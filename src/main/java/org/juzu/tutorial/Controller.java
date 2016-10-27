@@ -124,6 +124,7 @@ public class Controller {
   }
   
   //----------下面是我的修改2016-10-27 15:43:18--------
+  
   @View
   public Response.Content content() throws IOException{
 	  return content.ok();
