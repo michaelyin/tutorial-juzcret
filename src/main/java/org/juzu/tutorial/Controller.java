@@ -52,7 +52,14 @@ public class Controller {
   
  // @Inject
  // private IdentityManager identityManager;
-
+//-----下面是我的修改2016-10-27 15:40:38-------------------
+  @Inject
+  @Path("classifyFind.gtmpl")
+  Template classifyFind;
+  
+  
+  
+  //----------上面是我的修改2016-10-27 15:41:11---------------------
   @Inject
   @Path("index.gtmpl")
   Template index;
@@ -115,4 +122,12 @@ public class Controller {
   public Response.Content interpret_upload() throws IOException {
     return input_interpret.ok();
   }
+  
+  //----------下面是我的修改2016-10-27 15:43:18--------
+  @View
+  public Response.Content content() throws IOException{
+	  return content.ok();
+  }
+  
+  //-------------上面是我的修改2016-10-27 15:43:46-----------------
 }
