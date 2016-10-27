@@ -1,0 +1,117 @@
+
+	
+	<div class="container">
+		<div class="container_center">
+		  <div class="input-append">
+              <span class="span_title" style="margin-left:-35px;">车辆型号&nbsp&nbsp&nbsp
+                <input type="text" />
+              </span>
+   
+              <span class="span_title">车辆品牌 
+                  <select name="select" style="height:38px;" placeholder="（模糊检索+选项）" >
+                    <option>（模糊检索+选项）</option>
+                    <option>奥迪</option>
+                    <option>宝马</option>
+                  </select>
+             </span>
+             
+		  </div>
+          <div class="input-append">
+              <span class="span_title" style="margin-left:-35px;">企业名称&nbsp&nbsp&nbsp 
+                <select name="select" style="height:38px;" placeholder="（模糊检索+选项）" >
+                    <option>（模糊检索+选项）</option>
+                    <option>企业1</option>
+                    <option>企业2</option>
+                  </select>
+              </span>
+   
+              <span class="span_title">驱车类型 
+                  <select name="select" style="height:38px;" placeholder="（模糊检索+选项）" >
+                    <option>BEV</option>
+                    <option>PHEV</option>
+                    <option>FECV</option>
+                    <option>HEV</option>
+                  </select>
+             </span>
+		  </div>
+          <div class="input-append">
+              <span class="span_title" style="margin-left:-35px;">车辆通用名
+                <input type="text" />
+              </span>
+   
+              <span class="span_title">车辆类型 
+                  <select name="select" style="height:38px;" placeholder="（模糊检索+选项）" >
+                    <option>乘用车</option>
+                    <option>客车</option>
+                    <option>专用车</option>
+                  </select>
+             </span>
+		  </div>
+          <div class="input-append" style="margin-left:-35px;">
+   			<button class="btn btn-primary dropdown-toggle" type="button" style=" width:53%;margin-right:20px;">新能源汽车推荐车型目录</button>
+            <button class="btn btn-primary dropdown-toggle" type="button" style=" width:53%;">免征车辆购置税目录</button>
+   		  </div>
+          <div class="input-append" style="margin-left:-35px;">
+   			<button class="btn btn-primary dropdown-toggle" type="button" style=" height:60px; width:53%;margin-right:20px;" >北京示范应用新能源小客车生产<br/>企业及产品各类信息</button>
+            <button class="btn btn-primary dropdown-toggle" type="button" style=" height:60px; width:53%;">享受车船税减免优惠的节约能源使<br/>用新能源汽车车型目录</button>
+   		  </div>
+          <button class="btn btn-primary dropdown-toggle" type="button" style="height:35px; width:10%;float:right; margin-top:-300px;margin-right:-25px;">查询</button>
+           <button class="btn btn-primary dropdown-toggle" type="button" style="height:35px; width:10%;float:right; margin-top:-230px;margin-right:-25px;">重置</button>
+	  </div>
+	  <div style=" clear:right;">
+      
+		</div>
+		
+		
+		<!----------------->
+		
+        <div class="table-responsive" style="margin-top:-30px;">
+        	<table class="uiGrid table table-hover table-striped sortable">
+        		<thead>
+        			<tr> 
+        				<th width="80" style="background:#578DC9; color:#FFFFFF;">车辆型号</th>
+             			<th width="80" style="background:#578DC9; color:#FFFFFF;">通用名</th>
+                        <th width="80" style="background:#578DC9; color:#FFFFFF;">企业名称</th>
+                        <th width="80" style="background:#578DC9; color:#FFFFFF;">车辆类型</th>
+                        <th width="80" style="background:#578DC9; color:#FFFFFF;">动力类型</th>
+                        <th width="80" style="background:#578DC9; color:#FFFFFF;">公告批次</th>
+                        <th width="80" style="background:#578DC9; color:#FFFFFF;">车辆品牌</th>
+                        <th width="80" style="background:#578DC9; color:#FFFFFF;">燃料种类</th>
+                        <th width="80" style="background:#578DC9; color:#FFFFFF;">动力电池类型</th>
+                        <th width="80" style="background:#578DC9; color:#FFFFFF;">电动汽车储能装置种类</th>
+                        <th width="80" style="background:#578DC9; color:#FFFFFF;">整备质量</th>
+                        <th width="80" style="background:#578DC9; color:#FFFFFF;">总质量</th>
+                        <th width="80" style="background:#578DC9; color:#FFFFFF;">外形尺寸长</th>
+                        <th width="80" style="background:#578DC9; color:#FFFFFF;">外形尺寸宽</th>
+                        <th width="80" style="background:#578DC9; color:#FFFFFF;">外形尺寸高</th>
+                 	</tr>
+           		</thead>
+                                
+				<tbody>
+                 <!--新能源汽车领域有19个重点项目入选，共计划补贴约10.15个亿，重点围绕动力电池与电池管理、电机驱动与电力电子、电动汽车智能化、燃料电池动力系统等6个技术方向，部署38个重点研究任务。alert('您的鼠标刚才离开了该段！')-->
+                	<tr>
+                    	<td>123456</td>
+                        <td>123456</td>
+                        <td>123456</td>
+                        <td>123456</td>
+                        <td>123456</td>
+                        <td>123456</td>
+                        <td>123456</td>
+                        <td>123456</td>
+                        <td>123456</td>
+                        <td>123456</td>
+                        <td>123456</td>
+                        <td>12345</td>
+                        <td>12345</td>
+                        <td>12345</td>
+                        <td>12345</td>
+                   	</tr>
+                    
+				
+			  </tbody>
+                    
+					<tfoot></tfoot>
+       	  </table>
+	  </div>
+</div>	
+		
