@@ -1,0 +1,498 @@
+
+	
+	<div class="container">
+	
+		<div class="container_left">
+			
+       		<ul class="breadcrumb">
+    			<li style=" width:12%; height:200px;  border:3px solid #E6E6E6; padding:0px; margin:0px;">
+                	<div style="width:100%; height:100px; text-align:center; line-height:100px;">
+                    	领域                    </div>
+                    
+                    <div style="width:100%; height:100px; text-align:center; line-height:100px;">
+                    	筛选                    </div>
+                </li>
+    			
+                <li style="background:#E6E6E6; width:86%; height:200px; border:3px solid #E6E6E6; padding:0px; margin-left:-5px;">
+                	
+                    <ul class="breadcrumb" style="margin-top:10px; margin-bottom:10px;">
+						<li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox">
+  								<span>所有购置方面政策</span>							</span>						</li>
+        				<li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox">
+  								<span>补贴政策</span>							</span>						</li>
+						<li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox">
+  								<span>税收优惠</span>							</span>						</li>
+                        <li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox">
+  								<span>免限购</span>							</span>						</li>
+    				</ul>
+                    
+                    
+                    <ul class="breadcrumb" style="margin-top:10px; margin-bottom:10px;">
+						<li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox">
+  								<span>所有使用方面政策</span>							</span>						</li>
+        				<li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox">
+  								<span>补贴政策</span>							</span>						</li>
+						<li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox">
+  								<span>税收优惠</span>							</span>						</li>
+                        <li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox">
+  								<span>免限购</span>							</span>						</li>
+    				</ul>
+                    
+                    <ul class="breadcrumb" style="margin-top:10px; margin-bottom:10px;">
+						<li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox">
+  								<span>所有研发支持政策</span>							</span>						</li>
+        				<li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox">
+  								<span>补贴政策</span>							</span>						</li>
+						<li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox">
+  								<span>税收优惠</span>							</span>						</li>
+    				</ul>
+                    
+                    <ul class="breadcrumb" style="margin-top:10px; margin-bottom:10px;">
+						<li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox">
+  								<span>政策支持对象类型</span>							</span>						</li>
+        				<li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox">
+  								<span>乘用车</span>							</span>						</li>
+						<li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox">
+  								<span>客车</span>							</span>						</li>
+                        <li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox">
+  								<span>专用车</span>							</span>						</li>
+                        <li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox">
+  								<span>零部件</span>							</span>						</li>
+    				</ul>
+                    
+                    
+                    <ul class="breadcrumb" style="margin-top:10px; margin-bottom:10px;">
+                    
+                    	<li class="active">发布时间</li>
+                        
+						<div class="input-append" style="margin-bottom:0px;">
+      					
+        				<div class="btn-group" style="padding:0; margin-bottom:3px;">
+                            <input type="text" data-toggle="dropdown" class="input-mini" style="height:26px; width:50px;"> 
+        					<ul class="dropdown-menu" style=" padding:0px;">
+            					<div class="uiCalendarComponent uiBox" id="BlockCalendar" style="margin:0px; padding:0px;">
+        							<div style="cursor: default" onmousedown="event.cancelBubble = true">
+            							<h5 class="title clearfix">
+                							<span>January, 2015</span>            							</h5>
+            							<table class="weekList">
+                <tbody>
+                    <tr>
+                        <td><font color="red">S</font></td>
+                        <td>M</td>
+                        <td>T</td>
+                        <td>W</td>
+                        <td>T</td>
+                        <td>F</td>
+                        <td>S</td>
+                    </tr>
+                </tbody>
+            </table>
+            							<hr>
+            							<table cellspacing="0" cellpadding="0" class="weekDays" id="">
+                <tbody>
+                    <tr><td><a onclick="" class="otherMonth" href="">28</a></td>
+                        <td><a onclick="" class="otherMonth" href="">29</a></td>
+                        <td><a onclick="" class="otherMonth" href="">30</a></td>
+                        <td><a onclick="" class="otherMonth" href="">31</a></td>
+                        <td><a onclick="" href="" class="">1</a></td>
+                        <td><a onclick="" href="" class="">2</a></td>
+                        <td><a onclick="" href="" class="">3</a></td>
+                    </tr>
+                    <tr><td><a onclick="" href="" class="">4</a></td>
+                        <td><a onclick="" href="" class="">5</a></td>
+                        <td><a onclick="" href="" class="">6</a></td>
+                        <td><a onclick="" href="" class="">7</a></td>
+                        <td><a onclick="" href="" class="">8</a></td>
+                        <td><a onclick="" href="" class="">9</a></td>
+                        <td><a onclick="" href="" class="">10</a></td>
+                    </tr>
+                    <tr class="currentWeek">
+                        <td><a onclick="" href="" class="">11</a></td>
+                        <td><a onclick="" href="" class="">12</a></td>
+                        <td><a onclick="" href="" class="">13</a></td>
+                        <td><a onclick="" href="" class="">14</a></td>
+                        <td><a onclick="" href="" class="">15</a></td>
+                        <td><a onclick="" href="" class="highLight today">16</a></td>
+                        <td><a onclick="" href="" class="">17</a></td>
+                    </tr>
+                    <tr><td><a onclick="" href="" class="">18</a></td>
+                        <td><a onclick="" href="" class="">19</a></td>
+                        <td><a onclick="eXo.webui.UICalendar.setDate(2015,1,20)" href="" class="">20</a></td>
+                        <td><a onclick="" href="" class="">21</a></td>
+                        <td><a onclick="" href="" class="">22</a></td>
+                        <td><a onclick="" href="" class="">23</a></td>
+                        <td><a onclick="" href="" class="">24</a></td>
+                    </tr>
+                    <tr><td><a onclick="" href="" class="">25</a></td>
+                        <td><a onclick="" href="" class="">26</a></td>
+                        <td><a onclick="" href="" class="">27</a></td>
+                        <td><a onclick="" href="" class="">28</a></td>
+                        <td><a onclick="" href="" class="">29</a></td>
+                        <td><a onclick="" href="" class="">30</a></td>
+                        <td><a onclick="" href="" class="">31</a></td>
+                    </tr>
+                    <tr></tr>
+                </tbody>
+            </table>
+            							<div class="calendarTimeInput">
+                							<span>
+                    							<input type="text" onblur="this.parentNode.className=''" onfocus="this.parentNode.className='focus'" onkeyup="eXo.webui.UICalendar.setHour(this)" value="16" maxlength="2" class="InputTime">:<input type="text" onblur="this.parentNode.className=''" onfocus="this.parentNode.className='focus'" onkeyup="eXo.webui.UICalendar.setMinus(this)" value="40" maxlength="2" class="InputTime">
+                							</span>            							</div>
+        							</div>
+    							</div>
+        					</ul>
+    					</div>
+                        
+                        
+						<span style="font-size:15px;padding-left:5px; padding-right:5px;">年--</span>
+						<div class="btn-group" style="padding:0;  margin-bottom:3px;">
+                            <input type="text" data-toggle="dropdown" class="input-mini" style="height:26px; width:50px;"> 
+        					<ul class="dropdown-menu" style=" padding:0px;">
+            					<div class="uiCalendarComponent uiBox" id="BlockCalendar" style="margin:0px; padding:0px;">
+        							<div style="cursor: default" onmousedown="event.cancelBubble = true">
+            							<h5 class="title clearfix">
+                							<span>January, 2015</span>            							</h5>
+            							<table class="weekList">
+                <tbody>
+                    <tr>
+                        <td><font color="red">S</font></td>
+                        <td>M</td>
+                        <td>T</td>
+                        <td>W</td>
+                        <td>T</td>
+                        <td>F</td>
+                        <td>S</td>
+                    </tr>
+                </tbody>
+            </table>
+            							<hr>
+            							<table cellspacing="0" cellpadding="0" class="weekDays" id="">
+                <tbody>
+                    <tr><td><a onclick="" class="otherMonth" href="">28</a></td>
+                        <td><a onclick="" class="otherMonth" href="">29</a></td>
+                        <td><a onclick="" class="otherMonth" href="">30</a></td>
+                        <td><a onclick="" class="otherMonth" href="">31</a></td>
+                        <td><a onclick="" href="" class="">1</a></td>
+                        <td><a onclick="" href="" class="">2</a></td>
+                        <td><a onclick="" href="" class="">3</a></td>
+                    </tr>
+                    <tr><td><a onclick="" href="" class="">4</a></td>
+                        <td><a onclick="" href="" class="">5</a></td>
+                        <td><a onclick="" href="" class="">6</a></td>
+                        <td><a onclick="" href="" class="">7</a></td>
+                        <td><a onclick="" href="" class="">8</a></td>
+                        <td><a onclick="" href="" class="">9</a></td>
+                        <td><a onclick="" href="" class="">10</a></td>
+                    </tr>
+                    <tr class="currentWeek">
+                        <td><a onclick="" href="" class="">11</a></td>
+                        <td><a onclick="" href="" class="">12</a></td>
+                        <td><a onclick="" href="" class="">13</a></td>
+                        <td><a onclick="" href="" class="">14</a></td>
+                        <td><a onclick="" href="" class="">15</a></td>
+                        <td><a onclick="" href="" class="highLight today">16</a></td>
+                        <td><a onclick="" href="" class="">17</a></td>
+                    </tr>
+                    <tr><td><a onclick="" href="" class="">18</a></td>
+                        <td><a onclick="" href="" class="">19</a></td>
+                        <td><a onclick="eXo.webui.UICalendar.setDate(2015,1,20)" href="" class="">20</a></td>
+                        <td><a onclick="" href="" class="">21</a></td>
+                        <td><a onclick="" href="" class="">22</a></td>
+                        <td><a onclick="" href="" class="">23</a></td>
+                        <td><a onclick="" href="" class="">24</a></td>
+                    </tr>
+                    <tr><td><a onclick="" href="" class="">25</a></td>
+                        <td><a onclick="" href="" class="">26</a></td>
+                        <td><a onclick="" href="" class="">27</a></td>
+                        <td><a onclick="" href="" class="">28</a></td>
+                        <td><a onclick="" href="" class="">29</a></td>
+                        <td><a onclick="" href="" class="">30</a></td>
+                        <td><a onclick="" href="" class="">31</a></td>
+                    </tr>
+                    <tr></tr>
+                </tbody>
+            </table>
+            							<div class="calendarTimeInput">
+                							<span>
+                    							<input type="text" onblur="this.parentNode.className=''" onfocus="this.parentNode.className='focus'" onkeyup="eXo.webui.UICalendar.setHour(this)" value="16" maxlength="2" class="InputTime">:<input type="text" onblur="this.parentNode.className=''" onfocus="this.parentNode.className='focus'" onkeyup="eXo.webui.UICalendar.setMinus(this)" value="40" maxlength="2" class="InputTime">
+                							</span>            							</div>
+        							</div>
+    							</div>
+        					</ul>
+    					</div>
+						<span style="font-size:15px;padding-left:5px; padding-right:5px;">年</span>
+                        
+                        
+                        <!---->
+                        <span style="font-size:15px;padding-left:5px; padding-right:5px; font-weight:bold; color:#999; font-size:15.5px; vertical-align:middle; padding-bottom:3px;">废止时间</span>
+                        <div class="btn-group" style="padding:0; margin-bottom:3px;">
+                            <input type="text" data-toggle="dropdown" class="input-mini" style="height:26px; width:50px;"> 
+        					<ul class="dropdown-menu" style=" padding:0px;">
+            					<div class="uiCalendarComponent uiBox" id="BlockCalendar" style="margin:0px; padding:0px;">
+        							<div style="cursor: default" onmousedown="event.cancelBubble = true">
+            							<h5 class="title clearfix">
+                							<span>January, 2015</span>            							</h5>
+            							<table class="weekList">
+                <tbody>
+                    <tr>
+                        <td><font color="red">S</font></td>
+                        <td>M</td>
+                        <td>T</td>
+                        <td>W</td>
+                        <td>T</td>
+                        <td>F</td>
+                        <td>S</td>
+                    </tr>
+                </tbody>
+            </table>
+            							<hr>
+            							<table cellspacing="0" cellpadding="0" class="weekDays" id="">
+                <tbody>
+                    <tr><td><a onclick="" class="otherMonth" href="">28</a></td>
+                        <td><a onclick="" class="otherMonth" href="">29</a></td>
+                        <td><a onclick="" class="otherMonth" href="">30</a></td>
+                        <td><a onclick="" class="otherMonth" href="">31</a></td>
+                        <td><a onclick="" href="" class="">1</a></td>
+                        <td><a onclick="" href="" class="">2</a></td>
+                        <td><a onclick="" href="" class="">3</a></td>
+                    </tr>
+                    <tr><td><a onclick="" href="" class="">4</a></td>
+                        <td><a onclick="" href="" class="">5</a></td>
+                        <td><a onclick="" href="" class="">6</a></td>
+                        <td><a onclick="" href="" class="">7</a></td>
+                        <td><a onclick="" href="" class="">8</a></td>
+                        <td><a onclick="" href="" class="">9</a></td>
+                        <td><a onclick="" href="" class="">10</a></td>
+                    </tr>
+                    <tr class="currentWeek">
+                        <td><a onclick="" href="" class="">11</a></td>
+                        <td><a onclick="" href="" class="">12</a></td>
+                        <td><a onclick="" href="" class="">13</a></td>
+                        <td><a onclick="" href="" class="">14</a></td>
+                        <td><a onclick="" href="" class="">15</a></td>
+                        <td><a onclick="" href="" class="highLight today">16</a></td>
+                        <td><a onclick="" href="" class="">17</a></td>
+                    </tr>
+                    <tr><td><a onclick="" href="" class="">18</a></td>
+                        <td><a onclick="" href="" class="">19</a></td>
+                        <td><a onclick="eXo.webui.UICalendar.setDate(2015,1,20)" href="" class="">20</a></td>
+                        <td><a onclick="" href="" class="">21</a></td>
+                        <td><a onclick="" href="" class="">22</a></td>
+                        <td><a onclick="" href="" class="">23</a></td>
+                        <td><a onclick="" href="" class="">24</a></td>
+                    </tr>
+                    <tr><td><a onclick="" href="" class="">25</a></td>
+                        <td><a onclick="" href="" class="">26</a></td>
+                        <td><a onclick="" href="" class="">27</a></td>
+                        <td><a onclick="" href="" class="">28</a></td>
+                        <td><a onclick="" href="" class="">29</a></td>
+                        <td><a onclick="" href="" class="">30</a></td>
+                        <td><a onclick="" href="" class="">31</a></td>
+                    </tr>
+                    <tr></tr>
+                </tbody>
+            </table>
+            							<div class="calendarTimeInput">
+                							<span>
+                    							<input type="text" onblur="this.parentNode.className=''" onfocus="this.parentNode.className='focus'" onkeyup="eXo.webui.UICalendar.setHour(this)" value="16" maxlength="2" class="InputTime">:<input type="text" onblur="this.parentNode.className=''" onfocus="this.parentNode.className='focus'" onkeyup="eXo.webui.UICalendar.setMinus(this)" value="40" maxlength="2" class="InputTime">
+                							</span>            							</div>
+        							</div>
+    							</div>
+        					</ul>
+    					</div>
+                        
+                        
+						<span style="font-size:15px;padding-left:5px; padding-right:5px;">年--</span>
+						<div class="btn-group" style="padding:0;  margin-bottom:3px;">
+                            <input type="text" data-toggle="dropdown" class="input-mini" style="height:26px; width:50px;"> 
+        					<ul class="dropdown-menu" style=" padding:0px;">
+            					<div class="uiCalendarComponent uiBox" id="BlockCalendar" style="margin:0px; padding:0px;">
+        							<div style="cursor: default" onmousedown="event.cancelBubble = true">
+            							<h5 class="title clearfix">
+                							<span>January, 2015</span>            							</h5>
+            							<table class="weekList">
+                <tbody>
+                    <tr>
+                        <td><font color="red">S</font></td>
+                        <td>M</td>
+                        <td>T</td>
+                        <td>W</td>
+                        <td>T</td>
+                        <td>F</td>
+                        <td>S</td>
+                    </tr>
+                </tbody>
+            </table>
+            							<hr>
+            							<table cellspacing="0" cellpadding="0" class="weekDays" id="">
+                <tbody>
+                    <tr><td><a onclick="" class="otherMonth" href="">28</a></td>
+                        <td><a onclick="" class="otherMonth" href="">29</a></td>
+                        <td><a onclick="" class="otherMonth" href="">30</a></td>
+                        <td><a onclick="" class="otherMonth" href="">31</a></td>
+                        <td><a onclick="" href="" class="">1</a></td>
+                        <td><a onclick="" href="" class="">2</a></td>
+                        <td><a onclick="" href="" class="">3</a></td>
+                    </tr>
+                    <tr><td><a onclick="" href="" class="">4</a></td>
+                        <td><a onclick="" href="" class="">5</a></td>
+                        <td><a onclick="" href="" class="">6</a></td>
+                        <td><a onclick="" href="" class="">7</a></td>
+                        <td><a onclick="" href="" class="">8</a></td>
+                        <td><a onclick="" href="" class="">9</a></td>
+                        <td><a onclick="" href="" class="">10</a></td>
+                    </tr>
+                    <tr class="currentWeek">
+                        <td><a onclick="" href="" class="">11</a></td>
+                        <td><a onclick="" href="" class="">12</a></td>
+                        <td><a onclick="" href="" class="">13</a></td>
+                        <td><a onclick="" href="" class="">14</a></td>
+                        <td><a onclick="" href="" class="">15</a></td>
+                        <td><a onclick="" href="" class="highLight today">16</a></td>
+                        <td><a onclick="" href="" class="">17</a></td>
+                    </tr>
+                    <tr><td><a onclick="" href="" class="">18</a></td>
+                        <td><a onclick="" href="" class="">19</a></td>
+                        <td><a onclick="eXo.webui.UICalendar.setDate(2015,1,20)" href="" class="">20</a></td>
+                        <td><a onclick="" href="" class="">21</a></td>
+                        <td><a onclick="" href="" class="">22</a></td>
+                        <td><a onclick="" href="" class="">23</a></td>
+                        <td><a onclick="" href="" class="">24</a></td>
+                    </tr>
+                    <tr><td><a onclick="" href="" class="">25</a></td>
+                        <td><a onclick="" href="" class="">26</a></td>
+                        <td><a onclick="" href="" class="">27</a></td>
+                        <td><a onclick="" href="" class="">28</a></td>
+                        <td><a onclick="" href="" class="">29</a></td>
+                        <td><a onclick="" href="" class="">30</a></td>
+                        <td><a onclick="" href="" class="">31</a></td>
+                    </tr>
+                    <tr></tr>
+                </tbody>
+            </table>
+            							<div class="calendarTimeInput">
+                							<span>
+                    							<input type="text" onblur="this.parentNode.className=''" onfocus="this.parentNode.className='focus'" onkeyup="eXo.webui.UICalendar.setHour(this)" value="16" maxlength="2" class="InputTime">:<input type="text" onblur="this.parentNode.className=''" onfocus="this.parentNode.className='focus'" onkeyup="eXo.webui.UICalendar.setMinus(this)" value="40" maxlength="2" class="InputTime">
+                							</span>            							</div>
+        							</div>
+    							</div>
+        					</ul>
+    					</div>
+						<span style="font-size:15px;padding-left:5px; padding-right:5px;">年</span>    				</div>
+    				</ul>
+           		</li>
+            </ul>
+            
+            
+            
+            <ul class="breadcrumb">
+    			<li style=" width:12%; height:400px;  border:3px solid #E6E6E6; padding:0px; margin:0px;">
+                	<div style="width:100%; height:200px; text-align:center; line-height:200px;">
+                    	地域                    </div>
+                    
+                    <div style="width:100%; height:200px; text-align:center; line-height:200px;">
+                    	筛选                    </div>
+                </li>
+    			
+                <li style="width:86%; height:400px; border:3px solid #E6E6E6; padding:0px; margin-left:-5px;">
+                	
+                    <!--
+                    <ul class="breadcrumb" style="margin-top:5px; margin-bottom:10px;">
+						<li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox" onclick="click_all(this)">
+  								<span>全选</span>
+							</span>
+						</li>
+    				</ul>
+                    -->
+                        
+                    <div id="main" style="width:100%; height:360px;">					</div>
+           		</li>
+            </ul>
+            
+			<a href="input2.html" class="btn btn-mini" type="button" style="padding:2px 10px;font-size:13px; float:left;">上传</a>
+			
+            <button class="btn btn-mini" type="button" style="padding:2px 10px;font-size:13px; float:right;">确定</button>
+		</div>
+	
+	<div class="container_right">
+		
+		<a style="width:40px; float:right;" class="btn btn-primary btn-large" href="@{Controller.index()}">返回</a>
+		
+		
+		<!---->
+		<div style="margin-top:215px;">
+		    <div id="accordion" class="accordion">
+        		<h5 class="menuHeader" style="background:#578DC9; color:#FFFFFF;">搜索历史</h5>
+        		
+				<div class="accordion-group">
+            		<div class="accordion-heading">
+                		<div class="accordion-toggle collapsed">
+                    		<a data-toggle="tab" href="#modals" style="padding:5px 8px 4px 15px;"><i class="uiIconSelected pull-right"></i>搜索历史</a>                		</div>
+            		</div>
+        		</div>
+        
+				<div class="accordion-group">
+            		<div class="accordion-heading">
+                		<div class="accordion-toggle collapsed">
+                    		<a data-toggle="tab" href="#modals" style="padding:5px 8px 4px 15px;"><i class="uiIconSelected pull-right"></i>搜索历史</a>                		</div>
+            		</div>
+        		</div>
+				
+        		<div class="accordion-group">
+            		<div class="accordion-heading">
+                		<div class="accordion-toggle collapsed">
+                    		<a data-toggle="tab" href="#modals" style="padding:5px 8px 4px 15px;"><i class="uiIconSelected pull-right"></i>搜索历史</a>                		</div>
+            		</div>
+        		</div>
+        
+				<div class="accordion-group">
+            		<div class="accordion-heading">
+                		<div class="accordion-toggle collapsed">
+                    		<a data-toggle="tab" href="#modals" style="padding:5px 8px 4px 15px;"><i class="uiIconSelected pull-right"></i>搜索历史</a>                		</div>
+            		</div>
+        		</div>
+				
+				<div class="accordion-group">
+            		<div class="accordion-heading">
+                		<div class="accordion-toggle collapsed">
+                    		<a data-toggle="tab" href="#modals" style="padding:5px 8px 4px 15px;"><i class="uiIconSelected pull-right"></i>搜索历史</a>                		</div>
+            		</div>
+        		</div>
+    		</div>
+		</div>
+	</div>
+</div>	
