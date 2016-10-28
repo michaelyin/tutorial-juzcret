@@ -23,7 +23,7 @@
 			
 			<div style="width:28%; height:120px; background:#FFFFFF; float:left;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px;" onmouseover="move_in(this)"  onmouseout="move_out(this)" onclick="window.location.href='@{Controller.interpretation()}'">
 				
-				<h3 style="font-size:20px; text-align:center; padding-top:20px;"><a href="@{Controller.interpretion()}">政策与解读</a></h3>
+				<h3 style="font-size:20px; text-align:center; padding-top:20px;"><a href="@{Controller.interpretation()}">政策与解读</a></h3>
 				
 				<div style="text-align:center; padding-top:10px; font-size:14px;text-decoration:underline;">
 					<a href="@{Controller.zhengCeFaBu()}" >最新政策和解读</a>
