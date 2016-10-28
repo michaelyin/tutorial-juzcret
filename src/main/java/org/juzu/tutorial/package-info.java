@@ -25,14 +25,22 @@
 
 
 @Scripts({
-    @Script(id = "indexjs", value = "js/index.js", location=AssetLocation.APPLICATION)
+    @Script(id = "indexjs", value = "js/index.js", location=AssetLocation.APPLICATION),
+    /*下面是我添加的部分*/
+    @Script(id = "classifyFindjs", value = "js/classifyFind.js", location=AssetLocation.APPLICATION),
+    
 })
 
 @Stylesheets ({
     @Stylesheet(id = "indexcss", value = "styles/index.css", location = AssetLocation.APPLICATION),
     @Stylesheet(id = "input_interpretcss", value = "styles/input_interpret.css", location = AssetLocation.APPLICATION),
+    /*下面是我添加的部分*/
+    @Stylesheet(id = "classifyFindcss", value = "styles/classifyFind.css", location = AssetLocation.APPLICATION),
     
 })
+
+
+
 
 package org.juzu.tutorial;
 
