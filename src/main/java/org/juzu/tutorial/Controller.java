@@ -63,8 +63,7 @@ public class Controller {
   
   @Inject
   @Path("guoJiaBiaozhun.gtmpl")
-  Template guoJiaBiaozhun;
-    
+  Template guoJiaBiaozhun;    
   
   //----------上面是我的修改2016-10-27 15:41:11---------------------
   @Inject
