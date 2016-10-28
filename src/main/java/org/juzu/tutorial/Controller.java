@@ -65,6 +65,10 @@ public class Controller {
   @Path("guoJiaBiaozhun.gtmpl")
   Template guoJiaBiaozhun;    
   
+  @Inject
+  @Path("map.gtmpl")
+  Template map;
+  
   //----------上面是我的修改2016-10-27 15:41:11---------------------
   @Inject
   @Path("index.gtmpl")
@@ -135,6 +139,15 @@ public class Controller {
   public Response.Content content() throws IOException {
 	  return content.ok();
   }
+  
+  @View
+  public Response.Content map() throws IOException {
+	  return map.ok();
+  }
+  
+  
+  
+  
   
   //-------------上面是我的修改2016-10-27 15:43:46-----------------
 }

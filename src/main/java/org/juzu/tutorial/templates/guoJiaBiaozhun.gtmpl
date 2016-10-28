@@ -58,7 +58,7 @@
       					
         				<div class="btn-group" style="padding:0; margin-bottom:3px;">
                             <input type="text" data-toggle="dropdown" class="input-mini" style="height:26px; width:50px;"> 
-        					<ul class="dropdown-menu" style=" padding:0px;">
+        				    <ul class="dropdown-menu" style=" padding:0px;">
             					<div class="uiCalendarComponent uiBox" id="BlockCalendar" style="margin:0px; padding:0px;">
         							<div style="cursor: default" onmousedown="event.cancelBubble = true">
             							<h5 class="title clearfix">
