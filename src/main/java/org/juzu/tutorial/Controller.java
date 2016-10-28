@@ -52,7 +52,7 @@ public class Controller {
   
  // @Inject
  // private IdentityManager identityManager;
-//-----下面是我的修改2016-10-27 15:40:38-------------------
+/*-----下面是我的修改2016-10-27 15:40:38-------------------*/
   @Inject
   @Path("classifyFind.gtmpl")
   Template classifyFind;
@@ -69,7 +69,10 @@ public class Controller {
   @Path("map.gtmpl")
   Template map;
   
-  //----------上面是我的修改2016-10-27 15:41:11---------------------
+  @Inject
+  @Path("zhengCeFaBu.gtmpl")
+  Template zhengCeFaBu;
+  /*----------上面是我的修改2016-10-27 15:41:11---------------------*/
   @Inject
   @Path("index.gtmpl")
   Template index;
@@ -123,7 +126,7 @@ public class Controller {
   }
   
   @View
-  public Response.Content interpret() throws IOException {
+  public Response.Content interpretion() throws IOException {
     return interpretation.ok();
   }
   
@@ -133,7 +136,7 @@ public class Controller {
     return input_interpret.ok();
   }
   
-  //----------下面是我的修改2016-10-27 15:43:18--------
+  /*----------下面是我的修改2016-10-27 15:43:18--------*/
   @Assets({"classifyFindcss","classifyFindjs"})
   @View
   public Response.Content content() throws IOException {
@@ -145,9 +148,18 @@ public class Controller {
 	  return map.ok();
   }
   
+  @View
+  public Response.Content guoJiaBiaozhun() throws IOException{
+	  return guoJiaBiaozhun.ok();
+  }
+  @View
+  public Response.Content classifyFind() throws IOException{
+	  return classifyFind.ok();
+  }
+  @View
+  public Response.Content zhengCeFaBu()throws IOException{
+	  return zhengCeFaBu.ok();
+  }
   
-  
-  
-  
-  //-------------上面是我的修改2016-10-27 15:43:46-----------------
+  /*-------------上面是我的修改2016-10-27 15:43:46-----------------*/
 }
