@@ -126,7 +126,7 @@ public class Controller {
   }
   
   @View
-  public Response.Content interpretion() throws IOException {
+  public Response.Content interpretation() throws IOException {
     return interpretation.ok();
   }
   
