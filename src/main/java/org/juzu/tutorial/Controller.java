@@ -57,7 +57,14 @@ public class Controller {
   @Path("classifyFind.gtmpl")
   Template classifyFind;
   
+  @Inject
+  @Path("content.gtmpl")
+  Template content;
   
+  @Inject
+  @Path("guoJiaBiaozhun.gtmpl")
+  Template guoJiaBiaozhun;
+    
   
   //----------上面是我的修改2016-10-27 15:41:11---------------------
   @Inject
