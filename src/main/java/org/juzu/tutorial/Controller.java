@@ -72,6 +72,13 @@ public class Controller {
   @Inject
   @Path("zhengCeFaBu.gtmpl")
   Template zhengCeFaBu;
+  
+  @Inject
+  @Path("zhengCeUpload.gtmpl")
+  Template zhengCeUpload;
+  
+
+  
   /*----------上面是我的修改2016-10-27 15:41:11---------------------*/
   @Inject
   @Path("index.gtmpl")
@@ -160,6 +167,22 @@ public class Controller {
   public Response.Content zhengCeFaBu()throws IOException{
 	  return zhengCeFaBu.ok();
   }
+  @View
+  public Response.Content zhengCeUpload() throws IOException{
+	  return zhengCeFaBu.ok();
+  }
+  
+  @View
+  public Response.Content back() throws IOException{
+	  return map.ok();
+  }
+ /* @View
+  public Response.Content notes_add_touch() throws IOException{
+	  return ???
+  }*/
+  
+  
+  
   
   /*-------------上面是我的修改2016-10-27 15:43:46-----------------*/
 }
