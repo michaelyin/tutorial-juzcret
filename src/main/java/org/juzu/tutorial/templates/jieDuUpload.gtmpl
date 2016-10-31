@@ -7,7 +7,7 @@
 		
 		
 		<div class="input-append" style="width:95%;">
-   			<button type="button"  onclick="back()" class="btn btn-block btn-primary" style="width:10%; float:right;">返回</button>
+   			<button type="button"  onclick="window.location.href='@{Controller.back()}'" class="btn btn-block btn-primary" style="width:10%; float:right;">返回</button>
    		</div>
 		<form id="form1" method="post" name="f1" enctype="multipart/form-data">
 		<div class="input-append">

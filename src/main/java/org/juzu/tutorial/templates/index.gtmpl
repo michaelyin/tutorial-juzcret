@@ -38,7 +38,7 @@
 				<h3 style="font-size:20px; text-align:center; padding-top:20px;"><a href="@{Controller.map()}">地方政策详解</a></h3>
 				
 				<div style="text-align:center; padding-top:10px; font-size:14px;text-decoration:underline;">
-					<a href="map.html?new=1">最新分类</a>
+					<a href="@{Controller.map_new()}">最新分类</a>
 				</div>
 			
 			</div>
@@ -63,7 +63,7 @@
 				<h3 style="font-size:20px; text-align:center; padding-top:20px;"><a href="@{Controller.guoJiaBiaozhun()}">国家标准</a></h3>
 				
 				<div style="text-align:center; padding-top:10px; font-size:14px;text-decoration:underline;">
-					<a href="index3.html?new=1" >最新标准</a>
+					<a href="@{Controller.zuiXinBiaoZhun()}" >最新标准</a>
 				</div>
 			</div>
 			
@@ -73,7 +73,7 @@
 				<h3 style="font-size:20px; text-align:center; padding-top:20px;"><a href="@{Controller.classifyFind()}">项目</a></h3>
 				
 				<div style="text-align:center; padding-top:10px; font-size:14px;text-decoration:underline;">
-					<a href="index2.html?new=1" >最新项目</a>
+					<a href="@{Controller.zuiXinXiangMu()}" >最新项目</a>
 				</div>
 			</div>
 			

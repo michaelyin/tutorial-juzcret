@@ -81,6 +81,14 @@ public class Controller {
   @Path("jieDuUpload.gtmpl")
   Template jieDuUpload;
   
+  @Inject
+  @Path("biaoZhunFaBu.gtmpl")
+  Template biaoZhunFaBu;
+  
+  @Inject
+  @Path("xiangMuFaBu.gtmpl")
+  Template xiangMuFaBu;
+  
   /*----------上面是我的修改2016-10-27 15:41:11---------------------*/
   @Inject
   @Path("index.gtmpl")
@@ -98,40 +106,40 @@ public class Controller {
   //@Assets("indexcss")
   @View
   public Response.Content index(SecurityContext securityContext) throws IOException {
-	  String username = securityContext.getRemoteUser();
+	  String username = securityContext.getRemoteUser();//从服务器端获取用户名
 	  LOG.info("user: " + username);
 	  UserSetting setting = userService.getUserSetting(username);
 	  net.wyun.qys.model.User u = userService.loadUser(username);
 	  
-	  try{
+	  try{//异常处理
 		  
-		  Identity identity = ConversationState.getCurrent().getIdentity();
+		  Identity identity = ConversationState.getCurrent().getIdentity();//获取验证信息
 		  //org.exoplatform.social.core.identity.model.Identity identity = identityManager.getOrCreateIdentity(OrganizationIdentityProvider.NAME, username, true);
-		  List<String> ms =UserUtil.getMemberships(identity);
-		  
+		  List<String> ms =UserUtil.getMemberships(identity);//把验证信息放到集合中
+	     	  
 		  for (String m : ms) {
-			  LOG.info("membership: " + m);
+			  LOG.info("membership: " + m);//用增强for循环把成员信息放到日志中
 		  }
-	  }catch(Exception e){
+	  }catch(Exception e){//捕获异常信息并提示
 		  LOG.error(e);
 	  }
 	  
 	  
-	  if(setting != null){
+	  if(setting != null){//setting不为空则获取setting的用户名信息到日志中
 		  LOG.info("user setting: " + setting.getUsername());
 	  }
-	  if(u != null){
+	  if(u != null){//u不为空则获取u的唯一标识到日志中
 		  LOG.info("user avatar: " + u.getAvatar());
 	  }
 	  
 	  //try policySvc
 	  LOG.info("save policy");
-	  Policy policy = new Policy();
-	  policy.setPolicyName("test db saving");
-	  policy.setStartDate(new Date());
-	  this.policySvc.save(policy);
+	  Policy policy = new Policy();//实例化一个policy
+	  policy.setPolicyName("test db saving");//实例化赋初值
+	  policy.setStartDate(new Date());//并加上日期
+	  this.policySvc.save(policy);//把policy的信息保存
 	  
-      return index.ok();
+      return index.ok();//最后返回到index页面
   }
   
   @View
@@ -178,12 +186,29 @@ public class Controller {
   public Response.Content back() throws IOException{
 	  return map.ok();
   }
+  
   @View
   public Response.Content notes_add_touch() throws IOException{
 	  return jieDuUpload.ok();
   }
   
+  //最新分类
+  @View
+  public Response.Content map_new() throws IOException{
+	  return map.ok();
+  }
   
+ //最新标准
+  @View
+  public Response.Content zuiXinBiaoZhun() throws IOException{
+	  return biaoZhunFaBu.ok();
+  }
+  
+  //最新项目
+  @View
+  public Response.Content zuiXinXiangMu() throws IOException{
+	  return xiangMuFaBu.ok();
+  }
   
   
   /*-------------上面是我的修改2016-10-27 15:43:46-----------------*/
