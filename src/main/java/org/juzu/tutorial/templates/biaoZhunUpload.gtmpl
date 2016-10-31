@@ -1,0 +1,274 @@
+
+	
+	<div class="container">
+		
+		<div class="container_center">
+		
+		<h1  style="text-align:center;">标准上传页面</h1>
+		
+		
+		<div class="input-append" style="width:95%;">
+   			<button type="button"  onclick="window.location.href='@{Controller.back()}'" class="btn btn-block btn-primary" style="width:10%; float:right;">返回</button>
+   		</div>
+		 
+		
+		<div class="input-append">
+   			<span class="span_title">标准名称</span>
+			<input type="text">
+   		</div>
+		
+		<div></div>
+		<div class="input-append">
+   			<span class="span_title">标准编号</span>
+			<input type="text">
+   		</div>
+		
+		
+		<div></div>
+		<div class="input-append">
+   			<span class="span_title">标准类型</span>
+			<div class="btn-group">
+				<input type="text" data-toggle="dropdown" >
+				
+				<ul class="dropdown-menu" style="padding:0px;">
+					<select multiple="multiple">
+  						<option>安全</option>
+  						<option>车身及悬架</option>
+  						<option>车轮</option>
+  						<option>材料</option>
+  						<option>灯光</option>
+						<option>底盘</option>
+  						<option>汽车电子与电磁兼容</option>
+  						<option>电器</option>
+  						<option>防盗</option>
+  						<option>回收利用</option>
+						<option>环保（不含排放）</option>
+  						<option>节能</option>
+  						<option>排放</option>
+  						<option>制动</option>
+  						<option>电动车辆</option>
+						<option>挂车</option>
+  						<option>客车</option>
+  						<option>专用车</option>
+  						<option>液化石油气汽车</option>
+  						<option>燃气汽车</option>
+						<option>仪表</option>
+  						<option>其他</option>
+					</select>
+				</ul>
+   			</div>
+		</div>
+		
+		
+		
+		<div id="myModal" aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" style="width: 420px; position: relative; display: none;" exo:minheight="200" exo:minwidth="200" class="UIPopupWindow uiPopup UIDragObject NormalStyle modal hide fade">
+                            <div class="popupHeader ClearFix">
+                                <a onclick="" title="Close Window" class="uiIconClose pull-right">
+                                    <div class="ClosePopup" style="width: 16px; height: 16px;" data-dismiss="modal"><span></span></div>
+                                </a>
+                                <span class="PopupTitle popupTitle">Attach File</span>
+                            </div>
+                            <div class="PopupContent popupContent">
+                                <div id="AttachFileForm" class="AttachFileForm">
+                                    <span id="UIPopupActionChildPopupAction" class="UIPopupActionChildPopupAction UIKSPopupAction"></span>
+                                    <div class="uiFormForum uiAttachFileForm">
+                                        <form method="post" enctype="multipart/form-data" action="/portal/intranet/forum?portal:componentId=c4775064-7711-4230-b877-5078c5b5212d&amp;interactionstate=JBPNS_rO0ABXcsAAt1aWNvbXBvbmVudAAAAAEAEFVJQXR0YWNoRmlsZUZvcm0AB19fRU9GX18*&amp;portal:type=action" id="UIAttachFileForm" class="UIForm">
+                                            <div>
+                                                <input value="" name="formOp" type="hidden">
+                                                <input value="AA17AB94C0A8012B35D8BBCC4C81958F" name="gtn:csrf" type="hidden">
+                                            </div>
+                                            <div class="resizable">
+                                                <div class="form-horizontal">
+                                                    <div class="control-group">
+                                                        <div class="controlUpload controls-full">
+                                                            <div class="uiUploadInput" id="upload">
+
+                                                                <div style="" class="uploadContainer" id="uploadContainer1526481975-0">
+                                                                    <div style="" class="selectFileFrame clearfix">
+                                                                        <div class="fileNameLabel" style="float: left;">exo-tomcat-platform-4.1.x</div>
+                                                                        <div class="removeFile pull-right" style="float: right;">
+                                                                            <a data-placement="bottom" rel="tooltip" class="actionIcon" href="#" data-original-title="Delete">
+                                                                                <i class="uiIconDelete uiIconLightGray"></i>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div style="" class="uploadContainer" id="uploadContainer1526481975-0">
+                                                                    <div style="" class="selectFileFrame clearfix">
+                                                                        <div class="fileNameLabel" style="float: left;">exo-image-ECMS-style4.1.x</div>
+                                                                        <div class="removeFile pull-right" style="float: right;">
+                                                                            <a data-placement="bottom" rel="tooltip" class="actionIcon" href="#" data-original-title="Delete">
+                                                                                <i class="uiIconDelete uiIconLightGray"></i>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div style="" class="uploadContainer" id="uploadContainer1526481975-0">
+                                                                    <div style="" class="progressBarFrame clearfix">
+                                                                        <span class="deleteFileLabel pull-right">
+												<a data-placement="bottom" rel="tooltip" class="actionIcon" href="#" data-original-title="Cancel">
+													<i class="uiIconRemove uiIconLightGray"></i>
+												</a>
+											</span>
+                                                                        <div class="fileNameLabel pull-left">exo-image-Forum-style...</div>
+                                                                        <div class="pull-left percent">50%</div>
+                                                                        <div class="progress  progress-striped">
+                                                                            <div style="width:50%" class="bar"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div style="" class="uploadContainer" id="uploadContainer430359469-0">
+                                                                    <div class="uploadButton">
+                                                                        <label class="btn">Select File</label>
+                                                                        <label style="display:none" class="noFile">No file selected</label>
+                                                                        <label style="" class="moreFiles">Select more files</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uiAction uiActionBorder">
+                                                <button type="button" class="btn" data-dismiss="modal">Save</button>
+                                                <button type="button" class="btn" data-dismiss="modal">Cancel</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="uiIconResize pull-right uiIconLightGray"></span>
+                        </div>
+		
+		
+		
+		<div></div>
+		<div class="input-append">
+   			<span class="span_title">标签&nbsp;&nbsp;</span>
+			
+			<div class="btn-group">
+				<input type="text" data-toggle="dropdown">
+				<ul class="dropdown-menu" style=" padding:0px;">
+					<select multiple="multiple">
+  						<option>标签1</option>
+  						<option>标签2</option>
+  						<option>标签3</option>
+						<option>标签4</option>
+  						<option>标签5</option>
+  						<option>标签6</option>
+					</select>
+				</ul>
+			</div>
+   		</div>
+		
+		
+		
+		<div></div>
+		<div class="input-append">
+   			<span class="span_title">创建人员</span>
+			<input type="text" readonly="readonly" id="people">
+   		</div>
+		
+		<div></div>
+		<div class="input-append">
+   			<span class="span_title">所属部门</span>
+			<input type="text" readonly="readonly" id="department">
+   		</div>
+		
+		<div></div>
+		<div class="input-append">
+   			<span class="span_title">创建日期</span>
+			<input type="text" readonly="readonly" id="date">
+   		</div>
+		
+		
+		<div></div>
+		<div class="input-append">
+   			<span class="span_title">权限设置</span>
+			
+			<select multiple="multiple">
+  				<option>可见</option>
+  				<option>预览文件</option>
+  				<option>打印文件</option>
+  				<option>下载文件</option>
+				<option>修改文件</option>
+  				<option>删除文件</option>
+  				<option>发布文件</option>
+  				<option>转发文件</option>
+				<option>完全控制文件</option>
+			</select>
+			
+   		</div>
+		
+		
+		<div></div>
+		<div class="input-append">
+   			<span class="span_title">加密级别</span>
+			
+			<select style="height:38px;">
+  				<option>1级</option>
+  				<option>2级</option>
+  				<option>3级</option>
+  				<option>4级</option>
+			</select>
+   		</div>
+		
+		
+		<div></div>
+		<div class="input-append">
+   			<span class="span_title">标准原文</span>
+			
+			<textarea rows="5"></textarea>
+			
+			<div></div>
+			
+			<!--
+			<a style="width:8%;  margin-left:25%; float:left;" class="btn btn-primary btn-large" href="#myModal" data-toggle="modal">上传文件</a>
+			-->
+			<div style="width:8%;  margin-left:25%; float:left; font-size:18px; line-height:26px; margin-right:20px;">上传文件</div>
+			
+			
+				<input type="file"  id="fileselect" name="fileselect[]" multiple="multiple" />
+			
+			
+				<div style="clear:left;"></div>
+				
+				<div style="font-size:18px; margin-left:25%; width:70%; margin-top:30px;">
+					<!--
+					<form id="upload" action="index.html" method="POST" enctype="multipart/form-data">
+					-->
+						<input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="2000000" />
+						<div>
+							<!--
+							<input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
+							-->
+							<div id="filedrag" style=" width:100%; height:80px; line-height:80px; text-align:center; border:1px solid  #CCCCCC; margin-bottom:30px;">或者拖动文件到这里</div>
+							
+						</div>
+
+						<div id="submitbutton">
+							<button type="submit">上传文件</button>
+						</div>
+					<!--
+					</form>
+					-->
+					
+					<div id="messages" style="width:100%; min-height:80px; border:1px solid  #CCCCCC; margin-bottom:30px; padding-top:20px; padding-bottom:20px;">
+						<p>上传文件列表</p>
+					</div>
+				</div>	
+			
+			
+			
+			
+   		</div>
+		
+		
+		<div class="input-append" style="width:95%;">
+   			<button type="button" class="btn btn-block btn-primary" style="width:10%; float:right;">提交</button>
+   		</div>
+		
+		</div>
+		
+	</div>	
+	
