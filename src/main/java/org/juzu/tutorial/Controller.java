@@ -77,7 +77,9 @@ public class Controller {
   @Path("zhengCeUpload.gtmpl")
   Template zhengCeUpload;
   
-
+  @Inject
+  @Path("jieDuUpload.gtmpl")
+  Template jieDuUpload;
   
   /*----------上面是我的修改2016-10-27 15:41:11---------------------*/
   @Inject
@@ -176,10 +178,10 @@ public class Controller {
   public Response.Content back() throws IOException{
 	  return map.ok();
   }
- /* @View
+  @View
   public Response.Content notes_add_touch() throws IOException{
-	  return ???
-  }*/
+	  return jieDuUpload.ok();
+  }
   
   
   
