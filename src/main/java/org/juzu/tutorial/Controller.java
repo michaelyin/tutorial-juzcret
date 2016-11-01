@@ -108,8 +108,8 @@ public class Controller {
   public Response.Content index(SecurityContext securityContext) throws IOException {
 	  String username = securityContext.getRemoteUser();//从服务器端获取用户名
 	  LOG.info("user: " + username);
-	  UserSetting setting = userService.getUserSetting(username);
-	  net.wyun.qys.model.User u = userService.loadUser(username);
+	  UserSetting setting = userService.getUserSetting(username);// ?
+	  net.wyun.qys.model.User u = userService.loadUser(username);// ?
 	  
 	  try{//异常处理
 		  
@@ -141,7 +141,7 @@ public class Controller {
 	  
       return index.ok();//最后返回到index页面
   }
-  
+  @Assets({"interpretationjs","interpretationcss"})
   @View
   public Response.Content interpretation() throws IOException {
     return interpretation.ok();
@@ -160,15 +160,19 @@ public class Controller {
 	  return content.ok();
   }
   
+  @Assets({"mapjs","mapcss"})
   @View
   public Response.Content map() throws IOException {
 	  return map.ok();
   }
   
+  @Assets({"guoJiaBiaozhunjs","guoJiaBiaozhuncss"})
   @View
   public Response.Content guoJiaBiaozhun() throws IOException{
 	  return guoJiaBiaozhun.ok();
   }
+  
+  @Assets({"classifyFindjs","classifyFindcss"})
   @View
   public Response.Content classifyFind() throws IOException{
 	  return classifyFind.ok();
