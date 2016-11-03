@@ -64,7 +64,7 @@
                             <div class="tooltips"> 
                             	<div class="tooltips1">
                                 <span class="top2">新能源汽车领域有19个重点项目入选，共计划补贴约10.15个亿，重点围绕动力电池与电池管理、电机驱动与电力电子、电动汽车智能化、燃料电池动力系统等6个技术方向，部署38个重点研究任务。</span></div>
-                           	<a href="@{Controller.content()}">关于对国家重点研发计划“新能源汽车”等10个重点专项2016年度项目安排进行公示的通知</a>                            </div>
+                           	<a href="@{MainController.content()}">关于对国家重点研发计划“新能源汽车”等10个重点专项2016年度项目安排进行公示的通知</a>                            </div>
                         </td>
                         <td>12345</td>
                         <td>工信部</td>
@@ -78,7 +78,7 @@
                     	<td >
                             <div class="tooltips"> 
                             	<div class="tooltips1">
-                                <span class="top2">新能源汽车领域有19个重点项目入选，共计划补贴约10.15个亿，重点围绕动力电池与电池管理、电机驱动与电力电子、电动汽车智能化、燃料电池动力系统等6个技术方向，部署38个重点研究任务。</span></div>	<a href="@{Controller.content()}">关于对国家重点研发计划“新能源汽车”等10个重点专项2016年度项目安排进行公示的通知</a>
+                                <span class="top2">新能源汽车领域有19个重点项目入选，共计划补贴约10.15个亿，重点围绕动力电池与电池管理、电机驱动与电力电子、电动汽车智能化、燃料电池动力系统等6个技术方向，部署38个重点研究任务。</span></div>	<a href="@{MainController.content()}">关于对国家重点研发计划“新能源汽车”等10个重点专项2016年度项目安排进行公示的通知</a>
                                 
                             </div>
                         </td>
@@ -96,7 +96,7 @@
                     	<td >
                             <div class="tooltips"> 
                             	<div class="tooltips1">
-                                <span class="top2">新能源汽车领域有19个重点项目入选，共计划补贴约10.15个亿，重点围绕动力电池与电池管理、电机驱动与电力电子、电动汽车智能化、燃料电池动力系统等6个技术方向，部署38个重点研究任务。</span></div>	<a href="@{Controller.content()}">关于对国家重点研发计划“新能源汽车”等10个重点专项2016年度项目安排进行公示的通知</a>
+                                <span class="top2">新能源汽车领域有19个重点项目入选，共计划补贴约10.15个亿，重点围绕动力电池与电池管理、电机驱动与电力电子、电动汽车智能化、燃料电池动力系统等6个技术方向，部署38个重点研究任务。</span></div>	<a href="@{MainController.content()}">关于对国家重点研发计划“新能源汽车”等10个重点专项2016年度项目安排进行公示的通知</a>
                                 
                             </div>
                         </td>
@@ -113,7 +113,7 @@
                     	<td >
                             <div class="tooltips"> 
                             	<div class="tooltips1">
-                                <span class="top2">新能源汽车领域有19个重点项目入选，共计划补贴约10.15个亿，重点围绕动力电池与电池管理、电机驱动与电力电子、电动汽车智能化、燃料电池动力系统等6个技术方向，部署38个重点研究任务。</span></div>	<a href="@{Controller.content()}">关于对国家重点研发计划“新能源汽车”等10个重点专项2016年度项目安排进行公示的通知</a>
+                                <span class="top2">新能源汽车领域有19个重点项目入选，共计划补贴约10.15个亿，重点围绕动力电池与电池管理、电机驱动与电力电子、电动汽车智能化、燃料电池动力系统等6个技术方向，部署38个重点研究任务。</span></div>	<a href="@{MainController.content()}">关于对国家重点研发计划“新能源汽车”等10个重点专项2016年度项目安排进行公示的通知</a>
                                 
                             </div>
                         </td>
@@ -131,7 +131,7 @@
                     	<td >
                             <div class="tooltips"> 
                             	<div class="tooltips1">
-                                <span class="top2">新能源汽车领域有19个重点项目入选，共计划补贴约10.15个亿，重点围绕动力电池与电池管理、电机驱动与电力电子、电动汽车智能化、燃料电池动力系统等6个技术方向，部署38个重点研究任务。</span></div>	<a href="@{Controller.content()}">关于对国家重点研发计划“新能源汽车”等10个重点专项2016年度项目安排进行公示的通知</a>
+                                <span class="top2">新能源汽车领域有19个重点项目入选，共计划补贴约10.15个亿，重点围绕动力电池与电池管理、电机驱动与电力电子、电动汽车智能化、燃料电池动力系统等6个技术方向，部署38个重点研究任务。</span></div>	<a href="@{MainController.content()}">关于对国家重点研发计划“新能源汽车”等10个重点专项2016年度项目安排进行公示的通知</a>
                                 
                             </div>
                         </td>
@@ -148,7 +148,7 @@
                     	<td >
                             <div class="tooltips"> 
                             	<div class="tooltips1">
-                                <span class="top1">新能源汽车领域有19个重点项目入选，共计划补贴约10.15个亿，重点围绕动力电池与电池管理、电机驱动与电力电子、电动汽车智能化、燃料电池动力系统等6个技术方向，部署38个重点研究任务。</span></div>	<a href="@{Controller.content()}">关于对国家重点研发计划“新能源汽车”等10个重点专项2016年度项目安排进行公示的通知</a>
+                                <span class="top1">新能源汽车领域有19个重点项目入选，共计划补贴约10.15个亿，重点围绕动力电池与电池管理、电机驱动与电力电子、电动汽车智能化、燃料电池动力系统等6个技术方向，部署38个重点研究任务。</span></div>	<a href="@{MainController.content()}">关于对国家重点研发计划“新能源汽车”等10个重点专项2016年度项目安排进行公示的通知</a>
                                 
                             </div>
                         </td>
@@ -165,7 +165,7 @@
                     	<td >
                             <div class="tooltips"> 
                             	<div class="tooltips1">
-                                <span class="top1">新能源汽车领域有19个重点项目入选，共计划补贴约10.15个亿，重点围绕动力电池与电池管理、电机驱动与电力电子、电动汽车智能化、燃料电池动力系统等6个技术方向，部署38个重点研究任务。</span></div>	<a href="@{Controller.content()}">关于对国家重点研发计划“新能源汽车”等10个重点专项2016年度项目安排进行公示的通知</a>
+                                <span class="top1">新能源汽车领域有19个重点项目入选，共计划补贴约10.15个亿，重点围绕动力电池与电池管理、电机驱动与电力电子、电动汽车智能化、燃料电池动力系统等6个技术方向，部署38个重点研究任务。</span></div>	<a href="@{MainController.content()}">关于对国家重点研发计划“新能源汽车”等10个重点专项2016年度项目安排进行公示的通知</a>
                             </div>
                         </td>
                         <td>12345</td>
@@ -181,7 +181,7 @@
                     	<td >
                             <div class="tooltips"> 
                             	<div class="tooltips1">
-                                <span class="top1">新能源汽车领域有19个重点项目入选，共计划补贴约10.15个亿，重点围绕动力电池与电池管理、电机驱动与电力电子、电动汽车智能化、燃料电池动力系统等6个技术方向，部署38个重点研究任务。</span></div>	<a href="@{Controller.content()}">关于对国家重点研发计划“新能源汽车”等10个重点专项2016年度项目安排进行公示的通知</a>
+                                <span class="top1">新能源汽车领域有19个重点项目入选，共计划补贴约10.15个亿，重点围绕动力电池与电池管理、电机驱动与电力电子、电动汽车智能化、燃料电池动力系统等6个技术方向，部署38个重点研究任务。</span></div>	<a href="@{MainController.content()}">关于对国家重点研发计划“新能源汽车”等10个重点专项2016年度项目安排进行公示的通知</a>
                                 
                             </div>
                         </td>
@@ -206,7 +206,7 @@
 				<div class="input-append" style="float:left; width:24%;">
       				<button class="btn" type="button" style=" font-size:13px; padding:2px 10px; margin-right:10px;">下载</button>
 					<button class="btn" type="button" style=" font-size:13px; padding:2px 10px;margin-right:10px;">收藏</button>
-					<button class="btn"  onclick="window.location.href='@{Controller.interpret_upload()}'" type="button" style=" font-size:13px; padding:2px 10px;">上传</button>
+					<button class="btn"  onclick="window.location.href='@{MainController.interpret_upload()}'" type="button" style=" font-size:13px; padding:2px 10px;">上传</button>
     			</div>
 			
 			
@@ -236,7 +236,7 @@
 	
 	<div class="container_right">
 		
-		<a style="width:40px;float:right;" class="btn btn-primary btn-large" href="@{Controller.index()}">返回</a>
+		<a style="width:40px;float:right;" class="btn btn-primary btn-large" href="@{MainController.index()}">返回</a>
 		
 		<!---->
 		<div style="margin-top:44px;">
