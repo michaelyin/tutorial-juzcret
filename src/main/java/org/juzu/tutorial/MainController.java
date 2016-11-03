@@ -40,9 +40,9 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
-public class Controller {
+public class MainController {
 	
-  private static final Log LOG = ExoLogger.getExoLogger(Controller.class);
+  private static final Log LOG = ExoLogger.getExoLogger(MainController.class);
 	
   @Inject
   UserService userService;
