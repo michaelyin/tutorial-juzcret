@@ -45,6 +45,10 @@ public class NationalStandardController {
 	  @Path("index.gtmpl")
 	  Template index;
 	  
+	  @Inject
+	  @Path("map.gtmpl")
+	  Template map;
+	  
 	 /*----------------------分割线--------------------------------*/ 
 	  
 	  @Assets({"classifyFindcss","classifyFindjs"})
@@ -57,6 +61,11 @@ public class NationalStandardController {
 	  @View
 	  public Response.Content interpret_upload() throws IOException {
 	    return input_interpret.ok();
+	  }
+	  
+	  @View
+	  public Response.Content back() throws IOException{
+		  return map.ok();
 	  }
 	  
 	  @Assets({"indexcss", "indexjs"})  
