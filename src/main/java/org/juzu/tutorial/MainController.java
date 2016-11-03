@@ -40,9 +40,9 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
-public class Controller {
+public class MainController {
 	
-  private static final Log LOG = ExoLogger.getExoLogger(Controller.class);
+  private static final Log LOG = ExoLogger.getExoLogger(MainController.class);
 	
   @Inject
   UserService userService;
@@ -53,7 +53,7 @@ public class Controller {
  // @Inject
  // private IdentityManager identityManager;
 /*-----下面是我的修改2016-10-27 15:40:38-------------------*/
-  @Inject
+  /*@Inject
   @Path("classifyFind.gtmpl")
   Template classifyFind;
   
@@ -87,7 +87,7 @@ public class Controller {
   
   @Inject
   @Path("xiangMuFaBu.gtmpl")
-  Template xiangMuFaBu;
+  Template xiangMuFaBu;*/
   
   /*----------上面是我的修改2016-10-27 15:41:11---------------------*/
   @Inject
@@ -101,9 +101,12 @@ public class Controller {
   @Inject
   @Path("input_interpret.gtmpl")
   Template input_interpret;
+  
+  @Inject
+  @Path("content.gtmpl")
+  Template content;
 
-  @Assets({"indexcss", "indexjs"})
-  //@Assets("indexcss")
+  @Assets({"indexcss", "indexjs"})  
   @View
   public Response.Content index(SecurityContext securityContext) throws IOException {
 	  String username = securityContext.getRemoteUser();//从服务器端获取用户名
@@ -153,8 +156,13 @@ public class Controller {
     return input_interpret.ok();
   }
   
-  /*----------下面是我的修改2016-10-27 15:43:18--------*/
   @Assets({"classifyFindcss","classifyFindjs"})
+  @View
+  public Response.Content content() throws IOException {
+	  return content.ok();
+  }
+  /*----------下面是我的修改2016-10-27 15:43:18--------*/
+  /*@Assets({"classifyFindcss","classifyFindjs"})
   @View
   public Response.Content content() throws IOException {
 	  return content.ok();
@@ -212,7 +220,7 @@ public class Controller {
   @View
   public Response.Content zuiXinXiangMu() throws IOException{
 	  return xiangMuFaBu.ok();
-  }
+  }*/
   
   
   /*-------------上面是我的修改2016-10-27 15:43:46-----------------*/
