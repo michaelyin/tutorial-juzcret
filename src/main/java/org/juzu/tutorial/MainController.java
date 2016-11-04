@@ -101,6 +101,7 @@ public class MainController {//主函数
 	  return map.ok();
   }
   
+  @Assets({"zhengCeFaBujs","zhengCeFaBucss"})
   @View
   public Response.Content zhengCeFaBu()throws IOException{
 	  return zhengCeFaBu.ok();
