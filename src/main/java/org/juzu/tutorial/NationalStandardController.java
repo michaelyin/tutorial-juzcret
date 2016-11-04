@@ -38,10 +38,6 @@ public class NationalStandardController {
 	  Template content;
 	  
 	  @Inject
-	  @Path("input_interpret.gtmpl")
-	  Template input_interpret;
-	  
-	  @Inject
 	  @Path("index.gtmpl")
 	  Template index;
 	  
@@ -49,18 +45,35 @@ public class NationalStandardController {
 	  @Path("map.gtmpl")
 	  Template map;
 	  
+	  @Inject
+	  @Path("guoJiaBiaozhun.gtmpl")
+	  Template guoJiaBiaozhun;
+	  @Inject
+	  @Path("biaoZhunFaBu.gtmpl")
+	  Template biaoZhunFaBu;
+	  
 	 /*----------------------分割线--------------------------------*/ 
+	  
+	  
+	  @Assets({"guoJiaBiaozhunjs","guoJiaBiaozhuncss"})
+	  @View
+	  public Response.Content guoJiaBiaozhun() throws IOException{
+		  return guoJiaBiaozhun.ok();
+	  }
+	  @View
+	  public Response.Content zuiXinBiaoZhun() throws IOException{
+		  return biaoZhunFaBu.ok();
+	  }
+	  
+	  @View
+	  public Response.Content interpretUpload() throws IOException{
+		  return guoJiaBiaozhun.ok();
+	  }
 	  
 	  @Assets({"classifyFindcss","classifyFindjs"})
 	  @View
 	  public Response.Content content() throws IOException {
 		  return content.ok();
-	  }
-	  
-	  @Assets("input_interpretcss")
-	  @View
-	  public Response.Content interpret_upload() throws IOException {
-	    return input_interpret.ok();
 	  }
 	  
 	  @View
