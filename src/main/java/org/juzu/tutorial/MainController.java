@@ -40,7 +40,7 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
-public class MainController {
+public class MainController {//主函数
 	
   private static final Log LOG = ExoLogger.getExoLogger(MainController.class);
 	
