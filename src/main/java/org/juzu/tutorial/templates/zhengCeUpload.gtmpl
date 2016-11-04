@@ -8,7 +8,7 @@
 		
 		
 		<div class="input-append" style="width:95%;">
-   			<button type="button"  onclick="window.location.href='@{Controller.back()}'" class="btn btn-block btn-primary" style="width:10%; float:right;">返回</button>
+   			<button type="button"  onclick="window.location.href='@{LocalPolicyController.back()}'" class="btn btn-block btn-primary" style="width:10%; float:right;">返回</button>
    		</div>
 		
 		<div class="input-append">
