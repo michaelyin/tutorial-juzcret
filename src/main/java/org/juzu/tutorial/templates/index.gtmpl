@@ -2,7 +2,7 @@
 <div class="container">
 		<div class="container_center">
 			<div>
-				
+			
 			
 			</div>
 			
@@ -25,10 +25,10 @@
 			
 			<div style="width:28%; height:120px; background:#FFFFFF; float:left;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px; margin-left:8%;" onmouseover="move_in(this)"  onmouseout="move_out(this)" onclick="window.location.href='@{MainController.map()}'">
 				
-				<h3 style="font-size:20px; text-align:center; padding-top:20px;"><a href="@{MainController.map()}">地方政策详解</a></h3>
+				<h3 style="font-size:20px; text-align:center; padding-top:20px;"><a href="@{LocalPolicyController.map()}">地方政策详解</a></h3>
 				
 				<div style="text-align:center; padding-top:10px; font-size:14px;text-decoration:underline;">
-					<a href="@{MainController.map_new()}">最新分类</a>
+					<a href="@{LocalPolicyController.map_new()}">最新分类</a>
 				</div>
 			
 			</div>
@@ -50,20 +50,20 @@
 			
 			<div style="width:28%; height:120px; background:#FFFFFF; float:left;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px; margin-top:80px; margin-left:16%;" onmouseover="move_in(this)"  onmouseout="move_out(this)" onclick="window.location.href='@{MainController.guoJiaBiaozhun()}'">
 				
-				<h3 style="font-size:20px; text-align:center; padding-top:20px;"><a href="@{MainController.guoJiaBiaozhun()}">国家标准</a></h3>
+				<h3 style="font-size:20px; text-align:center; padding-top:20px;"><a href="@{NationalStandardController.guoJiaBiaozhun()}">国家标准</a></h3>
 				
 				<div style="text-align:center; padding-top:10px; font-size:14px;text-decoration:underline;">
-					<a href="@{MainController.zuiXinBiaoZhun()}" >最新标准</a>
+					<a href="@{NationalStandardController.zuiXinBiaoZhun()}" >最新标准</a>
 				</div>
 			</div>
 			
 			
-			<div style="width:28%; height:120px; background:#FFFFFF; float:left;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px; margin-top:80px; margin-left:16%;" onmouseover="move_in(this)"  onmouseout="move_out(this)" onclick="window.location.href='@{MainController.classifyFind()}'">
+			<div style="width:28%; height:120px; background:#FFFFFF; float:left;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px; margin-top:80px; margin-left:16%;" onmouseover="move_in(this)"  onmouseout="move_out(this)" onclick="window.location.href='index.html'">
 				
-				<h3 style="font-size:20px; text-align:center; padding-top:20px;"><a href="@{MainController.classifyFind()}">项目</a></h3>
+				<h3 style="font-size:20px; text-align:center; padding-top:20px;"><a href="index2.html">项目</a></h3>
 				
 				<div style="text-align:center; padding-top:10px; font-size:14px;text-decoration:underline;">
-					<a href="@{MainController.zuiXinXiangMu()}" >最新项目</a>
+					<a href="zuiXinXiangMu.html" >最新项目</a>
 				</div>
 			</div>
 			
