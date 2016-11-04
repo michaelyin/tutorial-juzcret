@@ -48,48 +48,8 @@ public class MainController {
   UserService userService;
   
   @Inject
-  PolicyService policySvc;
-  
- // @Inject
- // private IdentityManager identityManager;
-/*-----下面是我的修改2016-10-27 15:40:38-------------------*/
-  /*@Inject
-  @Path("classifyFind.gtmpl")
-  Template classifyFind;
-  
-  @Inject
-  @Path("content.gtmpl")
-  Template content;
-  
-  @Inject
-  @Path("guoJiaBiaozhun.gtmpl")
-  Template guoJiaBiaozhun;    
-  
-  @Inject
-  @Path("map.gtmpl")
-  Template map;
-  
-  @Inject
-  @Path("zhengCeFaBu.gtmpl")
-  Template zhengCeFaBu;
-  
-  @Inject
-  @Path("zhengCeUpload.gtmpl")
-  Template zhengCeUpload;
-  
-  @Inject
-  @Path("jieDuUpload.gtmpl")
-  Template jieDuUpload;
-  
-  @Inject
-  @Path("biaoZhunFaBu.gtmpl")
-  Template biaoZhunFaBu;
-  
-  @Inject
-  @Path("xiangMuFaBu.gtmpl")
-  Template xiangMuFaBu;*/
-  
-  /*----------上面是我的修改2016-10-27 15:41:11---------------------*/
+  PolicyService policySvc;  
+
   @Inject
   @Path("index.gtmpl")
   Template index;
@@ -97,14 +57,54 @@ public class MainController {
   @Inject
   @Path("interpretation.gtmpl")
   Template interpretation;
-  
-  @Inject
-  @Path("input_interpret.gtmpl")
-  Template input_interpret;
-  
+   
   @Inject
   @Path("content.gtmpl")
   Template content;
+  
+  @Inject
+  @Path("zhengCeFaBu.gtmpl")
+  Template zhengCeFaBu;
+  
+  @Inject
+  @Path("map.gtmpl")
+  Template map;
+  
+  @Inject
+  @Path("guoJiaBiaozhun.gtmpl")
+  Template guoJiaBiaozhun;
+    
+  @Inject
+  @Path("biaoZhunFaBu.gtmpl")
+  Template biaoZhunFaBu;
+  
+
+  
+  @Inject
+  @Path("jieDuUpload.gtmpl")
+  Template jieDuUpload;
+  /*----------------分割线----------------------*/
+  
+  
+  @View
+  public Response.Content interpretUpload() throws IOException{
+	  return jieDuUpload.ok();
+  }
+  @View
+  public Response.Content map_new() throws IOException{
+	  return map.ok();
+  }
+  
+  @Assets({"mapjs","mapcss"})
+  @View
+  public Response.Content map() throws IOException {
+	  return map.ok();
+  }
+  
+  @View
+  public Response.Content zhengCeFaBu()throws IOException{
+	  return zhengCeFaBu.ok();
+  }
 
   @Assets({"indexcss", "indexjs"})  
   @View
@@ -116,18 +116,15 @@ public class MainController {
 	  
 	  try{//异常处理
 		  
-		  Identity identity = ConversationState.getCurrent().getIdentity();//获取验证信息
-		  //org.exoplatform.social.core.identity.model.Identity identity = identityManager.getOrCreateIdentity(OrganizationIdentityProvider.NAME, username, true);
-		  List<String> ms =UserUtil.getMemberships(identity);//把验证信息放到集合中
+		  Identity identity = ConversationState.getCurrent().getIdentity();		
+		  List<String> ms =UserUtil.getMemberships(identity);
 	     	  
 		  for (String m : ms) {
-			  LOG.info("membership: " + m);//用增强for循环把成员信息放到日志中
+			  LOG.info("membership: " + m);
 		  }
-	  }catch(Exception e){//捕获异常信息并提示
+	  }catch(Exception e){
 		  LOG.error(e);
-	  }
-	  
-	  
+	  }	  
 	  if(setting != null){//setting不为空则获取setting的用户名信息到日志中
 		  LOG.info("user setting: " + setting.getUsername());
 	  }
@@ -142,24 +139,38 @@ public class MainController {
 	  policy.setStartDate(new Date());//并加上日期
 	  this.policySvc.save(policy);//把policy的信息保存
 	  
-      return index.ok();//最后返回到index页面
+      return index.ok();
   }
   @Assets({"interpretationjs","interpretationcss"})
   @View
   public Response.Content interpretation() throws IOException {
     return interpretation.ok();
   }
+    
   
-  @Assets("input_interpretcss")
-  @View
-  public Response.Content interpret_upload() throws IOException {
-    return input_interpret.ok();
-  }
-  
-  @Assets({"classifyFindcss","classifyFindjs"})
   @View
   public Response.Content content() throws IOException {
 	  return content.ok();
+  }
+  
+  @Assets({"guoJiaBiaozhunjs","guoJiaBiaozhuncss"})
+  @View
+  public Response.Content guoJiaBiaozhun() throws IOException{
+	  return guoJiaBiaozhun.ok();
+  }
+ 
+  @View
+  public Response.Content zuiXinBiaoZhun() throws IOException{
+	  return biaoZhunFaBu.ok();
+  }
+ 
+  @View
+  public Response.Content back() throws IOException{
+	  return map.ok();
+  }
+  @View
+  public Response.Content notes_add_touch() throws IOException{
+	  return jieDuUpload.ok();
   }
   /*----------下面是我的修改2016-10-27 15:43:18--------*/
   /*@Assets({"classifyFindcss","classifyFindjs"})
