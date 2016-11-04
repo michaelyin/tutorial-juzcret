@@ -7,7 +7,7 @@
 		
 		
 		<div class="input-append" style="width:95%;">
-   			<button type="button"  onclick="window.location.href='@{Controller.back()}'" class="btn btn-block btn-primary" style="width:10%; float:right;">返回</button>
+   			<button type="button"  onclick="window.location.href='@{MainController.back()}'" class="btn btn-block btn-primary" style="width:10%; float:right;">返回</button>
    		</div>
 		<form id="form1" method="post" name="f1" enctype="multipart/form-data">
 		<div class="input-append">
@@ -606,7 +606,7 @@
 		
 		
 		<div class="input-append" style="width:95%;">
-   			<button type="button" class="btn btn-block btn-primary" style="width:10%; float:right;" onClick="window.location.href='@{Controller.notes_add_touch()}'">提交</button>
+   			<button type="button" class="btn btn-block btn-primary" style="width:10%; float:right;" onClick="window.location.href='@{MainController.notes_add_touch()}'">提交</button>
    		</div>
         </form>
        </div>
