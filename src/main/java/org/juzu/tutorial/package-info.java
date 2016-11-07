@@ -26,14 +26,18 @@
 
 @Scripts({
     @Script(id = "indexjs", value = "js/index.js", location=AssetLocation.APPLICATION),
-    
+    @Script(id = "standardsjs",value ="js/standards.js",location=AssetLocation.APPLICATION),
+    @Script(id = "new_standardsjs",value ="js/new_standards.js",location=AssetLocation.APPLICATION),
     
 })
 
 @Stylesheets ({
     @Stylesheet(id = "indexcss", value = "styles/index.css", location = AssetLocation.APPLICATION),
-    @Stylesheet(id = "input_interpretcss", value = "styles/input_interpret.css", location = AssetLocation.APPLICATION),
-   
+    @Stylesheet(id = "standardscss", value = "styles/standards.css", location = AssetLocation.APPLICATION),
+    @Stylesheet(id = "new_standardscss", value = "styles/new_standards.css", location = AssetLocation.APPLICATION),
+
+
+    
 })
 
 

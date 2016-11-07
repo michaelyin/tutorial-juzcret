@@ -25,7 +25,7 @@ import net.wyun.qys.util.UserUtil;
 
 public class NationalStandardController {
 
-	private static final Log LOG = ExoLogger.getExoLogger(NationalStandardController.class);
+	private static final Log LOG = ExoLogger.getExoLogger(NationalStandardController.class);	
 	
 	  @Inject
 	  UserService userService;
@@ -50,15 +50,17 @@ public class NationalStandardController {
 	  Template content;
 	  
 	/* ----------------------分割线-------------------------------- */
-	  
+	  @Assets({"standardscss", "standardsjs"}) 
 	  @View
 	  public Response.Content standards() throws IOException{
 		  return standards.ok();
 	  }
+	  @Assets({"new_standardscss","new_standardsjs"})
 	  @View
 	  public Response.Content new_standards() throws IOException{
 		  return new_standards.ok();
 	  }
+	  
 	  @View 
 	  public Response.Content back() throws IOException{
 		  return standards.ok();
@@ -72,12 +74,16 @@ public class NationalStandardController {
 	  public Response.Content update_data() throws IOException{
 		  return standards_upload.ok();
 	  }
+	  @View 
 	  public Response.Content file_add() throws IOException{
 		  return standards_upload.ok();
 	  }
+	  @View 
 	  public Response.Content file_delete() throws IOException{
 		  return standards_upload.ok();
 	  }
+	  
+	  @View 
 	  public Response.Content notes_add_touch() throws IOException{
 		  return standards_upload.ok();
 	  }

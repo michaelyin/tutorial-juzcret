@@ -43,7 +43,7 @@ import java.util.List;
 public class MainController {
 	
   private static final Log LOG = ExoLogger.getExoLogger(MainController.class);
-	
+
   @Inject
   UserService userService;
   
