@@ -37,9 +37,7 @@ public class NationalStandardController {
 	  @Path("content.gtmpl")
 	  Template content;
 	  
-	  @Inject
-	  @Path("index.gtmpl")
-	  Template index;
+	  
 	  
 	  @Inject
 	  @Path("map.gtmpl")
@@ -81,40 +79,7 @@ public class NationalStandardController {
 		  return map.ok();
 	  }
 	  
-	  @Assets({"indexcss", "indexjs"})  
-	  @View
-	  public Response.Content index(SecurityContext securityContext) throws IOException {
-		  String username = securityContext.getRemoteUser();
-		  LOG.info("user: " + username);
-		  UserSetting setting = userService.getUserSetting(username);
-		  net.wyun.qys.model.User u = userService.loadUser(username);
-		  
-		  try{			  
-			  Identity identity = ConversationState.getCurrent().getIdentity();
-			  //org.exoplatform.social.core.identity.model.Identity identity = identityManager.getOrCreateIdentity(OrganizationIdentityProvider.NAME, username, true);
-			  List<String> ms =UserUtil.getMemberships(identity);
-		     	  
-			  for (String m : ms) {
-				  LOG.info("membership: " + m);
-			  }
-		  }catch(Exception e){
-			  LOG.error(e);
-		  }		  
-		  
-		  if(setting != null){
-			  LOG.info("user setting: " + setting.getUsername());
-		  }
-		  if(u != null){
-			  LOG.info("user avatar: " + u.getAvatar());
-		  }
-		  LOG.info("save policy");
-		  Policy policy = new Policy();
-		  policy.setPolicyName("test db saving");
-		  policy.setStartDate(new Date());
-		  this.policySvc.save(policy);
-		  
-	      return index.ok();
-	  }
+	  
 	  
 	  
 }

@@ -38,9 +38,7 @@ public class LocalPolicyController {
 	  @Path("zhengCeFaBu.gtmpl")
 	  Template zhengCeFaBu;
 	  
-	  @Inject
-	  @Path("index.gtmpl")
-	  Template index;
+	 
 	  
 	  @Inject
 	  @Path("map.gtmpl")
@@ -67,44 +65,7 @@ public class LocalPolicyController {
 		  return map.ok();
 	  }
 	  
-	  @Assets({"indexcss", "indexjs"})  
-	  @View
-	  public Response.Content index(SecurityContext securityContext) throws IOException {
-		  String username = securityContext.getRemoteUser();//从服务器端获取用户名
-		  LOG.info("user: " + username);
-		  UserSetting setting = userService.getUserSetting(username);// ?
-		  net.wyun.qys.model.User u = userService.loadUser(username);// ?
-		  
-		  try{//异常处理
-			  
-			  Identity identity = ConversationState.getCurrent().getIdentity();//获取验证信息
-			  //org.exoplatform.social.core.identity.model.Identity identity = identityManager.getOrCreateIdentity(OrganizationIdentityProvider.NAME, username, true);
-			  List<String> ms =UserUtil.getMemberships(identity);//把验证信息放到集合中
-		     	  
-			  for (String m : ms) {
-				  LOG.info("membership: " + m);//用增强for循环把成员信息放到日志中
-			  }
-		  }catch(Exception e){//捕获异常信息并提示
-			  LOG.error(e);
-		  }
-		  
-		  
-		  if(setting != null){//setting不为空则获取setting的用户名信息到日志中
-			  LOG.info("user setting: " + setting.getUsername());
-		  }
-		  if(u != null){//u不为空则获取u的唯一标识到日志中
-			  LOG.info("user avatar: " + u.getAvatar());
-		  }
-		  
-		  //try policySvc
-		  LOG.info("save policy");
-		  Policy policy = new Policy();//实例化一个policy
-		  policy.setPolicyName("test db saving");//实例化赋初值
-		  policy.setStartDate(new Date());//并加上日期
-		  this.policySvc.save(policy);//把policy的信息保存
-		  
-	      return index.ok();//最后返回到index页面
-	  }
+	 
 	  
 	  
 	  

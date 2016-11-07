@@ -450,7 +450,7 @@
 	
 	<div class="container_right">
 		
-		<a style="width:40px; float:right;" class="btn btn-primary btn-large" href="@{LocalPolicyController.index()}">返回</a>
+		<a style="width:40px; float:right;" class="btn btn-primary btn-large" href="@{MainController.index()}">返回</a>
 		
 		
 		<!---->
