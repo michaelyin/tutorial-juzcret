@@ -8,19 +8,19 @@
 		
 		
 		<div class="input-append" style="width:95%;">
-   			<button type="button"  onclick="window.location.href='@{NationalStandardController.back()}'" class="btn btn-block btn-primary" style="width:10%; float:right;">返回</button>
+   			<button type="button"  onclick="window.location.href='@NationalStandardController.back()'" class="btn btn-block btn-primary" style="width:10%; float:right;">返回</button>
    		</div>
 		 
-		
+		<form id="form1" method="post" name="f1" enctype="multipart/form-data">
 		<div class="input-append">
    			<span class="span_title">标准名称</span>
-			<input type="text">
+			<input type="text" id="standardName" name="standardName">
    		</div>
 		
 		<div></div>
 		<div class="input-append">
    			<span class="span_title">标准编号</span>
-			<input type="text">
+			<input type="text"  id="standardNum" name="standardNum">
    		</div>
 		
 		
@@ -28,39 +28,59 @@
 		<div class="input-append">
    			<span class="span_title">标准类型</span>
 			<div class="btn-group">
-				<input type="text" data-toggle="dropdown" >
+				<input type="text" data-toggle="dropdown" id="standardTypeTxt" name="standardTypeTxt">
 				
 				<ul class="dropdown-menu" style="padding:0px;">
-					<select multiple="multiple">
-  						<option>安全</option>
-  						<option>车身及悬架</option>
-  						<option>车轮</option>
-  						<option>材料</option>
-  						<option>灯光</option>
-						<option>底盘</option>
-  						<option>汽车电子与电磁兼容</option>
-  						<option>电器</option>
-  						<option>防盗</option>
-  						<option>回收利用</option>
-						<option>环保（不含排放）</option>
-  						<option>节能</option>
-  						<option>排放</option>
-  						<option>制动</option>
-  						<option>电动车辆</option>
-						<option>挂车</option>
-  						<option>客车</option>
-  						<option>专用车</option>
-  						<option>液化石油气汽车</option>
-  						<option>燃气汽车</option>
-						<option>仪表</option>
-  						<option>其他</option>
+					<select multiple="multiple" id="standardType" name="standardType" onchange="ShowToText()">
+  						<option value="1">安全</option>
+  						<option value="2">车身及悬架</option>
+  						<option value="3">车轮</option>
+  						<option value="4">材料</option>
+  						<option value="5">灯光</option>
+						<option value="6">底盘</option>
+  						<option value="7">汽车电子与电磁兼容</option>
+  						<option value="8">电器</option>
+  						<option value="9">防盗</option>
+  						<option value="10">回收利用</option>
+						<option value="11">环保（不含排放）</option>
+  						<option value="12">节能</option>
+  						<option value="13">排放</option>
+  						<option value="14">制动</option>
+  						<option value="15">电动车辆</option>
+						<option value="16">挂车</option>
+  						<option value="17">客车</option>
+  						<option value="18">专用车</option>
+  						<option value="19">液化石油气汽车</option>
+  						<option value="20">燃气汽车</option>
+						<option value="21">仪表</option>
+  						<option value="22">其他</option>
 					</select>
 				</ul>
    			</div>
 		</div>
+		<div class="input-append">
+   			<span class="span_title">标签&nbsp;&nbsp;</span>
+			
+			<div class="btn-group">
+				<input type="text" data-toggle="dropdown" id="tag" name="tag">
+				<ul class="dropdown-menu" style=" padding:0px;">
+					<select multiple="multiple"  id="selectTag" name="selectTag" onChange="ShowToTextTag()">
+  						<option value="标签1">标签1</option>
+  						<option value="标签2">标签2</option>
+  						<option value="标签3">标签3</option>
+						<option value="标签4">标签4</option>
+  						<option value="标签5">标签5</option>
+  						<option value="标签6">标签6</option>
+					</select>
+				</ul>
+			</div>
+   		</div>
 		
 		
 		
+		<div></div>
+		
+		<!--
 		<div id="myModal" aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" style="width: 420px; position: relative; display: none;" exo:minheight="200" exo:minwidth="200" class="UIPopupWindow uiPopup UIDragObject NormalStyle modal hide fade">
                             <div class="popupHeader ClearFix">
                                 <a onclick="" title="Close Window" class="uiIconClose pull-right">
@@ -143,42 +163,22 @@
 		
 		
 		<div></div>
-		<div class="input-append">
-   			<span class="span_title">标签&nbsp;&nbsp;</span>
-			
-			<div class="btn-group">
-				<input type="text" data-toggle="dropdown">
-				<ul class="dropdown-menu" style=" padding:0px;">
-					<select multiple="multiple">
-  						<option>标签1</option>
-  						<option>标签2</option>
-  						<option>标签3</option>
-						<option>标签4</option>
-  						<option>标签5</option>
-  						<option>标签6</option>
-					</select>
-				</ul>
-			</div>
-   		</div>
-		
-		
-		
-		<div></div>
+		-->
 		<div class="input-append">
    			<span class="span_title">创建人员</span>
-			<input type="text" readonly="readonly" id="people">
+			<input type="text" readonly="readonly" id="author" name="author" value="admin">
    		</div>
 		
 		<div></div>
 		<div class="input-append">
    			<span class="span_title">所属部门</span>
-			<input type="text" readonly="readonly" id="department">
+			<input type="text" readonly="readonly" id="department" name="department" value="部门1">
    		</div>
-		
+		<!--dept-->
 		<div></div>
 		<div class="input-append">
    			<span class="span_title">创建日期</span>
-			<input type="text" readonly="readonly" id="date">
+			<input type="text" readonly="readonly" id="createDate" name="createDate" value="">
    		</div>
 		
 		
@@ -186,16 +186,16 @@
 		<div class="input-append">
    			<span class="span_title">权限设置</span>
 			
-			<select multiple="multiple">
-  				<option>可见</option>
-  				<option>预览文件</option>
-  				<option>打印文件</option>
-  				<option>下载文件</option>
-				<option>修改文件</option>
-  				<option>删除文件</option>
-  				<option>发布文件</option>
-  				<option>转发文件</option>
-				<option>完全控制文件</option>
+			<select multiple="multiple" id="perm" name="perm">
+  				<option value="1">可见</option>
+  				<option value="2">预览文件</option>
+  				<option value="3">打印文件</option>
+  				<option value="4">下载文件</option>
+				<option value="5">修改文件</option>
+  				<option value="6">删除文件</option>
+  				<option value="7">发布文件</option>
+  				<option value="8">转发文件</option>
+				<option value="9">完全控制文件</option>
 			</select>
 			
    		</div>
@@ -205,69 +205,55 @@
 		<div class="input-append">
    			<span class="span_title">加密级别</span>
 			
-			<select style="height:38px;">
-  				<option>1级</option>
-  				<option>2级</option>
-  				<option>3级</option>
-  				<option>4级</option>
+			<select style="height:38px;" id="encrpLevel" name="encrpLevel">
+  				<option value="1">1级</option>
+  				<option value="2">2级</option>
+  				<option value="3">3级</option>
+  				<option value="4">4级</option>
 			</select>
    		</div>
 		
 		
 		<div></div>
 		<div class="input-append">
-   			<span class="span_title">标准原文</span>
-			
-			<textarea rows="5"></textarea>
-			
+   			<span class="span_title">标准原文</span>	
+				<textarea rows="5" name="text" id="text"></textarea>
 			<div></div>
 			
-			<!--
-			<a style="width:8%;  margin-left:25%; float:left;" class="btn btn-primary btn-large" href="#myModal" data-toggle="modal">上传文件</a>
-			-->
 			<div style="width:8%;  margin-left:25%; float:left; font-size:18px; line-height:26px; margin-right:20px;">上传文件</div>
 			
 			
-				<input type="file"  id="fileselect" name="fileselect[]" multiple="multiple" />
-			
+				
 			
 				<div style="clear:left;"></div>
 				
 				<div style="font-size:18px; margin-left:25%; width:70%; margin-top:30px;">
-					<!--
-					<form id="upload" action="index.html" method="POST" enctype="multipart/form-data">
-					-->
-						<input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="2000000" />
-						<div>
-							<!--
-							<input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
-							-->
-							<div id="filedrag" style=" width:100%; height:80px; line-height:80px; text-align:center; border:1px solid  #CCCCCC; margin-bottom:30px;">或者拖动文件到这里</div>
-							
-						</div>
-
-						<div id="submitbutton">
-							<button type="submit">上传文件</button>
-						</div>
-					<!--
-					</form>
-					-->
 					
-					<div id="messages" style="width:100%; min-height:80px; border:1px solid  #CCCCCC; margin-bottom:30px; padding-top:20px; padding-bottom:20px;">
+						<input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="20000000" />
+						
+						<div style="padding-bottom:15px">
+                                <input class="btn" type="button" style="font-size:13px; padding:2px 10px; margin-right:10px;" value="添加文件" id="fileselect"  onClick="window.location.href='@{NationalStandardController.file_add()}'"/>
+                                <input class="btn" type="button" style="font-size:13px; padding:2px 10px; margin-right:10px;" value="删除文件" id="fileselect2"  onClick="window.location.href='@{NationalStandardController.file_delete()}'"/>
+                                
+                        </div>
+						
+					
+					
+					<div id="messages" style="width:100%; min-height:80px; border:1px solid  #CCCCCC; margin-bottom:30px; padding-top:20px; padding-bottom:30px;">
 						<p>上传文件列表</p>
 					</div>
 				</div>	
 			
 			
 			
-			
    		</div>
+		<div></div>
 		
 		
 		<div class="input-append" style="width:95%;">
-   			<button type="button" class="btn btn-block btn-primary" style="width:10%; float:right;">提交</button>
+   			<button type="button" class="btn btn-block btn-primary" style="width:10%; float:right;" onclick="window.location.href='@{NationalStandardController.notes_add_touch()}'">提交</button>
    		</div>
-		
+		</form>
 		</div>
 		
 	</div>	

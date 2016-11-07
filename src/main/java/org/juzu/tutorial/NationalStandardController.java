@@ -25,7 +25,7 @@ import net.wyun.qys.util.UserUtil;
 
 public class NationalStandardController {
 
-	private static final Log LOG = ExoLogger.getExoLogger(MainController.class);
+	private static final Log LOG = ExoLogger.getExoLogger(NationalStandardController.class);
 	
 	  @Inject
 	  UserService userService;
@@ -34,51 +34,55 @@ public class NationalStandardController {
 	  PolicyService policySvc;
 	  
 	  @Inject
+	  @Path("standards.gtmpl")
+	  Template standards;
+	  
+	  @Inject
+	  @Path("standards_upload.gtmpl")
+	  Template standards_upload;
+	  
+	  @Inject
+	  @Path("new_standards.gtmpl")
+	  Template new_standards;
+	  
+	  @Inject
 	  @Path("content.gtmpl")
 	  Template content;
 	  
+	/* ----------------------分割线-------------------------------- */
 	  
-	  
-	  @Inject
-	  @Path("map.gtmpl")
-	  Template map;
-	  
-	  @Inject
-	  @Path("guoJiaBiaozhun.gtmpl")
-	  Template guoJiaBiaozhun;
-	  @Inject
-	  @Path("biaoZhunFaBu.gtmpl")
-	  Template biaoZhunFaBu;
-	  
-	 /*----------------------分割线--------------------------------*/ 
-	  
-	  
-	  @Assets({"guoJiaBiaozhunjs","guoJiaBiaozhuncss"})
 	  @View
-	  public Response.Content guoJiaBiaozhun() throws IOException{
-		  return guoJiaBiaozhun.ok();
+	  public Response.Content standards() throws IOException{
+		  return standards.ok();
 	  }
 	  @View
-	  public Response.Content zuiXinBiaoZhun() throws IOException{
-		  return biaoZhunFaBu.ok();
+	  public Response.Content new_standards() throws IOException{
+		  return new_standards.ok();
 	  }
-	  
-	  @View
-	  public Response.Content interpretUpload() throws IOException{
-		  return guoJiaBiaozhun.ok();
-	  }
-	  
-	  @Assets({"classifyFindcss","classifyFindjs"})
-	  @View
-	  public Response.Content content() throws IOException {
-		  return content.ok();
-	  }
-	  
-	  @View
+	  @View 
 	  public Response.Content back() throws IOException{
-		  return map.ok();
+		  return standards.ok();
+	  }
+	  @View 
+	  public Response.Content content() throws IOException{
+		  return content.ok();
+	  }	  
+	  
+	  @View 
+	  public Response.Content update_data() throws IOException{
+		  return standards_upload.ok();
+	  }
+	  public Response.Content file_add() throws IOException{
+		  return standards_upload.ok();
+	  }
+	  public Response.Content file_delete() throws IOException{
+		  return standards_upload.ok();
+	  }
+	  public Response.Content notes_add_touch() throws IOException{
+		  return standards_upload.ok();
 	  }
 	  
+	
 	  
 	  
 	  

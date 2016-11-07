@@ -22,5 +22,5 @@ $("#tcdPageCode").createPage({
 
 function update_data()
 {
-	window.location.href="input.html";
+	window.location.href="interpretation_upload.html";
 }	

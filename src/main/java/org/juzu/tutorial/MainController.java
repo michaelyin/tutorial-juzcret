@@ -40,7 +40,7 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
-public class MainController {//主函数
+public class MainController {
 	
   private static final Log LOG = ExoLogger.getExoLogger(MainController.class);
 	
@@ -54,58 +54,9 @@ public class MainController {//主函数
   @Path("index.gtmpl")
   Template index;
   
-  @Inject
-  @Path("interpretation.gtmpl")
-  Template interpretation;
-   
-  @Inject
-  @Path("content.gtmpl")
-  Template content;
   
-  @Inject
-  @Path("zhengCeFaBu.gtmpl")
-  Template zhengCeFaBu;
-  
-  @Inject
-  @Path("map.gtmpl")
-  Template map;
-  
-  @Inject
-  @Path("guoJiaBiaozhun.gtmpl")
-  Template guoJiaBiaozhun;
-    
-  @Inject
-  @Path("biaoZhunFaBu.gtmpl")
-  Template biaoZhunFaBu;
-  
-
-  
-  @Inject
-  @Path("jieDuUpload.gtmpl")
-  Template jieDuUpload;
   /*----------------分割线----------------------*/
-  
-  
-  @View
-  public Response.Content interpretUpload() throws IOException{
-	  return jieDuUpload.ok();
-  }
-  @View
-  public Response.Content map_new() throws IOException{
-	  return map.ok();
-  }
-  
-  @Assets({"mapjs","mapcss"})
-  @View
-  public Response.Content map() throws IOException {
-	  return map.ok();
-  }
-  
-  @Assets({"zhengCeFaBujs","zhengCeFaBucss"})
-  @View
-  public Response.Content zhengCeFaBu()throws IOException{
-	  return zhengCeFaBu.ok();
-  }
+
 
   @Assets({"indexcss", "indexjs"})  
   @View
@@ -142,98 +93,11 @@ public class MainController {//主函数
 	  
       return index.ok();
   }
-  @Assets({"interpretationjs","interpretationcss"})
-  @View
-  public Response.Content interpretation() throws IOException {
-    return interpretation.ok();
-  }
-    
+
+   
   
-  @View
-  public Response.Content content() throws IOException {
-	  return content.ok();
-  }
-  
-  @Assets({"guoJiaBiaozhunjs","guoJiaBiaozhuncss"})
-  @View
-  public Response.Content guoJiaBiaozhun() throws IOException{
-	  return guoJiaBiaozhun.ok();
-  }
- 
-  @View
-  public Response.Content zuiXinBiaoZhun() throws IOException{
-	  return biaoZhunFaBu.ok();
-  }
- 
-  @View
-  public Response.Content back() throws IOException{
-	  return map.ok();
-  }
-  @View
-  public Response.Content notes_add_touch() throws IOException{
-	  return jieDuUpload.ok();
-  }
-  /*----------下面是我的修改2016-10-27 15:43:18--------*/
-  /*@Assets({"classifyFindcss","classifyFindjs"})
-  @View
-  public Response.Content content() throws IOException {
-	  return content.ok();
-  }
-  
-  @Assets({"mapjs","mapcss"})
-  @View
-  public Response.Content map() throws IOException {
-	  return map.ok();
-  }
-  
-  @Assets({"guoJiaBiaozhunjs","guoJiaBiaozhuncss"})
-  @View
-  public Response.Content guoJiaBiaozhun() throws IOException{
-	  return guoJiaBiaozhun.ok();
-  }
-  
-  @Assets({"classifyFindjs","classifyFindcss"})
-  @View
-  public Response.Content classifyFind() throws IOException{
-	  return classifyFind.ok();
-  }
-  @View
-  public Response.Content zhengCeFaBu()throws IOException{
-	  return zhengCeFaBu.ok();
-  }
-  @View
-  public Response.Content zhengCeUpload() throws IOException{
-	  return zhengCeFaBu.ok();
-  }
-  
-  @View
-  public Response.Content back() throws IOException{
-	  return map.ok();
-  }
-  
-  @View
-  public Response.Content notes_add_touch() throws IOException{
-	  return jieDuUpload.ok();
-  }
-  
-  //最新分类
-  @View
-  public Response.Content map_new() throws IOException{
-	  return map.ok();
-  }
-  
- //最新标准
-  @View
-  public Response.Content zuiXinBiaoZhun() throws IOException{
-	  return biaoZhunFaBu.ok();
-  }
-  
-  //最新项目
-  @View
-  public Response.Content zuiXinXiangMu() throws IOException{
-	  return xiangMuFaBu.ok();
-  }*/
+
   
   
-  /*-------------上面是我的修改2016-10-27 15:43:46-----------------*/
+  
 }

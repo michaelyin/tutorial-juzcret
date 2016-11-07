@@ -33,40 +33,7 @@ public class LocalPolicyController {
 	  @Inject
 	  PolicyService policySvc;
 	  
-	  
-	  @Inject
-	  @Path("zhengCeFaBu.gtmpl")
-	  Template zhengCeFaBu;
-	  
-	 
-	  
-	  @Inject
-	  @Path("map.gtmpl")
-	  Template map;
-	  
-	  /*======================分割线=====================*/
-	  
-	  @View
-	  public Response.Content zhengCeUpload() throws IOException{
-		  return zhengCeFaBu.ok();
-	  }
-	  @View
-	  public Response.Content back() throws IOException{
-		  return map.ok();
-	  }
 	
-	  @Assets({"mapjs","mapcss"})
-	  @View
-	  public Response.Content map() throws IOException {
-		  return map.ok();
-	  }
-	  @View
-	  public Response.Content map_new() throws IOException{
-		  return map.ok();
-	  }
-	  
-	 
-	  
 	  
 	  
 }

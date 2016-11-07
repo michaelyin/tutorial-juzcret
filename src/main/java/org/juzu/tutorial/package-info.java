@@ -26,28 +26,14 @@
 
 @Scripts({
     @Script(id = "indexjs", value = "js/index.js", location=AssetLocation.APPLICATION),
-    /*下面是我添加的部分*/
-    @Script(id = "classifyFindjs", value = "js/classifyFind.js", location=AssetLocation.APPLICATION),
-    @Script(id = "interpretationjs",value="js/interpretation.js",location=AssetLocation.APPLICATION),
-    @Script(id = "mapjs",value="js/map.js",location=AssetLocation.APPLICATION),
-    @Script(id = "guoJiaBiaozhunjs",value="js/guoJiaBiaozhun.js",location=AssetLocation.APPLICATION),
-    @Script(id = "zhengCeFaBujs",value="js/zhengCeFaBu.js",location=AssetLocation.APPLICATION),
-    @Script(id = "car_infojs",value="js/car_info.js",location=AssetLocation.APPLICATION),
-    @Script(id = "biaoZhunFaBujs",value="js/biaoZhunFaBu.js",location=AssetLocation.APPLICATION),
+    
     
 })
 
 @Stylesheets ({
     @Stylesheet(id = "indexcss", value = "styles/index.css", location = AssetLocation.APPLICATION),
     @Stylesheet(id = "input_interpretcss", value = "styles/input_interpret.css", location = AssetLocation.APPLICATION),
-    /*下面是我添加的部分*/
-    @Stylesheet(id = "classifyFindcss", value = "styles/classifyFind.css", location = AssetLocation.APPLICATION),
-    @Stylesheet(id = "interpretationcss",value="styles/interpretation.css",location = AssetLocation.APPLICATION),
-    @Stylesheet(id = "mapcss",value="styles/map.css",location = AssetLocation.APPLICATION),
-    @Stylesheet(id = "guoJiaBiaozhuncss",value="styles/guoJiaBiaozhun.css",location = AssetLocation.APPLICATION),
-    @Stylesheet(id = "zhengCeFaBucss",value="styles/zhengCeFaBu.css",location = AssetLocation.APPLICATION),
-    @Stylesheet(id = "car_infocss",value="styles/car_info.css",location = AssetLocation.APPLICATION),
-    @Stylesheet(id = "biaoZhunFaBucss",value="styles/biaoZhunFaBu.css",location = AssetLocation.APPLICATION),
+   
 })
 
 
