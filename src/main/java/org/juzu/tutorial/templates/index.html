@@ -18,6 +18,7 @@
 <link href="http://app.aireading.cn/exo-ux/eXoSkin/skin/css/docs.css" rel="stylesheet">
 <link href="http://app.aireading.cn/exo-ux/eXoSkin/skin/css/responsive.css" rel="stylesheet">
 
+<link href="css/index.css" rel="stylesheet" type="text/css" />
 
 <!-- syntaxhighlighter -->
 <link href="http://app.aireading.cn/exo-ux/js/google-code-prettify/prettify.css" rel="stylesheet" type="text/css" />
@@ -30,53 +31,7 @@
 <!-- Le fav and touch icons -->
 <script src="http://app.aireading.cn/exo-ux/js/track.js" data-site-id="4f0dc9fef5a1f55508000013" id="gauges-tracker" async="" type="text/javascript"></script>
 <script src="http://app.aireading.cn/exo-ux/js/ga.js" async="" type="text/javascript"></script>
-<script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-146052-10']);
-        _gaq.push(['_trackPageview']);
-        (function() {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-</script>
-
-
-<style>
-
-body
-{
-	padding:0;
-	margin:0;
-	background:#578DC9;
-}
-
-.container
-{
-	width:970px;
-	padding:0;
-	margin:0;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-.container .container_center
-{
-	padding:30px 60px 60px 60px;
-}
-
-
-.box-shadow-6{  
-    box-shadow:-3px 0 3px green, /*左边阴影*/
-    3px 0 3px green, /*右边阴影*/
-    0 -3px 3px green, /*顶部阴影*/
-    0 3px 3px green; /*底边阴影*/
-}  
-
-</style>
+<script src="js/public.js" type="text/javascript"></script>
 
 </head>
 
@@ -104,12 +59,12 @@ body
 			<h1 style="width:48%; color:#FFFFFF; margin-left:auto; margin-right:auto; text-align:center; font-size:28px; border:1px #FFFFFF solid; margin-bottom:100px; margin-top:40px;">请选择您要检索的数据库</h1>
 			
 			
-			<div style="width:28%; height:120px; background:#FFFFFF; float:left;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px;" onmouseover="move_in(this)"  onmouseout="move_out(this)" onclick="click_one('index1.html')">
+			<div style="width:28%; height:120px; background:#FFFFFF; float:left;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px;" onmouseover="move_in(this)"  onmouseout="move_out(this)" onclick="click_one('interpretation.html')">
 				
-				<h3 style="font-size:20px; text-align:center; padding-top:20px;"><a href="index1.html">政策与解读</a></h3>
+				<h3 style="font-size:20px; text-align:center; padding-top:20px;"><a href="interpretation.html">政策与解读</a></h3>
 				
 				<div style="text-align:center; padding-top:10px; font-size:14px;text-decoration:underline;">
-					<a href="index1.html?new=1" >最新政策和解读</a>
+					<a href="new_interpretation.html" >最新政策和解读</a>
 				</div>
 				
 			</div>
@@ -130,10 +85,10 @@ body
 			
 			<div style="width:28%; height:120px; background:#FFFFFF; float:left;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px; margin-left:8%;" onmouseover="move_in(this)"  onmouseout="move_out(this)">
 				
-				<h3 style="font-size:20px; text-align:center; padding-top:20px;"><a href="">车型及产销</a></h3>
+				<h3 style="font-size:20px; text-align:center; padding-top:20px;"><a href="car_info.html">车型及产销</a></h3>
 				
 				<div style="text-align:center; padding-top:10px; font-size:14px;text-decoration:underline;">
-					<a href="">最新车型及产销</a>
+					<a href="#">最新车型及产销</a>
 				</div>
 			
 			</div>
@@ -141,22 +96,22 @@ body
 			<div style="clear:left;"></div>
 			
 			
-			<div style="width:28%; height:120px; background:#FFFFFF; float:left;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px; margin-top:80px; margin-left:16%;" onmouseover="move_in(this)"  onmouseout="move_out(this)" onclick="click_one('index3.html')">
+			<div style="width:28%; height:120px; background:#FFFFFF; float:left;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px; margin-top:80px; margin-left:16%;" onmouseover="move_in(this)"  onmouseout="move_out(this)" onclick="click_one('standards.html')">
 				
-				<h3 style="font-size:20px; text-align:center; padding-top:20px;"><a href="index3.html">国家标准</a></h3>
+				<h3 style="font-size:20px; text-align:center; padding-top:20px;"><a href="standards.html">国家标准</a></h3>
 				
 				<div style="text-align:center; padding-top:10px; font-size:14px;text-decoration:underline;">
-					<a href="index3.html?new=1" >最新标准</a>
+					<a href="new_standards.html" >最新标准</a>
 				</div>
 			</div>
 			
 			
-			<div style="width:28%; height:120px; background:#FFFFFF; float:left;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px; margin-top:80px; margin-left:16%;" onmouseover="move_in(this)"  onmouseout="move_out(this)" onclick="click_one('index2.html')">
+			<div style="width:28%; height:120px; background:#FFFFFF; float:left;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px; margin-top:80px; margin-left:16%;" onmouseover="move_in(this)"  onmouseout="move_out(this)" onclick="click_one('projects.html')">
 				
-				<h3 style="font-size:20px; text-align:center; padding-top:20px;"><a href="index2.html">项目</a></h3>
+				<h3 style="font-size:20px; text-align:center; padding-top:20px;"><a href="projects.html">项目</a></h3>
 				
 				<div style="text-align:center; padding-top:10px; font-size:14px;text-decoration:underline;">
-					<a href="index2.html?new=1" >最新项目</a>
+					<a href="new_projects.html" >最新项目</a>
 				</div>
 			</div>
 			
@@ -201,59 +156,5 @@ body
 	<script src="js/jquery.page.js"></script>
 	
     <!-- Analytics -->
-    <script>
-        var _gauges = _gauges || [];
-        (function() {
-            var t = document.createElement('script');
-            t.type = 'text/javascript';
-            t.async = true;
-            t.id = 'gauges-tracker';
-            t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
-            t.src = '//secure.gaug.es/track.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(t, s);
-        })();
-		
-		
-		
-		$("#tcdPageCode").createPage({
-        		pageCount:20,
-        		current:1,
-        		backFn:function(p){
-					
-			}
-    	});
-		
-		function back()
-		{
-			window.location.href="index1.html";
-		}
-		
-		function move_in(one)
-		{
-			$(one).addClass("box-shadow-6");
-		}
-		
-		function move_out(one)
-		{
-			$(one).removeClass("box-shadow-6");
-		}
-		
-		function click_one(one)
-		{
-			//window.location.href=one;
-		}
-		
-		
-		function user_register()
-		{
-			
-		}
-		
-		function user_login()
-		{
-			//如果没登录
-		}
-		
-    </script>
+    <script type="text/javascript" src="js/index.js"></script>
 </html>
