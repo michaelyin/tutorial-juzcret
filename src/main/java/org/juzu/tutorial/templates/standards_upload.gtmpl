@@ -80,91 +80,7 @@
 		
 		<div></div>
 		
-		<!--
-		<div id="myModal" aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" style="width: 420px; position: relative; display: none;" exo:minheight="200" exo:minwidth="200" class="UIPopupWindow uiPopup UIDragObject NormalStyle modal hide fade">
-                            <div class="popupHeader ClearFix">
-                                <a onclick="" title="Close Window" class="uiIconClose pull-right">
-                                    <div class="ClosePopup" style="width: 16px; height: 16px;" data-dismiss="modal"><span></span></div>
-                                </a>
-                                <span class="PopupTitle popupTitle">Attach File</span>
-                            </div>
-                            <div class="PopupContent popupContent">
-                                <div id="AttachFileForm" class="AttachFileForm">
-                                    <span id="UIPopupActionChildPopupAction" class="UIPopupActionChildPopupAction UIKSPopupAction"></span>
-                                    <div class="uiFormForum uiAttachFileForm">
-                                        <form method="post" enctype="multipart/form-data" action="/portal/intranet/forum?portal:componentId=c4775064-7711-4230-b877-5078c5b5212d&amp;interactionstate=JBPNS_rO0ABXcsAAt1aWNvbXBvbmVudAAAAAEAEFVJQXR0YWNoRmlsZUZvcm0AB19fRU9GX18*&amp;portal:type=action" id="UIAttachFileForm" class="UIForm">
-                                            <div>
-                                                <input value="" name="formOp" type="hidden">
-                                                <input value="AA17AB94C0A8012B35D8BBCC4C81958F" name="gtn:csrf" type="hidden">
-                                            </div>
-                                            <div class="resizable">
-                                                <div class="form-horizontal">
-                                                    <div class="control-group">
-                                                        <div class="controlUpload controls-full">
-                                                            <div class="uiUploadInput" id="upload">
-
-                                                                <div style="" class="uploadContainer" id="uploadContainer1526481975-0">
-                                                                    <div style="" class="selectFileFrame clearfix">
-                                                                        <div class="fileNameLabel" style="float: left;">exo-tomcat-platform-4.1.x</div>
-                                                                        <div class="removeFile pull-right" style="float: right;">
-                                                                            <a data-placement="bottom" rel="tooltip" class="actionIcon" href="#" data-original-title="Delete">
-                                                                                <i class="uiIconDelete uiIconLightGray"></i>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div style="" class="uploadContainer" id="uploadContainer1526481975-0">
-                                                                    <div style="" class="selectFileFrame clearfix">
-                                                                        <div class="fileNameLabel" style="float: left;">exo-image-ECMS-style4.1.x</div>
-                                                                        <div class="removeFile pull-right" style="float: right;">
-                                                                            <a data-placement="bottom" rel="tooltip" class="actionIcon" href="#" data-original-title="Delete">
-                                                                                <i class="uiIconDelete uiIconLightGray"></i>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div style="" class="uploadContainer" id="uploadContainer1526481975-0">
-                                                                    <div style="" class="progressBarFrame clearfix">
-                                                                        <span class="deleteFileLabel pull-right">
-												<a data-placement="bottom" rel="tooltip" class="actionIcon" href="#" data-original-title="Cancel">
-													<i class="uiIconRemove uiIconLightGray"></i>
-												</a>
-											</span>
-                                                                        <div class="fileNameLabel pull-left">exo-image-Forum-style...</div>
-                                                                        <div class="pull-left percent">50%</div>
-                                                                        <div class="progress  progress-striped">
-                                                                            <div style="width:50%" class="bar"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div style="" class="uploadContainer" id="uploadContainer430359469-0">
-                                                                    <div class="uploadButton">
-                                                                        <label class="btn">Select File</label>
-                                                                        <label style="display:none" class="noFile">No file selected</label>
-                                                                        <label style="" class="moreFiles">Select more files</label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="uiAction uiActionBorder">
-                                                <button type="button" class="btn" data-dismiss="modal">Save</button>
-                                                <button type="button" class="btn" data-dismiss="modal">Cancel</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <span class="uiIconResize pull-right uiIconLightGray"></span>
-                        </div>
-		
-		
-		
-		<div></div>
-		-->
-		<div class="input-append">
+				<div class="input-append">
    			<span class="span_title">创建人员</span>
 			<input type="text" readonly="readonly" id="author" name="author" value="admin">
    		</div>
@@ -221,9 +137,6 @@
 			<div></div>
 			
 			<div style="width:8%;  margin-left:25%; float:left; font-size:18px; line-height:26px; margin-right:20px;">上传文件</div>
-			
-			
-				
 			
 				<div style="clear:left;"></div>
 				
