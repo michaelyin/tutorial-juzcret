@@ -188,7 +188,7 @@
 				<div class="input-append" style="float:left; width:24%;">
       				<button class="btn" type="button" style=" font-size:13px; padding:2px 10px; margin-right:10px;">下载</button>
 					<button class="btn" type="button" style=" font-size:13px; padding:2px 10px;margin-right:10px;">收藏</button>
-					<button class="btn"  onclick="window.location.href='@NationalStandardController.update_data()'  " type="button" style=" font-size:13px; padding:2px 10px;">上传</button>
+					<button class="btn"  onclick="window.location.href='@{NationalStandardController.update_data()}'  " type="button" style=" font-size:13px; padding:2px 10px;">上传</button>
     			</div>
 			
 			
@@ -211,7 +211,7 @@
 	</div>
 	
 	<div class="container_right">
-		<a style="width:40px;float:right;" class="btn btn-primary btn-large" href="MainController.index()">返回</a>
+		<a style="width:40px;float:right;" class="btn btn-primary btn-large" href="@{MainController.index()}">返回</a>
 		
 		<!---->
 		<div style="margin-top:44px;">

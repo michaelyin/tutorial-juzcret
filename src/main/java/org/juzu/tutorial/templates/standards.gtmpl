@@ -405,7 +405,7 @@
                 	<tr>
                     	<td>
                         <div class="tooltips">
-                        <a href="NationalStandardController.content()">电动汽车非车载传导式充电机与电池管理系统之间的通信协议</a>
+                        <a href="@{NationalStandardController.content()}">电动汽车非车载传导式充电机与电池管理系统之间的通信协议</a>
                         	<div class="tooltips1">
                         		<span class="top2">显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示。</span>
                             </div>
@@ -419,7 +419,7 @@
 					<tr>
                     	<td>
                         <div class="tooltips">
-                        <a href="NationalStandardController.content()">电动汽车非车载传导式充电机与电池管理系统之间的通信协议</a>
+                        <a href="@{NationalStandardController.content()}">电动汽车非车载传导式充电机与电池管理系统之间的通信协议</a>
                         	<div class="tooltips1">
                         		<span class="top2">显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示。</span>
                             </div>
@@ -433,7 +433,7 @@
 					<tr>
                     	<td>
                         <div class="tooltips">
-                        <a href="NationalStandardController.content()">电动汽车非车载传导式充电机与电池管理系统之间的通信协议</a>
+                        <a href="@{NationalStandardController.content()}">电动汽车非车载传导式充电机与电池管理系统之间的通信协议</a>
                         	<div class="tooltips1">
                         		<span class="top2">显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示。</span>
                             </div>
@@ -447,7 +447,7 @@
 					<tr>
                     	<td>
                         <div class="tooltips">
-                        <a href="NationalStandardController.content()">电动汽车非车载传导式充电机与电池管理系统之间的通信协议</a>
+                        <a href="@{NationalStandardController.content()}">电动汽车非车载传导式充电机与电池管理系统之间的通信协议</a>
                         	<div class="tooltips1">
                         		<span class="top2">显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示。</span>
                             </div>
@@ -462,7 +462,7 @@
 					<tr>
                     	<td>
                         <div class="tooltips">
-                        <a href="NationalStandardController.content()">电动汽车非车载传导式充电机与电池管理系统之间的通信协议</a>
+                        <a href="@{NationalStandardController.content()}">电动汽车非车载传导式充电机与电池管理系统之间的通信协议</a>
                         	<div class="tooltips1">
                         		<span class="top2">显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示。</span>
                             </div>
@@ -476,7 +476,7 @@
 					<tr>
                     	<td>
                         <div class="tooltips">
-                        <a href="NationalStandardController.content()">电动汽车非车载传导式充电机与电池管理系统之间的通信协议</a>
+                        <a href="@{NationalStandardController.content()}">电动汽车非车载传导式充电机与电池管理系统之间的通信协议</a>
                         	<div class="tooltips1">
                         		<span class="top1">显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示。</span>
                             </div>
@@ -490,7 +490,7 @@
 					<tr>
                     	<td>
                         <div class="tooltips">
-                        <a href="NationalStandardController.content()">电动汽车非车载传导式充电机与电池管理系统之间的通信协议</a>
+                        <a href="@{NationalStandardController.content()}">电动汽车非车载传导式充电机与电池管理系统之间的通信协议</a>
                         	<div class="tooltips1">
                         		<span class="top1">显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示。</span>
                             </div>
@@ -504,7 +504,7 @@
 					<tr>
                     	<td>
                         <div class="tooltips">
-                        <a href="NationalStandardController.content()">电动汽车非车载传导式充电机与电池管理系统之间的通信协议</a>
+                        <a href="@{NationalStandardController.content()}">电动汽车非车载传导式充电机与电池管理系统之间的通信协议</a>
                         	<div class="tooltips1">
                         		<span class="top1">显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示注释显示。</span>
                             </div>
@@ -560,7 +560,7 @@
 	<div class="container_right">
 		<a href="#" style=" width:99px; margin-left:0px; margin-right:0px; margin-top:3px; display:block; float:left;font-size:14.5px;">在结果中搜索 </a>
 		
-		<a style="width:40px;float:right;" class="btn btn-primary btn-large" href="MainController.index()">返回</a>
+		<a style="width:40px;float:right;" class="btn btn-primary btn-large" href="@{MainController.index()}">返回</a>
 		
 		<!---->
 		<div style="margin-top:188px;">
