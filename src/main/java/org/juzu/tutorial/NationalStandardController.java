@@ -74,9 +74,36 @@ public class NationalStandardController {
 	  public Response.Content update_data() throws IOException{
 		  return standards_upload.ok();
 	  }
+	  
 	  @View 
 	  public Response.Content file_add() throws IOException{
-		  
+		 // 参数是：String appContext, String appSpace, String appFilter, String dataUuid, FileItem pic, RequestContext resourceContext
+		  /*boolean isPrivateContext = "Personal".equals(appContext);
+		    String name = (isPrivateContext)?resourceContext.getSecurityContext().getRemoteUser():appSpace;
+
+		    if (pic != null)
+		    {
+		      try{
+		    	  if (dataUuid!=null)
+		          {
+		            documentsData.storeFile(appFilter, pic, name, isPrivateContext, dataUuid);
+		            return Response.ok("<div style='background-color:#ffa; padding:20px'>File has been uploaded successfully!</div>")
+		                    .withMimeType("text/html; charset=UTF-8").withHeader("Cache-Control", "no-cache");
+		          }
+		          else
+		          {
+		            documentsData.storeFile(appFilter, pic, name, isPrivateContext);
+		            return Response.ok("{\"status\":\"File has been uploaded successfully!\"}")
+		                    .withMimeType("application/json; charset=UTF-8").withHeader("Cache-Control", "no-cache");
+		          }
+		      }catch(Exception e){
+		    	  String errorMsg = "file uploading error - " + e.getMessage();
+		    	  return Response.notFound("{\"error\":\"" + errorMsg + "\"}");
+		      }
+		    }
+
+		    return Response.notFound("{\"error\":\"file not found\"}");
+*/
 		  
 		  
 		  return standards_upload.ok();

@@ -28,14 +28,35 @@
     @Script(id = "indexjs", value = "js/index.js", location=AssetLocation.APPLICATION),
     @Script(id = "standardsjs",value ="js/standards.js",location=AssetLocation.APPLICATION),
     @Script(id = "new_standardsjs",value ="js/new_standards.js",location=AssetLocation.APPLICATION),
+    @Script(id = "filedragjs",value="js/filedrag.js",location=AssetLocation.APPLICATION),
+    @Script(id = "fileuploadjs",value="js/fileupload.js",location=AssetLocation.APPLICATION),
+    @Script(id = "jquery-1.8.3.minjs",value="js/jquery-1.8.3.min.js",location=AssetLocation.APPLICATION),
+    @Script(id = "jquery.filedropjs",value="js/jquery.filedrop.js",location=AssetLocation.APPLICATION),
+    @Script(id = "jquery.formjs",value="js/jquery.form.js",location=AssetLocation.APPLICATION),
+    @Script(id = "jquery.pagejs",value="js/jquery.page.js",location=AssetLocation.APPLICATION),
+    @Script(id = "jszip.minjs",value="js/jszip.min.js",location=AssetLocation.APPLICATION),
+    @Script(id = "libjs",value="js/lib.js",location=AssetLocation.APPLICATION),
+    @Script(id = "nlibjs",value="js/nlib.js",location=AssetLocation.APPLICATION),
+    @Script(id = "mouseoutjs",value="js/mouseout.js",location=AssetLocation.APPLICATION),
+    @Script(id = "mouseoverjs",value="js/mouseover.js",location=AssetLocation.APPLICATION),
+    @Script(id = "echartsjs",value="js/echarts.js",location=AssetLocation.APPLICATION),
+    @Script(id = "echarts.minjs",value="js/echarts.min.js",location=AssetLocation.APPLICATION),
+    @Script(id = "publicjs",value="js/public.js",location=AssetLocation.APPLICATION),
+    @Script(id = "scriptjs",value="js/script.js",location=AssetLocation.APPLICATION),
+    @Script(id = "searchjs",value="js/search.js",location=AssetLocation.APPLICATION),
+    
+    
     
 })
 
 @Stylesheets ({
     @Stylesheet(id = "indexcss", value = "styles/index.css", location = AssetLocation.APPLICATION),
     @Stylesheet(id = "standardscss", value = "styles/standards.css", location = AssetLocation.APPLICATION),
+    @Stylesheet(id = "searchcss", value = "styles/search.css", location = AssetLocation.APPLICATION),
     @Stylesheet(id = "new_standardscss", value = "styles/new_standards.css", location = AssetLocation.APPLICATION),
-
+    @Stylesheet(id = "assetscss", value = "styles/assets.css", location = AssetLocation.APPLICATION),
+    
+    
 
     
 })

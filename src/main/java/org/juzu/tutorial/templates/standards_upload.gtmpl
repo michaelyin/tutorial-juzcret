@@ -158,10 +158,8 @@
 				</div>	
 			
 			
-			
    		</div>
-		<div></div>
-		
+		<div></div>		
 		
 		<div class="input-append" style="width:95%;">
    			<button type="button" class="btn btn-block btn-primary" style="width:10%; float:right;" onclick="window.location.href='@{NationalStandardController.notes_add_touch()}'">提交</button>
