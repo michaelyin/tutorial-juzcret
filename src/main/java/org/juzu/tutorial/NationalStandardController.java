@@ -1,7 +1,6 @@
 package org.juzu.tutorial;
 
 import java.io.IOException;
-import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -17,14 +16,10 @@ import org.apache.commons.fileupload.FileItem;
 import org.exoplatform.commons.api.search.data.SearchResult;
 import org.exoplatform.services.log.ExoLogger;
 import org.exoplatform.services.log.Log;
-import org.exoplatform.services.security.ConversationState;
-import org.exoplatform.services.security.Identity;
 import org.exoplatform.services.wcm.search.connector.QysFileSearchServiceConnector;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import com.google.api.client.json.Json;
 
 import juzu.Path;
 import juzu.Resource;
@@ -36,16 +31,12 @@ import juzu.plugin.asset.Assets;
 import juzu.request.SecurityContext;
 import juzu.template.Template;
 import net.wyun.list.bean.File;
-import net.wyun.qys.domain.Policy;
-import net.wyun.qys.domain.UserSetting;
 import net.wyun.qys.domain.standard.StanJcrFile;
 import net.wyun.qys.domain.standard.StanTag;
 import net.wyun.qys.domain.standard.Standard;
 import net.wyun.qys.domain.standard.StandardType;
-import net.wyun.qys.service.PolicyService;
 import net.wyun.qys.service.StandardService;
 import net.wyun.qys.service.UserService;
-import net.wyun.qys.util.UserUtil;
 
 public class NationalStandardController {
 
