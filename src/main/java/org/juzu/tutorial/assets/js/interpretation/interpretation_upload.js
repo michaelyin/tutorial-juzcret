@@ -1,143 +1,286 @@
-		 var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-146052-10']);
-        _gaq.push(['_trackPageview']);
-        (function() {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-		
-		/*
-		$("#tcdPageCode").createPage({
-        		pageCount:20,
-        		current:1,
-        		backFn:function(p){
-					
-			}
-    	});
-		*/
-		
-		function back()
-		{
-		//index1.html
-			window.location.href="interpretation.html";
-		}
-		
-		
-		window.onload=function()
-		{
-			var people=http_get("people");
-			var department=http_get("department");
-			
-			$("#people").val(people);
-			$("#department").val(department);
-			$("#date").val(get_curr_time());
-		}
+var _gauges = _gauges || [];
+(function() {
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = true;
+	t.id = 'gauges-tracker';
+	t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+	t.src = '//secure.gaug.es/track.js';
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t, s);
+})();
 
-		//删除左右两端的空格
-		function trim(str)
-		{ 
-　　   		return str.replace(/(^s*)|(s*$)/g, "");
-　　 	}
-		function get_month_number(month)
+var imgPath = "/tutorial-juzcret/assets/net/wyun/";
+
+(function($){
+
+	$(document).ready(function(){
+		
+		$('#uploadSuccess').hide();
+		
+		$("#tcdPageCode").createPage({
+			pageCount:20,
+			current:1,
+			backFn:function(p){     }
+	    });
+		
+		$("#createDate").val(get_curr_time());
+		
+		$('#policyCategory').change(function(){
+			ShowToText2();
+		}); //(ShowToTextTag);
+		
+		$('#publishDept').change(function(){
+			ShowToText("publishDept");
+		});
+		
+		$('#file_add1').click(function(){
+			file_add();
+		});
+		
+		$('#file_del1').click(function(){
+			file_delete();
+		});
+		
+		$('#file_add2').click(function(){
+			file_add2();
+		});
+		
+		$('#file_del2').click(function(){
+			file_delete2();
+		});
+		
+		$("#dijiao").click(function(){
+
+			//validate form data before sending it to server
+			if(validateForm()){
+				$("#form1").submit();
+			};
+			
+		});
+		
+		//uploading data 
+		$("#form1").submit(function(e) {
+				 
+				    var formObj = $(this);
+				    var formURL = formObj.attr("action");
+				    var formData = new FormData(this);
+				    $.ajax({
+				        url: formURL,
+				        type: 'POST',
+				        data:  formData,
+				        dataType: 'text',
+				        mimeType:"multipart/form-data",
+				        contentType: false,
+				        cache: false,
+				        processData:false,
+				    success: function(data, textStatus, jqXHR)
+				    {
+				       console.log("post success: " + data);
+				       //handle data here:
+				       handle(data);
+				       
+				    },
+				     error: function(jqXHR, textStatus, errorThrown) 
+				     {
+				    	 alert('递交数据失败： ' + errorThrown);
+				     }          
+				    });
+				   // console.log("type of e: " + type(e));
+				    e.preventDefault(); //Prevent Default action. 
+				   // e.unbind();
+		}); 
+		
+		function handle(data){
+			//data: json data from server: standard
+			//refresh the upload page here
+			alert("递交数据成功！");
+			$('#uploadSuccess').show();
+			
+		}
+				
+		
+		function loadFiles(){
+			console.log("file upload successfully!");
+		}
+		
+		function getNowFormatDate() {
+			var date = new Date();
+			var seperator1 = "-";
+			var seperator2 = ":";
+			var month = date.getMonth() + 1;
+			var strDate = date.getDate();
+			var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+					+ " " + date.getHours() + seperator2 + date.getMinutes()
+					+ seperator2 + date.getSeconds();
+			return currentdate;
+		}
+		
+		document.getElementById("createDate").value = getNowFormatDate();
+		
+		function validateForm()
 		{
-			switch (month)
+			if($("#form1").find("input[name='standardName']").val()=="".trim())
 			{
-				case 'January':
-				  month = "1";
-				  break;
-				case 'February':
-				  month = "2";
-				  break;
-				case 'March':
-				  month = "3";
-				  break;
-				case 'April':
-				  month = "4";
-				  break;
-				case 'May':
-				  month = "5";
-				  break;
-				case 'June':
-				  month = "6";
-				  break;
-				case 'July':
-				  month = "7";
-				  break;
-				case 'August':
-				  month = "8";
-				  break;
-				case 'September':
-				  month = "9";
-				  break;
-				case 'October':
-				  month = "10";
-				  break;
-				case 'November':
-				  month = "11";
-				  break;
-				case 'December':
-				  month = "12";
-				  break;
+				alert("请输入标准名称！");
+				return false;
 			}
-			return month;
+			if($("#form1").find("input[name='standardNum']").val()=="".trim())
+			{
+				alert("请输入标准编号！");
+				return false;
+			}
+			if($("#form1").find("input[name='standardTypeTxt']").val()=="".trim())
+			{
+				alert("请输入标准类型！");
+				return false;
+			}
+			if($("#form1").find("input[name='tag']").val()=="".trim())
+			{
+				alert("请输入标签!");
+				return false;
+			}
+			if($("#form1").find("textarea[name='text']").val()=="".trim())
+			{
+				alert("请输入标准原文！");
+				return false;
+			}
+			
+			return true;	
 		}
-		function ShowCalendar(day)
+		
+		var image_count=0;
+		
+		function file_add()
 		{
-			//dateYM
-			var dateYM = document.getElementById("dateYM").innerHTML;
-			//alert(dateYM);
-			var dateArray = dateYM.split(",");
-			var year = trim(dateArray[1]);
-			//alert(year);
-			var month = trim(dateArray[0]);
-			var month = get_month_number(month);
-			//alert(month);
-			var dateTime = year+'-'+month+'-'+day;
-			//alert(dateTime);
-			document.getElementById("startDate").value = dateTime;
+			
+			var div_list=document.getElementById("messages");
+			var div_string=	"<div class=\"row\" style=\"margin-top:20px; padding-left:35%\">"+							
+								"<div class=\"\" id=\"preview"+image_count+"\" >"+
+									"<img src=\"/tutorial-juzcret/assets/net/wyun/img/use.jpg\" height=\"97\" width=\"148\"  id=\"imghead"+image_count+"\" class=\"img-responsive\" />"+
+								"</div>"+
+							"</div>"+
+							"<div class=\"row\" style=\"margin-top:10px; padding-left:35%\">"+
+								"<input type=\"file\"  name=\"tfiles\" onChange=\"previewImage(this,"+image_count+")\" />"+
+							"</div>";
+				
+			
+			var div_one=document.createElement("div");
+			div_one.innerHTML=div_string;
+			div_list.appendChild(div_one);
+			image_count+=1;
 		}
-		function ShowCalendar2(day)
+		
+		function file_delete()
 		{
-			//dateYM
-			var dateYM = document.getElementById("dateYM2").innerHTML;
-			//alert(dateYM);
-			var dateArray = dateYM.split(",");
-			var year = trim(dateArray[1]);
-			//alert(year);
-			var month = trim(dateArray[0]);
-			var month = get_month_number(month);
-			//alert(month);
-			var dateTime = year+'-'+month+'-'+day;
-			//alert(dateTime);
-			document.getElementById("activeDate").value = dateTime;
+			
+			if(image_count==0)
+			{
+				alert("图片列表为空");
+				return;
+			}
+			
+			var div_list=document.getElementById("messages");
+			
+			var has_child = div_list.hasChildNodes(); 
+			
+			if(has_child==false)
+			{
+				return;
+			}
+			
+			div_list.removeChild(div_list.childNodes[div_list.childNodes.length-1]);
+			
+			image_count-=1;
+			
 		}
-		function ShowCalendar3(day)
+		
+		var image_count2 = 0;
+		function file_add2()
 		{
-			//dateYM
-			var dateYM = document.getElementById("dateYM3").innerHTML;
-			//alert(dateYM);
-			var dateArray = dateYM.split(",");
-			var year = trim(dateArray[1]);
-			//alert(year);
-			var month = trim(dateArray[0]);
-			var month = get_month_number(month);
-			//alert(month);
-			var dateTime = year+'-'+month+'-'+day;
-			//alert(dateTime);
-			document.getElementById("endDate").value = dateTime;
+			
+			var div_list2=document.getElementById("messages2");
+			var div_string2 =	"<div class=\"row\" style=\"margin-top:20px; padding-left:35%\">"+							
+								"<div class=\"\" id=\"preview"+image_count2+"\" >"+
+									"<img src=\"/tutorial-juzcret/assets/net/wyun/img/use.jpg\" height=\"152\" width=\"200\"  id=\"imghead"+image_count2+"\" class=\"img-responsive\" />"+
+								"</div>"+
+							"</div>"+
+							"<div class=\"row\" style=\"margin-top:10px; padding-left:35%\">"+
+								"<input type=\"file\"  name=\"efiles\" onChange=\"previewImage(this,"+image_count2+")\" />"+
+							"</div>";
+				
+			
+			var div_one2=document.createElement("div");
+			div_one2.innerHTML=div_string2;
+			div_list2.appendChild(div_one2);
+			image_count2+=1;
 		}
-		function ShowToText()
+		
+		function file_delete2()
+		{
+			
+			if(image_count2==0)
+			{
+				alert("图片列表为空");
+				return;
+			}
+			
+			var div_list=document.getElementById("messages2");
+			
+			var has_child = div_list.hasChildNodes(); 
+			
+			if(has_child==false)
+			{
+				return;
+			}
+			
+			div_list.removeChild(div_list.childNodes[div_list.childNodes.length-1]);
+			
+			image_count2-=1;
+			
+		}
+		
+		//得到错误时运行的内容
+		function displayProp(obj){    
+			var names="";       
+			for(var name in obj){       
+			   names+=name+": "+obj[name]+", ";     
+			}  
+			alert(names);
+		}
+		
+		/*删除左右两端的空格*/
+		function trim(str){ 
+		　　  return str.replace(/(^s*)|(s*$)/g, "");
+		}
+		
+		
+		
+	})
+	
+	
+	function ShowToTextTag()
 		{
 			//alert("aaaaaaaaaaaaaaaaaaa");
 			//document.form_name.publishDept.value = document.form_name.select_name.value;
-			var publishDept = document.getElementById("selectPublishDept").value;
+			var selectTag = document.getElementById("selectTag").value;
 			//alert(publishDept);
-			document.getElementById("publishDept").value = publishDept;
+			document.getElementById("tag").value = selectTag;
 		}
+	
+	
+	function ShowToText(id)
+	{
+		//alert("aaaaaaaaaaaaaaaaaaa");
+		//document.form_name.publishDept.value = document.form_name.select_name.value;
+		var standardTypeObj = document.getElementById(id);
+		//alert(standardTypeObj);
+		var index=standardTypeObj.selectedIndex;//獲得選中項的索引
+		//alert(index);
+		var standardType=standardTypeObj.options[index].text;//选中的文本  
+		//alert(publishDept);
+		document.getElementById(id + "Txt").value = standardType;
+	}
 		
 		function ShowToText2()
 		{
@@ -151,70 +294,64 @@
 			//alert(publishDept);
 			document.getElementById("policyCategoryTxt").value = policyCategory;
 		}
-		function ShowToTextTag()
-		{
-			//alert("aaaaaaaaaaaaaaaaaaa");
-			//document.form_name.publishDept.value = document.form_name.select_name.value;
-			var selectTag = document.getElementById("selectTag").value;
-			//alert(publishDept);
-			document.getElementById("tag").value = selectTag;
-		}/**/
-		
-	  //图片上传预览    IE是用了滤镜。
-        function previewImage(file,imgindex,falg){
-		 
-          var MAXWIDTH  = 200; 
-          var MAXHEIGHT = 180;
-          var div = document.getElementById("preview"+imgindex);
-          if (file.files && file.files[0]){
-              div.innerHTML ="<img id=imghead"+imgindex+">";
-              var img = document.getElementById("imghead"+imgindex);
-              img.onload = function(){
-                var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
-                img.width  =  rect.width;
-                img.height =  rect.height;
-    //                 img.style.marginLeft = rect.left+'px';
-                img.style.marginTop = rect.top+'px';
-              }
-              var reader = new FileReader();
-              reader.onload = function(evt){img.src = "img/file.jpg";}
-              reader.readAsDataURL(file.files[0]);
-          }else{ //兼容IE
-            var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
-            file.select();
-            file.blur();
-            var src = document.selection.createRange().text;
-			//alert(src);
-            div.innerHTML = "<img id=imghead"+imgindex+">";
-            var img = document.getElementById("imghead"+imgindex);
-            
-            img.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)"; 
-            img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = "img/file.jpg";
-            
-            //alert(MAXHEIGHT+" "+MAXWIDTH +" "+img.offsetWidth + "   " + img.offsetHeight);
-            //var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
-            var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, 220, 130);
-            status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
-            div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
-            
+	
+})($);
+
+function previewImage(file,imgindex,falg){
+	 
+    var MAXWIDTH  = 200; 
+    var MAXHEIGHT = 180;
+    var div = document.getElementById("preview"+imgindex);
+    if (file.files && file.files[0]){
+        div.innerHTML ="<img id=imghead"+imgindex+">";
+        var img = document.getElementById("imghead"+imgindex);
+        img.onload = function(){
+          var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+          img.width  =  rect.width;
+          img.height =  rect.height;
+//                 img.style.marginLeft = rect.left+'px';
+          img.style.marginTop = rect.top+'px';
+        }
+        var reader = new FileReader();
+        reader.onload = function(evt){img.src = imgPath + "img/file.jpg";}
+        reader.readAsDataURL(file.files[0]);
+    }else{ //兼容IE
+      var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+      file.select();
+      file.blur();
+      var src = document.selection.createRange().text;
+		//alert(src);
+      div.innerHTML = "<img id=imghead"+imgindex+">";
+      var img = document.getElementById("imghead"+imgindex);
+      
+      img.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)"; 
+      img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = imgPath + "img/file.jpg";
+      
+      //alert(MAXHEIGHT+" "+MAXWIDTH +" "+img.offsetWidth + "   " + img.offsetHeight);
+      //var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+      var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, 220, 130);
+      status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
+      div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
+      
+    }
+  }
+	
+  function clacImgZoomParam( maxWidth, maxHeight, width, height ){
+      var param = {top:0, left:0, width:width, height:height};
+      if( width>maxWidth || height>maxHeight ){
+          rateWidth = width / maxWidth;
+          rateHeight = height / maxHeight;
+          
+          if( rateWidth > rateHeight ){
+              param.width =  maxWidth;
+              param.height = Math.round(height / rateWidth);
+          }else{
+              param.width = Math.round(width / rateHeight);
+              param.height = maxHeight;
           }
-        }
-		
-        function clacImgZoomParam( maxWidth, maxHeight, width, height ){
-            var param = {top:0, left:0, width:width, height:height};
-            if( width>maxWidth || height>maxHeight ){
-                rateWidth = width / maxWidth;
-                rateHeight = height / maxHeight;
-                
-                if( rateWidth > rateHeight ){
-                    param.width =  maxWidth;
-                    param.height = Math.round(height / rateWidth);
-                }else{
-                    param.width = Math.round(width / rateHeight);
-                    param.height = maxHeight;
-                }
-            }
-            param.left = Math.round((maxWidth - param.width) / 2);
-            param.top = Math.round((maxHeight - param.height) / 2);
-            return param;
-        }
+      }
+      param.left = Math.round((maxWidth - param.width) / 2);
+      param.top = Math.round((maxHeight - param.height) / 2);
+      return param;
+  }
+	
