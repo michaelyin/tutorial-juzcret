@@ -637,12 +637,13 @@ public class DocumentsDataHelper {
 	}
 	
 	/**
-	 * save content in a JCR file with name
+	 * save content in a JCR file with name, fs/standard/
+	 * @param category, for ex., fs/standard/, fs/nationalpolicy/, fs/localpolicy/
 	 * @param content
 	 * @param name
 	 * @return
 	 */
-	protected String storeContent(String content, String fileName, String folder) {
+	protected String storeContent(String content, String fileName, String category,  String folder) {
 		SessionProvider sessionProvider = getUserSessionProvider();
 		String uuid = null;
 		try {
@@ -656,7 +657,7 @@ public class DocumentsDataHelper {
 			Node rootNode = session.getRootNode();
 			homeNode = rootNode.getNode(getSpacePath("qyspl")); //groups/spaces/qyspl
 
-			Node docNode = homeNode.getNode("Documents/fs/standard/" + folder); //groups/spaces/qyspl/documents
+			Node docNode = homeNode.getNode("Documents/" + category + folder); //groups/spaces/qyspl/documents
 			
 			if (!docNode.hasNode(fileName)) {//new node
 				Node fileNode = docNode.addNode(fileName, "nt:file");
