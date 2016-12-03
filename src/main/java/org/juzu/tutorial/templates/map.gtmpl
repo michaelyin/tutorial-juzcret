@@ -1,9 +1,23 @@
-
-	
 	<div class="container">
 	 	<h1  style="text-align:center; margin-bottom:5%;">地方政策详解</h1>
 		<div class="container_left">
 			<div>
+            <form id="form1" method="post" name="f1" enctype="multipart/form-data">
+            <div style="margin-left:2px;">
+			    <div class="input-append" style=" width:100%;">
+				    <div class="btn-group btn-large" style="padding:0; margin:0; width:15%;">
+        			    <button id="btn1" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="width:100%" value="分类检索">分类检索
+            			    <span class="caret" style="margin-top:8px;"></span>
+        			    </button>
+    			    </div>
+				
+				    <input type="text" style=" width:70%;" id="search_text" name="search_text" AUTOCOMPLETE="off">
+				    <input type="hidden" name="class" id="class">
+				    <button class="btn btn-primary dropdown-toggle" type="button" style=" width:15%;" onclick="get_search()">搜索</button>
+			
+			    </div>
+		    </div>
+            
        		<ul class="breadcrumb">
     			<li style=" width:12%; height:150px;  border:3px solid #E6E6E6; padding:0px; margin:0px;">
                 	<div style="width:100%; height:100px; text-align:center; line-height:100px;">
@@ -12,84 +26,154 @@
                     <!--<div style="width:100%; height:100px; text-align:center; line-height:100px;">
                     	筛选                    </div>-->
                 </li>
-    			
+                <input type="hidden" name="province_str" id="province_str"  AUTOCOMPLETE="off">
+    			<input type="hidden" name="class" id="class">
                 <li style="background:#E6E6E6; width:86%; height:150px; border:3px solid #E6E6E6; padding:0px; margin-left:-5px;">
                 	
                     <ul class="breadcrumb" style="margin-top:10px; margin-bottom:10px;">
 						<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox">
-  								<span>所有购置方面政策</span>							</span>						</li>
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" >
+  								<span>所有购置方面政策</span>							
+                            </span>						
+                        </li>
         				<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox">
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type">
   								<span>补贴政策</span>							</span>						</li>
 						<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox">
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type">
   								<span>税收优惠</span>							</span>						</li>
                         <li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox">
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type">
   								<span>免限购</span>							</span>						</li>
+                        <li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="研发" AUTOCOMPLETE="off">
+  								<span>研发</span>							
+                            </span>						
+                        </li>
     				</ul>
                     
                     
                     <ul class="breadcrumb" style="margin-top:10px; margin-bottom:10px;">
 						<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox">
-  								<span>所有使用方面政策</span>							</span>						</li>
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="进出口" AUTOCOMPLETE="off">
+  								<span>进出口</span>							</span>						</li>
         				<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox">
-  								<span>补贴政策</span>							</span>						</li>
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="反垄断" AUTOCOMPLETE="off">
+  								<span>反垄断</span>							</span>						</li>
 						<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox">
-  								<span>税收优惠</span>							</span>						</li>
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="用车服务" AUTOCOMPLETE="off">
+  								<span>用车服务</span>							</span>						</li>
+                         <li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="销售" AUTOCOMPLETE="off">
+  								<span>销售</span>							
+                            </span>						
+                        </li>
                         <li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox">
-  								<span>免限购</span>							</span>						</li>
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="保险" AUTOCOMPLETE="off">
+  								<span>保险</span>							
+                            </span>						
+                        </li>
+                        <li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="汽车服务业" AUTOCOMPLETE="off">
+  								<span>汽车服务业</span>							
+                            </span>						
+                        </li>
+                       
     				</ul>
                     
                     <ul class="breadcrumb" style="margin-top:10px; margin-bottom:10px;">
 						<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox">
-  								<span>所有研发支持政策</span>							</span>						</li>
-        				<li>
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="二手车" AUTOCOMPLETE="off">
+  								<span>二手车</span>							
+                            </span>						
+                        </li>
+                        <li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox">
-  								<span>补贴政策</span>							</span>						</li>
-						<li>
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="新能源"   AUTOCOMPLETE="off">
+  								<span>新能源</span>							
+                            </span>						
+                        </li>
+                        <li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox">
-  								<span>税收优惠</span>							</span>						</li>
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="产业政策"   AUTOCOMPLETE="off">
+  								<span>产业政策</span>							
+                            </span>						
+                       </li>
+                        <li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="环保" AUTOCOMPLETE="off">
+  								<span>环保</span>							
+                            </span>						
+                        </li>
+                        <li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="安全" AUTOCOMPLETE="off">
+  								<span>安全</span>							
+                            </span>						
+                        </li>
+        				
+						
+                       <li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="法律体系"  AUTOCOMPLETE="off">
+  								<span>法律体系</span>							
+                            </span>						
+                       </li>
+                        
     				</ul>
                     
                     <ul class="breadcrumb" style="margin-top:10px; margin-bottom:10px;">
+                    	<li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="后市场" AUTOCOMPLETE="off">
+  								<span>后市场</span>							
+                            </span>
+                        </li>
 						<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox">
-  								<span>政策支持对象类型</span>							</span>						</li>
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="生产" AUTOCOMPLETE="off">
+  								<span>生产</span>							
+                            </span>
+                        </li>
+                        <li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="财税" AUTOCOMPLETE="off">
+  								<span>财税</span>							
+                            </span>
+                        </li>
+         				<li>
+							<span class="uiCheckbox">
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="金融" AUTOCOMPLETE="off">
+  								<span>金融</span>							
+                            </span>
+                        </li>
         				<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox">
-  								<span>乘用车</span>							</span>						</li>
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="准入" AUTOCOMPLETE="off">
+  								<span>准入</span>							</span>						</li>
 						<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox">
-  								<span>客车</span>							</span>						</li>
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type"  value="规划"  AUTOCOMPLETE="off">
+  								<span>规划</span>							</span>						</li>
                         <li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox">
-  								<span>专用车</span>							</span>						</li>
-                        <li>
-							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox">
-  								<span>零部件</span>							</span>						</li>
+  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="投资" AUTOCOMPLETE="off">
+  								<span>投资</span>							
+                            </span>						
+                        </li>
+                       
     				</ul>
                     
                     
@@ -414,7 +498,7 @@
     				</ul>
            		</li>
             </ul>
-            
+          
             
             
             <ul class="breadcrumb">
@@ -443,11 +527,12 @@
                    
            		</li>
             </ul>
+            </form>
             </div>
             <div style=" clear:right;">
-		</div>
+			</div>
 		
-		<div style="float:right; font-size:13px; font-weight:bold; margin-top:10px;">
+		<div style="float:right; font-size:13px; font-weight:bold; margin-top:10px;" id="total">
 			&nbsp;<!--共有xxx条政策符合要求-->
 		</div>
 		
@@ -471,9 +556,9 @@
                         <th width="170" style="background:#578DC9; color:#FFFFFF;">标签</th>
                  	</tr>
            		</thead>
-                <!--                
-				<tbody>
-                	<tr>
+                              
+				<tbody id="result_div">
+                	 <!-- <tr>
                     	<td >
                             <div class="tooltips"> 
                             	<div class="tooltips1">
@@ -591,11 +676,11 @@
                         <td>新能源汽车 重点专项 政策补贴
                         </td>
                         
-                   	</tr>
+                   	</tr>-->
 				
 					</tbody>
                     
-					<tfoot></tfoot>-->
+					<tfoot></tfoot>
             	</table>
      		</div>
                       
@@ -607,11 +692,11 @@
                     <button class="btn" type="button" style=" font-size:13px; padding:2px 10px; margin-right:10px;">下载</button>
 					<button class="btn" type="button" style=" font-size:13px; padding:2px 10px;margin-right:10px;">收藏</button>
                     -->
-					<button class="btn"  onclick="window.location.href='@{LocalPolicyController.update_data()}'" type="button" style=" font-size:13px; padding:2px 10px;">上传</button>
+					<button class="btn"  onclick="window.location.href='@{LocalPolicyController.upload_form()}'" type="button" style=" font-size:13px; padding:2px 10px;">上传</button>
     			</div>
-			
+				<div id="tcdPageCode" class="pagination uiPageIterator tcdPageCode" style="float:right; margin:0px; width:70%;"></div>
 			<!--
-				<div id="tcdPageCode" class="pagination uiPageIterator tcdPageCode" style="float:right; margin:0px; width:70%;">
+				
         			<ul>
             			<li class="active"><a href="">1</a></li>
             			<li><a href="">2</a></li>
@@ -619,7 +704,7 @@
             			<li class="disabled"><a href="#">...</a></li>
             			<li><a href="">20</a></li>
         			</ul>
-    			</div>
+    			
                 -->
 				
 				<!--
@@ -635,12 +720,9 @@
 	<div class="container_right">
 		
 		<a style="width:40px; float:right;" class="btn btn-primary btn-large" href="@{Controller.index()}">返回</a>
-		
-		
-		<!---->
         
-		<div style="margin-top:625px;">
-        <a style="width:40px; float:right; margin-top:-83px;" class="btn btn-primary btn-large" href="#">搜索</a>
+		<div style="margin-top:55px;">
+        
 		    <div id="accordion" class="accordion">
         		<h5 class="menuHeader" style="background:#578DC9; color:#FFFFFF;">搜索历史</h5>
         		<div id="history">

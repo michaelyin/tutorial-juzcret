@@ -617,7 +617,7 @@
 	<div class="container_right">
 		<!--<a href="#" style=" width:99px; margin-left:0px; margin-right:0px; margin-top:3px; display:block; float:left; font-size:14.5px;">在结果中搜索 </a>
 		-->
-		<a style="width:40px;float:right;margin-top:-45%;" class="btn btn-primary btn-large" href="@{Controller.index()}">返回</a>
+		<a style="width:40px; float:right;" class="btn btn-primary btn-large" href="@{Controller.index()}">返回</a>
 		
 		<!---->
 		<div style="margin-top:154px;">
@@ -698,4 +698,24 @@
 	
 	
 </div>	
+		
+<!-- ################################## -->
+<!-- ######### Standard MODAL ############ -->
+<!-- ################################## -->
+<div class="modal hide fade" id="standardModal" role="dialog" data-link="@{NationalPolicyController.policyContent()}">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">x</a>
+    <h1 style="text-align:center; margin-bottom:5%;">国家标准正文</h1>
+  </div>
+  
+  <div class="modal-body-no">
+
+    <div id="standard-properties" style="width:96%;text-align:center;padding:10px;">标准属性</div>
+
+  </div>
+
+  <div class="modal-footer">
+    <a href="#" class="btn btn-primary" data-dismiss="modal">关闭</a>
+  </div>
+</div>
 		
