@@ -237,8 +237,8 @@ function processJson(data){
 	localStorage.json_str = (JSON.stringify(json));
 	//alert(localStorage.json_str);
 	var total = document.getElementById("total");
-	var id_value = json.resultList[0].id;
-	if(id_value=='0')
+	//var id_value = json.resultList[0].id;
+	if(json.resultList.length=='0')
 	{
 		total.innerHTML = "共有0条政策符合要求";
 		var result_div = document.getElementById("result_div");
@@ -437,7 +437,7 @@ function get_page_result(json,page_num)
 													}
 														result_table = result_table + "</span>"+
 													"</div>"+
-													"<a href=\"javascript:void(0)\" onclick=\"click_href("+i+")\">"+name_value+"</a>"+                            									
+													"<a href=\"#\" class=\"stan-link\" data-uuid=\""+ id_value + "\">"+name_value+"</a>"+                            									
 													"</div>"+
 											"</td>"+
 											"<td>"+num_value+"</td>"+
@@ -458,7 +458,7 @@ function get_page_result(json,page_num)
 					   "<h1 style=\"text-align:center; margin-bottom:5%;\">政策与解读正文</h1>"+
 					"</div>"+
 					"<div class=\"modal-body-no\">"+
-						"<div id=\"standard-properties\" style=\"width:96%;text-align:center;padding:10px;\">政策与解读属性</div>"+							
+						"<div id=\"standard-properties999\" style=\"width:96%;text-align:center;padding:10px;\">政策与解读属性</div>"+							
 					"</div>"+				
 					"<h3 style=\"color:#999999; text-align:center;\">"+name_value+"</h3>"+
 					" </span> <p style=\"font-size:15px; margin:0; padding:0; text-align:center; color:#999999;\">&#26631;&#20934;&#21495;: "+num_value+"</p >"+
@@ -480,6 +480,17 @@ result_table = result_table+"<div class=\"modal-footer\">"+
 
 	var result_div = document.getElementById("result_div");
 	result_div.innerHTML = result_table;
+	
+	$(".stan-link").on("click", function() {
+	      var uuid = $(this).attr("data-uuid");
+	      var jzStandardGetProperties = $('#standardModal').attr("data-link");
+	      $('#standard-properties').load(jzStandardGetProperties, {"uuid": uuid}, function () {
+	        //propertiesActions();
+	        //$('#propertiesTab a:first').tab('show');
+	    	// jQuery.noConflict();
+	        $('#standardModal').modal({"backdrop": false});
+	      });
+	    });
 	
 }
 
