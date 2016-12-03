@@ -19,7 +19,7 @@
 @Bindings({
     @Binding(value = OrganizationService.class),
     @Binding(value = UserService.class),
-    @Binding(value = PolicyService.class),
+    @Binding(value = NationalPolicyService.class),
     @Binding(value = StandardService.class),
     @Binding(value = org.exoplatform.commons.api.search.SearchService.class),
     @Binding(value = org.exoplatform.services.jcr.RepositoryService.class),
@@ -41,8 +41,8 @@
 	@Script(id = "policycommonjs", value = "js/policy_js/policy_common.js", location=AssetLocation.APPLICATION),
     @Script(id = "indexjs", value = "js/index.js", depends="jquery", location=AssetLocation.APPLICATION),
     //interpretation
-    @Script(id = "interpretationjs", value = "js/interpretation/interpretation.js", location=AssetLocation.APPLICATION),
-    @Script(id = "interpretation_uploadjs", value = "js/interpretation/interpretation_upload.js", location=AssetLocation.APPLICATION),
+    @Script(id = "interpretationjs", value = "js/interpretation/interpretation.js", depends={"jquery", "juzuutil", "jquerypage", "policycommonjs"}, location=AssetLocation.APPLICATION),
+    @Script(id = "interpretation_uploadjs", value = "js/interpretation/interpretation_upload.js", depends = {"jquery", "jquerypage", "nlibjs"}, location=AssetLocation.APPLICATION),
     @Script(id = "new_interpretationjs", value = "js/interpretation/new_interpretation.js", location=AssetLocation.APPLICATION),
     //national standard
     @Script(id = "standardjs",value ="js/nationalsd/standard.js",depends={"jquery", "juzuutil", "jquerypage", "policycommonjs"}, location=AssetLocation.APPLICATION),
@@ -93,7 +93,7 @@ import juzu.plugin.binding.Bindings;
 //import juzu.plugin.portlet.Portlet;
 //import juzu.plugin.webjars.WebJar;
 //import juzu.plugin.webjars.WebJars;
-import net.wyun.qys.service.PolicyService;
+import net.wyun.qys.service.NationalPolicyService;
 import net.wyun.qys.service.StandardService;
 import net.wyun.qys.service.UserService;
 import juzu.asset.AssetLocation;
