@@ -221,6 +221,7 @@ public class NationalStandardController {
 	  
 	
 	  private final static String ROOT_FOLDER = "fs/standard/";
+	  private final static String TEXT_T = "T";  //text
 	  @Resource
 	  @Ajax
 	  public Response.Content upload(String standardName, String standardNum, Integer standardTypeString, 
@@ -251,8 +252,11 @@ public class NationalStandardController {
 		  boolean isCreated = documentsData.createNodeIfNotExist("Documents/" + ROOT_FOLDER, stdFolder);
 		  LOG.info(stdFolder + " folder is created: " + isCreated);
 		  
-		  String txtUuid = documentsData.storeContent(text, stdFolder + ".txt", stdFolder);
-		  s.setUuid(txtUuid);
+		  if(text != null && !text.isEmpty()){
+			  String txtUuid = documentsData.storeContent(text, TEXT_T + stdFolder + ".txt", ROOT_FOLDER, stdFolder);
+			  newS.setUuid(txtUuid);
+		  }
+		  
 		  
 		  if(null != files){
 			  for(FileItem fi:files){
@@ -269,9 +273,9 @@ public class NationalStandardController {
 	    		  jFile.setUrl("temp/url");
 	    		  jFile.setUuid(uuid);
 	    		  newS.addStanJcrFile(jFile);
-	    		  standardSvc.update(newS);
 	          }
 		  }
+		  standardSvc.update(newS);
 		  
 		  //save text to jcr as a file
 		  JSONObject jo = new JSONObject(newS);
