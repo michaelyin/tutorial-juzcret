@@ -30,28 +30,28 @@
 				
 				<ul class="dropdown-menu" style="padding:0px;">
 					<select multiple="multiple" id="standardType" name="standardType" AUTOCOMPLETE="off">
-  						<option value="1">安全</option>
-  						<option value="2">车身及悬架</option>
-  						<option value="3">车轮</option>
-  						<option value="4">材料</option>
-  						<option value="5">灯光</option>
-						<option value="6">底盘</option>
-  						<option value="7">汽车电子与电磁兼容</option>
-  						<option value="8">电器</option>
-  						<option value="9">防盗</option>
-  						<option value="10">回收利用</option>
-						<option value="11">环保（不含排放）</option>
-  						<option value="12">节能</option>
-  						<option value="13">排放</option>
-  						<option value="14">制动</option>
-  						<option value="15">电动车辆</option>
-						<option value="16">挂车</option>
-  						<option value="17">客车</option>
-  						<option value="18">专用车</option>
-  						<option value="19">液化石油气汽车</option>
-  						<option value="20">燃气汽车</option>
-						<option value="21">仪表</option>
-  						<option value="22">其他</option>
+  						<option value="0">安全</option>
+  						<option value="1">车身及悬架</option>
+  						<option value="2">车轮</option>
+  						<option value="3">材料</option>
+  						<option value="4">灯光</option>
+						<option value="5">底盘</option>
+  						<option value="6">汽车电子与电磁兼容</option>
+  						<option value="7">电器</option>
+  						<option value="8">防盗</option>
+  						<option value="9">回收利用</option>
+						<option value="10">环保（不含排放）</option>
+  						<option value="11">节能</option>
+  						<option value="12">排放</option>
+  						<option value="13">制动</option>
+  						<option value="14">电动车辆</option>
+						<option value="15">挂车</option>
+  						<option value="16">客车</option>
+  						<option value="17">专用车</option>
+  						<option value="18">液化石油气汽车</option>
+  						<option value="19">燃气汽车</option>
+						<option value="20">仪表</option>
+  						<option value="21">其他</option>
 					</select>
 				</ul>
    			</div>
