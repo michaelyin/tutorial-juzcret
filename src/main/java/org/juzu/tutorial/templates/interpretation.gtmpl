@@ -1,14 +1,13 @@
 
 	
 	<div class="container">
-   
 	 <h1  style="text-align:center; margin-bottom:5%;">政策与解读</h1>
 	<div class="container_left" >
-    <form id="form1" method="post" name="f1" enctype="multipart/form-data">
+        <form id="form1" action="@{NationalPolicyController.search()}" method="post" name="f1" enctype="multipart/form-data">
 		<div style="margin-left:2px;">
 			<div class="input-append" style=" width:100%;">
 				<div class="btn-group btn-large" style="padding:0; margin:0; width:15%;">
-        			<button id="btn1"` class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="width:100%">分类检索
+        			<button id="btn1" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="width:100%" value="分类检索">分类检索
             			<span class="caret" style="margin-top:8px;"></span>
         			</button>
         			<ul class="dropdown-menu">
@@ -18,79 +17,92 @@
         			</ul>
     			</div>
 				
-				<input type="text" style=" width:70%;">
+				<input type="text" style=" width:70%;" id="search_text" name="search_text" AUTOCOMPLETE="off">
 				<input type="hidden" name="class" id="class">
-				<button class="btn btn-primary dropdown-toggle" type="button" style=" width:15%;">搜索</button>
+				<button id="search" class="btn btn-primary dropdown-toggle" type="button" style=" width:15%;" >搜索</button>
 			
 			</div>
 		</div>
-		
-		<div style="margin-left:120px;">
+        <div style="margin-left:120px;">
+           <!--
 		    <ul class="breadcrumb">
         		<li class="active">级别</li>
 				
 				<li>
 					<span class="uiCheckbox">
-  						<input type="checkbox" class="checkbox">
+  						<input type="checkbox" class="checkbox" name="search_dept[]" id="search_dept" value="国家政策" AUTOCOMPLETE="off">
   						<span>国家政策</span>
 					</span>
 				</li>
 				
         		<li>
 					<span class="uiCheckbox">
-  						<input type="checkbox" class="checkbox">
+  						<input type="checkbox" class="checkbox" name="search_dept[]" id="search_dept" value="地方政策" AUTOCOMPLETE="off">
   						<span>地方政策</span>
 					</span>
 				</li>
 				
     		</ul>
+    		-->
     		<ul class="breadcrumb">
         		<li class="active">部门</li>
 				
+                <li>
+					<span class="uiCheckbox">
+  						<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="0" AUTOCOMPLETE="off">
+  						<span>国务院</span>
+					</span>
+				</li>
 				<li>
 					<span class="uiCheckbox">
-  						<input type="checkbox" class="checkbox">
+  						<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="1" AUTOCOMPLETE="off">
   						<span>工信部</span>
 					</span>
 				</li>
 				
         		<li>
 					<span class="uiCheckbox">
-  						<input type="checkbox" class="checkbox">
+  						<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="2" AUTOCOMPLETE="off">
   						<span>财政部</span>
+					</span>
+				</li>
+                <li>
+					<span class="uiCheckbox">
+  						<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="3" AUTOCOMPLETE="off">
+  						<span>科技部</span>
 					</span>
 				</li>
 				
 				<li>
 					<span class="uiCheckbox">
-  						<input type="checkbox" class="checkbox">
+  						<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="4" AUTOCOMPLETE="off">
   						<span>发改委</span>
 					</span>
 				</li>
 				
 				<li>
 					<span class="uiCheckbox">
-  						<input type="checkbox" class="checkbox">
+  						<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="5"  AUTOCOMPLETE="off">
   						<span>能源局</span>
 					</span>
 				</li>
                 
                 <li>
-					<span class="uiCheckbox">
-  						<input type="checkbox" class="checkbox">
+					<span class="uiCheckbox" style="margin-left:42px;">
+  						<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="6"  AUTOCOMPLETE="off">
   						<span>北京市</span>
 					</span>
 				</li>
                 
                 <li>
 					<span class="uiCheckbox">
-  						<input type="checkbox" class="checkbox">
-  						<span>上海</span>
+  						<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="7"  AUTOCOMPLETE="off">
+  						<span>上海市</span>
 					</span>
 				</li>
 				
     		</ul>
-                    <!--
+             </form>       <!--
                     <ul class="breadcrumb" style="margin-top:10px; margin-bottom:10px;">
                     
                     	<li class="active">发布时间</li>
@@ -417,7 +429,7 @@
 		</div>
 		
 		
-        <div style="float:right; font-size:13px; font-weight:bold; margin-top:10px;">
+        <div style="float:right; font-size:13px; font-weight:bold; margin-top:10px;" id="total">
 			&nbsp;
             <!--共有xxx条政策符合要求-->
 		</div>
@@ -442,9 +454,9 @@
                         <th width="170" style="background:#578DC9; color:#FFFFFF;">标签</th>
                  	</tr>
            		</thead>
-                <!--               
-				<tbody>
-                	<tr>
+                               
+				<tbody id="result_div">
+                	<!--<tr>
                     	<td >
                             <div class="tooltips"> 
                             	<div class="tooltips1">
@@ -562,11 +574,11 @@
                         <td>新能源汽车 重点专项 政策补贴
                         </td>
                         
-                   	</tr>
+                   	</tr>-->
 				
 					</tbody>
                     
-					<tfoot></tfoot>-->
+					<tfoot></tfoot>
             	</table>
      		</div>
                       
@@ -578,19 +590,19 @@
                     <button class="btn" type="button" style=" font-size:13px; padding:2px 10px; margin-right:10px;">下载</button>
 					<button class="btn" type="button" style=" font-size:13px; padding:2px 10px;margin-right:10px;">收藏</button>
                     -->
-					<button class="btn"  onclick="window.location.href='@{Controller.update_data()}'" type="button" style=" font-size:13px; padding:2px 10px;">上传</button>
+					<button class="btn"  onclick="window.location.href='@{NationalPolicyController.upload_form()}'" type="button" style=" font-size:13px; padding:2px 10px;">上传</button>
     			</div>
 			
-			<!--
-				<div id="tcdPageCode" class="pagination uiPageIterator tcdPageCode" style="float:right; margin:0px; width:70%;">
-        			<ul>
+			
+				<div id="tcdPageCode" class="pagination uiPageIterator tcdPageCode" style="float:right; margin:0px; width:70%;"></div>
+        			<!--<ul>
             			<li class="active"><a href="">1</a></li>
             			<li><a href="">2</a></li>
             			<li><a href="">3</a></li>
             			<li class="disabled"><a href="#">...</a></li>
             			<li><a href="">20</a></li>
         			</ul>
-    			</div>
+    			
 			-->	
 				<!--
 				<div class="input-append" style="float:left;">
@@ -600,11 +612,7 @@
 				-->
 			
 		</div>
-		
-		
-		
-		
-	</div>
+    </div>
 	
 	<div class="container_right">
 		<!--<a href="#" style=" width:99px; margin-left:0px; margin-right:0px; margin-top:3px; display:block; float:left; font-size:14.5px;">在结果中搜索 </a>
@@ -691,4 +699,3 @@
 	
 </div>	
 		
-	
