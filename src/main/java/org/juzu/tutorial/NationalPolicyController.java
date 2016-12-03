@@ -43,6 +43,7 @@ import juzu.plugin.ajax.Ajax;
 import juzu.plugin.asset.Assets;
 import juzu.request.SecurityContext;
 import juzu.template.Template;
+import net.wyun.list.bean.File;
 import net.wyun.qys.domain.JcrFileType;
 import net.wyun.qys.domain.UserSetting;
 import net.wyun.qys.domain.nationalpolicy.NPJcrFile;
@@ -89,7 +90,31 @@ public class NationalPolicyController {
 	  @Path("interpretation_upload.gtmpl")
 	  Template interpretation_upload;
 	  
+	  @Inject
+	  @Path("standard_content.gtmpl")
+	  Template content;
 	  
+	  
+	  @Resource
+	  @Ajax
+	  public Response.Content policyContent(String uuid) throws IOException{
+		  NationalPolicy stan = null;
+		  if(null != uuid && !uuid.isEmpty()){
+			  stan = policySvc.findById(uuid);
+		  }
+		  
+		  List<File> files = new ArrayList<File>();
+		  Set<NPJcrFile> jcrFiles = stan.getJcrFiles();
+		  for(NPJcrFile sjf:jcrFiles){
+			  String jcrUuid = sjf.getUuid();
+			  LOG.info("file name: " + sjf.getFileName());
+			  File file = documentsData.getNode(jcrUuid);
+			  files.add(file);
+		  }
+		  
+		  
+		  return content.with().set("stan", stan).set("files", files).ok();
+	  }	  
 	  /**
 	   * with out user input, search_text is empty string, search_type is null
 	   * so need to do data validation before searching.
