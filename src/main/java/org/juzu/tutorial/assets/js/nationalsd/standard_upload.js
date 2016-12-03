@@ -30,7 +30,7 @@ var imgPath = "/tutorial-juzcret/assets/net/wyun/";
 			ShowToTextTag();
 		}); //(ShowToTextTag);
 		$('#standardType').change(function(){
-			ShowToText();
+			ShowToText("standardType");
 		});
 		
 		$('#fileselect').click(function(){
@@ -215,17 +215,17 @@ var imgPath = "/tutorial-juzcret/assets/net/wyun/";
 		}
 	
 	
-		function ShowToText()
+		function ShowToText(id)
 		{
 			//alert("aaaaaaaaaaaaaaaaaaa");
 			//document.form_name.publishDept.value = document.form_name.select_name.value;
-			var standardTypeObj = document.getElementById("standardType");
+			var standardTypeObj = document.getElementById(id);
 			//alert(standardTypeObj);
 			var index=standardTypeObj.selectedIndex;//獲得選中項的索引
 			//alert(index);
 			var standardType=standardTypeObj.options[index].text;//选中的文本  
 			//alert(publishDept);
-			document.getElementById("standardTypeTxt").value = standardType;
+			document.getElementById(id + "Txt").value = standardType;
 		}
 	
 })($);

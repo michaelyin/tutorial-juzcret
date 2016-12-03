@@ -34,6 +34,7 @@ var _gauges = _gauges || [];
 
 			//validate form data before sending it to server
 			if(validateForm()){
+				  $("#form1").submit();
 				  var search_text = document.getElementById("search_text").value;
 				   //alert(search_text);
 				   /*if(search_text.length>20)
@@ -57,7 +58,6 @@ var _gauges = _gauges || [];
 				   } 
 				   suffix = suffix+1;
 				   
-				   $("#form1").submit();
 			};
 			
 		});
