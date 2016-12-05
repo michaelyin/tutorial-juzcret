@@ -1,44 +1,18 @@
-
 var map = new AMap.Map("mapview", {
 	resizeEnable: true,
 	zoom:4,
 	/*center:new AMap.LngLat(109.782437,19.181189)*/
 });
-
-
-
-var _gauges = _gauges || [];
-(function() {
-	var t = document.createElement('script');
-	t.type = 'text/javascript';
-	t.async = true;
-	t.id = 'gauges-tracker';
-	t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
-	t.src = '//secure.gaug.es/track.js';
-	var s = document.getElementsByTagName('script')[0];
-	s.parentNode.insertBefore(t, s);
-})();
-
-$("#tcdPageCode").createPage({
-		pageCount:20,
-		current:1,
-		backFn:function(p){
-			
-	}
-});
-
 function update_data()
 {
-	window.location.href="local_upload.html";
-}	
+	window.location.href="local_upload.html?new=0&update=0";
+}
 // 路径配置
 require.config({
 	paths: {
 		echarts: 'http://echarts.baidu.com/build/dist'
 	}
 });
-
-
 
 var myChart;
 var option;
@@ -88,15 +62,20 @@ require(
 			//alert(selected[0]);
 			
 			var str = '当前选择： ';
+			var province_str ='';
 			for (var p in selected) {
 				str += p + ' '+selected[p]+" || ";
 				if (selected[p]) {
 					//str += p + ' '+selected[p]+" || ";
+					var province_str = province_str+p+";";
 				}
 			}
-			//document.getElementById('wrong-message').innerHTML = str;
-			//alert(str);
+			
+			//alert(province_str);
+			document.getElementById("province_str").value = province_str;
+			//alert(document.getElementById("province_str").value);
 		})
+		
 		// 为echarts对象加载数据 
 		myChart.setOption(option); 
 	}
