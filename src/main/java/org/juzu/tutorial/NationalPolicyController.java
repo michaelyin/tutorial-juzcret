@@ -46,6 +46,7 @@ import juzu.template.Template;
 import net.wyun.list.bean.File;
 import net.wyun.qys.domain.JcrFileType;
 import net.wyun.qys.domain.UserSetting;
+import net.wyun.qys.domain.localpolicy.LocalPolicy;
 import net.wyun.qys.domain.nationalpolicy.NPJcrFile;
 import net.wyun.qys.domain.nationalpolicy.NPSourceType;
 import net.wyun.qys.domain.nationalpolicy.NPTag;
@@ -141,6 +142,12 @@ public class NationalPolicyController {
 		  
 		  //with search types, query db to get qualified standard(s)
 		 List<NationalPolicy> stanList = policySvc.findByTypes(types);
+		 
+		 if(stanList.isEmpty()){
+			 //return directly
+			 JSONObject mainObj = this.generateSearchResult(new HashSet<NationalPolicy>());
+			 return Response.ok(mainObj.toString()).withMimeType("text/json").withCharset(Tools.UTF_8);
+		 }
 		 
 		 Map<String, NationalPolicy> stanMap = new HashMap<String, NationalPolicy>();
 		 for(NationalPolicy stan:stanList){
@@ -243,9 +250,9 @@ public class NationalPolicyController {
 			  newP.setT_uuid(txtUuid);
 		  }
 		  
-		  if(policyTxt != null && !policyTxt.isEmpty()){
-			  String txtUuid = documentsData.storeContent(policyTxt, TEXT_E + pFolder + ".txt", ROOT_FOLDER, pFolder);
-			  newP.setT_uuid(txtUuid);
+		  if(InterpretationTxt != null && !InterpretationTxt.isEmpty()){
+			  String txtUuid = documentsData.storeContent(InterpretationTxt, TEXT_E + pFolder + ".txt", ROOT_FOLDER, pFolder);
+			  newP.setE_uuid(txtUuid);
 		  }
 		  
 		  //now save jcrfiles for original text
