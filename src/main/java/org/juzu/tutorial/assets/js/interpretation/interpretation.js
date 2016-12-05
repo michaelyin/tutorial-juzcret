@@ -320,6 +320,7 @@ function get_page_result(json,page_num)
 		var tag_value = tagobj.tag;
 		var tag_value = tag_value.replace(/\s+/g,"、");
 		var files_str = json.resultList[i].jcrFiles[0];
+		if(json.resultList[i].jcrFiles.length == 0){ files_str = "";}
 		//alert(files_str);
 		if(files_str!="")
 		{
