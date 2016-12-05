@@ -20,6 +20,7 @@
     @Binding(value = OrganizationService.class),
     @Binding(value = UserService.class),
     @Binding(value = NationalPolicyService.class),
+    @Binding(value = LocalPolicyService.class),
     @Binding(value = StandardService.class),
     @Binding(value = org.exoplatform.commons.api.search.SearchService.class),
     @Binding(value = org.exoplatform.services.jcr.RepositoryService.class),
@@ -50,12 +51,12 @@
     //@Script(id = "fileuploadjs",value ="js/fileupload.js",location=AssetLocation.APPLICATION),
     @Script(id = "mouseoutjs",value ="js/mouseout.js",depends = "jquery", location=AssetLocation.APPLICATION),
     @Script(id = "mouseoverjs",value ="js/mouseover.js",depends = "jquery", location=AssetLocation.APPLICATION),
-    //local standard
+    //local policy
     @Script(id = "echartsjs", value = "js/echarts.js", location=AssetLocation.APPLICATION),
-    @Script(id = "amapjs", value = "http://webapi.amap.com/maps?v=1.3&key=b23cb51fd67fa09da9478fc6a14cc200&plugin=AMap.Geocoder",
-    		  location = AssetLocation.URL),
-    @Script(id = "mapjs", value = "js/localpl/map.js", depends={"amapjs", "jquery", "echartsjs"}, location=AssetLocation.APPLICATION),    
-    @Script(id = "local_uploadjs", value = "js/localpl/local_upload.js", location=AssetLocation.APPLICATION),
+    @Script(id = "getmapdatajs", value = "js/localpl/get_map_data.js", depends={"jquery", "juzuutil"}, location=AssetLocation.APPLICATION),
+    @Script(id = "amapjs", value = "http://webapi.amap.com/maps?v=1.3&key=b23cb51fd67fa09da9478fc6a14cc200&plugin=AMap.Geocoder", location = AssetLocation.URL),
+    @Script(id = "mapjs", value = "js/localpl/map.js", depends={"jquery", "amapjs", "echartsjs"}, location=AssetLocation.APPLICATION),    
+    @Script(id = "local_uploadjs", value = "js/localpl/local_upload.js", depends={"jquery", "jquerypage", "nlibjs"}, location=AssetLocation.APPLICATION),
     @Script(id = "new_localjs", value = "js/localpl/new_local.js", location=AssetLocation.APPLICATION),
     
     
@@ -94,6 +95,7 @@ import juzu.plugin.binding.Bindings;
 //import juzu.plugin.webjars.WebJar;
 //import juzu.plugin.webjars.WebJars;
 import net.wyun.qys.service.NationalPolicyService;
+import net.wyun.qys.service.LocalPolicyService;
 import net.wyun.qys.service.StandardService;
 import net.wyun.qys.service.UserService;
 import juzu.asset.AssetLocation;
