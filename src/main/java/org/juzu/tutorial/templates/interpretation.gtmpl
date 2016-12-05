@@ -55,27 +55,27 @@
 				</li>
 				<li>
 					<span class="uiCheckbox">
-  						<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="1" AUTOCOMPLETE="off">
+  						<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="2" AUTOCOMPLETE="off">
   						<span>工信部</span>
 					</span>
 				</li>
 				
         		<li>
 					<span class="uiCheckbox">
-  						<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="2" AUTOCOMPLETE="off">
+  						<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="3" AUTOCOMPLETE="off">
   						<span>财政部</span>
 					</span>
 				</li>
                 <li>
 					<span class="uiCheckbox">
-  						<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="3" AUTOCOMPLETE="off">
+  						<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="4" AUTOCOMPLETE="off">
   						<span>科技部</span>
 					</span>
 				</li>
 				
 				<li>
 					<span class="uiCheckbox">
-  						<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="4" AUTOCOMPLETE="off">
+  						<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="1" AUTOCOMPLETE="off">
   						<span>发改委</span>
 					</span>
 				</li>
