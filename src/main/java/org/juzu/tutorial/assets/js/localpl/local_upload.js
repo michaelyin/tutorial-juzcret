@@ -1,20 +1,289 @@
-var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-146052-10']);
-        _gaq.push(['_trackPageview']);
-        (function() {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
+var imgPath = "/tutorial-juzcret/assets/net/wyun/";
+
+(function($){
+
+	$(document).ready(function(){
 		
-		function back()
-		{
-			window.location.href=get_url_base()+"/map.html";
+		$("#tcdPageCode").createPage({
+			pageCount:20,
+			current:1,
+			backFn:function(p){     }
+	    });
+		
+		$("#createDate").val(get_curr_time());
+		
+		$('#policyCategory').change(function(){
+			ShowToText2();
+		}); //(ShowToTextTag);
+		
+		$('#publishDept').change(function(){
+			ShowToText("publishDept");
+		});
+		
+		$('#file_add1').click(function(){
+			file_add();
+		});
+		
+		$('#file_del1').click(function(){
+			file_delete();
+		});
+		
+		$('#file_add2').click(function(){
+			file_add2();
+		});
+		
+		$('#file_del2').click(function(){
+			file_delete2();
+		});
+		
+		$("#dijiao").click(function(){
+
+			//validate form data before sending it to server
+			if(validateForm()){
+				$("#form1").submit();
+			};
+			
+		});
+		
+		//uploading data 
+		$("#form1").submit(function(e) {
+				 
+				    var formObj = $(this);
+				    var formURL = formObj.attr("action");
+				    var formData = new FormData(this);
+				    $.ajax({
+				        url: formURL,
+				        type: 'POST',
+				        data:  formData,
+				        dataType: 'text',
+				        mimeType:"multipart/form-data",
+				        contentType: false,
+				        cache: false,
+				        processData:false,
+				    success: function(data, textStatus, jqXHR)
+				    {
+				       console.log("post success: " + data);
+				       //handle data here:
+				       handle(data);
+				       
+				    },
+				     error: function(jqXHR, textStatus, errorThrown) 
+				     {
+				    	 alert('递交数据失败： ' + errorThrown);
+				     }          
+				    });
+				   // console.log("type of e: " + type(e));
+				    e.preventDefault(); //Prevent Default action. 
+				   // e.unbind();
+		}); 
+		
+		function handle(data){
+			//data: json data from server: standard
+			//refresh the upload page here
+			alert("递交数据成功！");
+			$('#uploadSuccess').show();
+			
+		}
+				
+		
+		function loadFiles(){
+			console.log("file upload successfully!");
 		}
 		
+		function getNowFormatDate() {
+			var date = new Date();
+			var seperator1 = "-";
+			var seperator2 = ":";
+			var month = date.getMonth() + 1;
+			var strDate = date.getDate();
+			var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+					+ " " + date.getHours() + seperator2 + date.getMinutes()
+					+ seperator2 + date.getSeconds();
+			return currentdate;
+		}
+		
+		document.getElementById("createDate").value = getNowFormatDate();
+		
+		function validateForm()
+		{
+			if($("#form1").find("input[name='standardName']").val()=="".trim())
+			{
+				alert("请输入标准名称！");
+				return false;
+			}
+			if($("#form1").find("input[name='standardNum']").val()=="".trim())
+			{
+				alert("请输入标准编号！");
+				return false;
+			}
+			if($("#form1").find("input[name='standardTypeTxt']").val()=="".trim())
+			{
+				alert("请输入标准类型！");
+				return false;
+			}
+			if($("#form1").find("input[name='tag']").val()=="".trim())
+			{
+				alert("请输入标签!");
+				return false;
+			}
+			if($("#form1").find("textarea[name='text']").val()=="".trim())
+			{
+				alert("请输入标准原文！");
+				return false;
+			}
+			
+			return true;	
+		}
+		
+		var image_count=0;
+		//var imghead1 = 'imghead1';
+		
+		function file_add()
+		{
+			
+			var div_list=document.getElementById("messages");
+			var div_string=	"<div class=\"row\" style=\"margin-top:20px; padding-left:35%\">"+							
+								"<div class=\"\" id=\"preview1"+image_count+"\" >"+
+									"<img src=\"/tutorial-juzcret/assets/net/wyun/img/use.jpg\" height=\"97\" width=\"148\"  id=\"imghead1"+image_count+"\" class=\"img-responsive\" />"+
+								"</div>"+
+							"</div>"+
+							"<div class=\"row\" style=\"margin-top:10px; padding-left:35%\">"+
+								"<input type=\"file\"  name=\"tfiles\" onChange=\"previewImage(this,'preview1','imghead1'," +image_count+")\" />"+
+							"</div>";
+				
+			
+			var div_one=document.createElement("div");
+			div_one.innerHTML=div_string;
+			div_list.appendChild(div_one);
+			image_count+=1;
+		}
+		
+		function file_delete()
+		{
+			
+			if(image_count==0)
+			{
+				alert("图片列表为空");
+				return;
+			}
+			
+			var div_list=document.getElementById("messages");
+			
+			var has_child = div_list.hasChildNodes(); 
+			
+			if(has_child==false)
+			{
+				return;
+			}
+			
+			div_list.removeChild(div_list.childNodes[div_list.childNodes.length-1]);
+			
+			image_count-=1;
+			
+		}
+		
+		var image_count2 = 0;
+		//var imghead2 = 'imghead2';
+		function file_add2()
+		{
+			
+			var div_list2=document.getElementById("messages2");
+			var div_string2 =	"<div class=\"row\" style=\"margin-top:20px; padding-left:35%\">"+							
+								"<div class=\"\" id=\"preview2"+image_count2+"\" >"+
+									"<img src=\"/tutorial-juzcret/assets/net/wyun/img/use.jpg\" height=\"152\" width=\"200\"  id=\"imghead2"+image_count2+"\" class=\"img-responsive\" />"+
+								"</div>"+
+							"</div>"+
+							"<div class=\"row\" style=\"margin-top:10px; padding-left:35%\">"+
+								"<input type=\"file\"  name=\"efiles\" onChange=\"previewImage(this,'preview2','imghead2',"+image_count2+")\" />"+
+							"</div>";
+				
+			
+			var div_one2=document.createElement("div");
+			div_one2.innerHTML=div_string2;
+			div_list2.appendChild(div_one2);
+			image_count2+=1;
+		}
+		
+		function file_delete2()
+		{
+			
+			if(image_count2==0)
+			{
+				alert("图片列表为空");
+				return;
+			}
+			
+			var div_list=document.getElementById("messages2");
+			
+			var has_child = div_list.hasChildNodes(); 
+			
+			if(has_child==false)
+			{
+				return;
+			}
+			
+			div_list.removeChild(div_list.childNodes[div_list.childNodes.length-1]);
+			
+			image_count2-=1;
+			
+		}
+		
+		//得到错误时运行的内容
+		function displayProp(obj){    
+			var names="";       
+			for(var name in obj){       
+			   names+=name+": "+obj[name]+", ";     
+			}  
+			alert(names);
+		}
+		
+		/*删除左右两端的空格*/
+		function trim(str){ 
+		　　  return str.replace(/(^s*)|(s*$)/g, "");
+		}
+		
+		
+		
+	})
+	
+	
+	function ShowToTextTag()
+		{
+			//alert("aaaaaaaaaaaaaaaaaaa");
+			//document.form_name.publishDept.value = document.form_name.select_name.value;
+			var selectTag = document.getElementById("selectTag").value;
+			//alert(publishDept);
+			document.getElementById("tag").value = selectTag;
+		}
+	
+	
+	function ShowToText(id)
+	{
+		//alert("aaaaaaaaaaaaaaaaaaa");
+		//document.form_name.publishDept.value = document.form_name.select_name.value;
+		var standardTypeObj = document.getElementById(id);
+		//alert(standardTypeObj);
+		var index=standardTypeObj.selectedIndex;//獲得選中項的索引
+		//alert(index);
+		var standardType=standardTypeObj.options[index].text;//选中的文本  
+		//alert(publishDept);
+		document.getElementById(id + "Txt").value = standardType;
+	}
+		
+		function ShowToText2()
+		{
+			//alert("aaaaaaaaaaaaaaaaaaa");
+			//document.form_name.publishDept.value = document.form_name.select_name.value;
+			var policyCategoryObj = document.getElementById("policyCategory");
+			//alert(policyCategoryObj);
+			var index=policyCategoryObj.selectedIndex;//獲得選中項的索引
+			//alert(index);
+			var policyCategory=policyCategoryObj.options[index].text;//选中的文本  
+			//alert(publishDept);
+			document.getElementById("policyCategoryTxt").value = policyCategory;
+		}
+	
+})($);
 		
 		function trim(str)
 		{ 
@@ -247,8 +516,17 @@ var _gaq = _gaq || [];
 				case "浙江":
 				  var cityOptions = new Array("杭州","宁波", "温州", "金华", "嘉兴","台州","绍兴", "湖州", "丽水", "衢州", "舟山", "乐清", "瑞安", "义乌", "余姚", "诸暨", "象山", "温岭", "桐乡", "慈溪", "长兴", "嘉善", "海宁", "德清");
 				  break;
-				case "其他":
-				  var cityOptions = new Array("香港","澳门","台湾","钓鱼岛");
+				case "香港":
+				  var cityOptions = new Array("香港");
+				  break;
+			    case "台湾":
+				  var cityOptions = new Array("台湾");
+				  break;
+				case "澳门":
+				  var cityOptions = new Array("澳门");
+				  break;
+				case "南海诸岛":
+				  var cityOptions = new Array("南海诸岛");
 				  break;
 				}
 				document.getElementById("selectCity").options.length = 0; 
@@ -271,14 +549,14 @@ var _gaq = _gaq || [];
 		
 		
 		//图片上传预览    IE是用了滤镜。
-        function previewImage(file,imgindex,falg){
+        function previewImage(file,preview, imghead, imgindex){
 		 
           var MAXWIDTH  = 200; 
           var MAXHEIGHT = 180;
-          var div = document.getElementById("preview"+imgindex);
+          var div = document.getElementById(preview+imgindex);
           if (file.files && file.files[0]){
-              div.innerHTML ="<img id=imghead"+imgindex+">";
-              var img = document.getElementById("imghead"+imgindex);
+              div.innerHTML ="<img id=" + imghead + imgindex+">";
+              var img = document.getElementById(imghead + imgindex);
               img.onload = function(){
                 var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
                 img.width  =  rect.width;
@@ -287,7 +565,7 @@ var _gaq = _gaq || [];
                 img.style.marginTop = rect.top+'px';
               }
               var reader = new FileReader();
-              reader.onload = function(evt){img.src = "img/file.jpg";}
+              reader.onload = function(evt){img.src = imgPath + "img/file.jpg";}
               reader.readAsDataURL(file.files[0]);
           }else{ //兼容IE
             var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
@@ -295,11 +573,11 @@ var _gaq = _gaq || [];
             file.blur();
             var src = document.selection.createRange().text;
 			//alert(src);
-            div.innerHTML = "<img id=imghead"+imgindex+">";
-            var img = document.getElementById("imghead"+imgindex);
+            div.innerHTML = "<img id=" + imghead+imgindex+">";
+            var img = document.getElementById(imghead + imgindex);
             
             img.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)"; 
-            img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = "img/file.jpg";
+            img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = imgPath + "img/file.jpg";
             
             //alert(MAXHEIGHT+" "+MAXWIDTH +" "+img.offsetWidth + "   " + img.offsetHeight);
             //var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
