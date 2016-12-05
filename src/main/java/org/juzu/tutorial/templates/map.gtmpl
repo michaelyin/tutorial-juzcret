@@ -2,7 +2,7 @@
 	 	<h1  style="text-align:center; margin-bottom:5%;">地方政策详解</h1>
 		<div class="container_left">
 			<div>
-            <form id="form1" method="post" name="f1" enctype="multipart/form-data">
+            <form id="form1" action="@{LocalPolicyController.search()}" method="post" name="f1" enctype="multipart/form-data">
             <div style="margin-left:2px;">
 			    <div class="input-append" style=" width:100%;">
 				    <div class="btn-group btn-large" style="padding:0; margin:0; width:15%;">
@@ -13,7 +13,7 @@
 				
 				    <input type="text" style=" width:70%;" id="search_text" name="search_text" AUTOCOMPLETE="off">
 				    <input type="hidden" name="class" id="class">
-				    <button class="btn btn-primary dropdown-toggle" type="button" style=" width:15%;" onclick="get_search()">搜索</button>
+				    <button id="search" class="btn btn-primary dropdown-toggle" type="button" style=" width:15%;" >搜索</button>
 			
 			    </div>
 		    </div>
@@ -33,25 +33,25 @@
                     <ul class="breadcrumb" style="margin-top:10px; margin-bottom:10px;">
 						<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" >
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" >
   								<span>所有购置方面政策</span>							
                             </span>						
                         </li>
         				<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="补贴政策" AUTOCOMPLETE="off">
   								<span>补贴政策</span>							</span>						</li>
 						<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="税收优惠" AUTOCOMPLETE="off">
   								<span>税收优惠</span>							</span>						</li>
                         <li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="免限购" AUTOCOMPLETE="off">
   								<span>免限购</span>							</span>						</li>
                         <li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="研发" AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="研发" AUTOCOMPLETE="off">
   								<span>研发</span>							
                             </span>						
                         </li>
@@ -61,31 +61,31 @@
                     <ul class="breadcrumb" style="margin-top:10px; margin-bottom:10px;">
 						<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="进出口" AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="进出口" AUTOCOMPLETE="off">
   								<span>进出口</span>							</span>						</li>
         				<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="反垄断" AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="反垄断" AUTOCOMPLETE="off">
   								<span>反垄断</span>							</span>						</li>
 						<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="用车服务" AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="用车服务" AUTOCOMPLETE="off">
   								<span>用车服务</span>							</span>						</li>
                          <li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="销售" AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="销售" AUTOCOMPLETE="off">
   								<span>销售</span>							
                             </span>						
                         </li>
                         <li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="保险" AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="保险" AUTOCOMPLETE="off">
   								<span>保险</span>							
                             </span>						
                         </li>
                         <li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="汽车服务业" AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="汽车服务业" AUTOCOMPLETE="off">
   								<span>汽车服务业</span>							
                             </span>						
                         </li>
@@ -95,31 +95,31 @@
                     <ul class="breadcrumb" style="margin-top:10px; margin-bottom:10px;">
 						<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="二手车" AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="二手车" AUTOCOMPLETE="off">
   								<span>二手车</span>							
                             </span>						
                         </li>
                         <li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="新能源"   AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="新能源"   AUTOCOMPLETE="off">
   								<span>新能源</span>							
                             </span>						
                         </li>
                         <li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="产业政策"   AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="产业政策"   AUTOCOMPLETE="off">
   								<span>产业政策</span>							
                             </span>						
                        </li>
                         <li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="环保" AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="环保" AUTOCOMPLETE="off">
   								<span>环保</span>							
                             </span>						
                         </li>
                         <li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="安全" AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="安全" AUTOCOMPLETE="off">
   								<span>安全</span>							
                             </span>						
                         </li>
@@ -127,7 +127,7 @@
 						
                        <li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="法律体系"  AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="法律体系"  AUTOCOMPLETE="off">
   								<span>法律体系</span>							
                             </span>						
                        </li>
@@ -137,39 +137,39 @@
                     <ul class="breadcrumb" style="margin-top:10px; margin-bottom:10px;">
                     	<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="后市场" AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="后市场" AUTOCOMPLETE="off">
   								<span>后市场</span>							
                             </span>
                         </li>
 						<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="生产" AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="生产" AUTOCOMPLETE="off">
   								<span>生产</span>							
                             </span>
                         </li>
                         <li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="财税" AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="财税" AUTOCOMPLETE="off">
   								<span>财税</span>							
                             </span>
                         </li>
          				<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="金融" AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="金融" AUTOCOMPLETE="off">
   								<span>金融</span>							
                             </span>
                         </li>
         				<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="准入" AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="准入" AUTOCOMPLETE="off">
   								<span>准入</span>							</span>						</li>
 						<li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type"  value="规划"  AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type"  value="规划"  AUTOCOMPLETE="off">
   								<span>规划</span>							</span>						</li>
                         <li>
 							<span class="uiCheckbox">
-  								<input type="checkbox" class="checkbox" name="search_type[]" id="search_type" value="投资" AUTOCOMPLETE="off">
+  								<input type="checkbox" class="checkbox" name="search_type" id="search_type" value="投资" AUTOCOMPLETE="off">
   								<span>投资</span>							
                             </span>						
                         </li>
@@ -768,3 +768,23 @@
 		</div>
 	</div>
 </div>	
+
+<!-- ################################## -->
+<!-- ######### Standard MODAL ############ -->
+<!-- ################################## -->
+<div class="modal hide fade" id="standardModal" role="dialog" data-link="@{LocalPolicyController.policyContent()}">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">x</a>
+    <h1 style="text-align:center; margin-bottom:5%;">地方政策正文</h1>
+  </div>
+  
+  <div class="modal-body-no">
+
+    <div id="standard-properties" style="width:96%;text-align:center;padding:10px;">标准属性</div>
+
+  </div>
+
+  <div class="modal-footer">
+    <a href="#" class="btn btn-primary" data-dismiss="modal">关闭</a>
+  </div>
+</div>
