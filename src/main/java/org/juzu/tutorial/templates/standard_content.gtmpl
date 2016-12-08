@@ -11,7 +11,7 @@
 		             <img src="${file.icon}" id="${file.uuid}" height="64" width="64">
 		             <p></p>
 		             <div style="margin:0 auto">
-		               <a href="${file.publicUrl}" target="_blank">${file.name}</a>
+		               <a href="${file.getRestPath()}" target="_blank">${file.name}</a>
 		             </div>
 		         </div>
 		         
