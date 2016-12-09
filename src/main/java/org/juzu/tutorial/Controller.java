@@ -102,8 +102,8 @@ public class Controller {
 	public Response.Content index(SecurityContext securityContext) throws IOException {
 		String username = securityContext.getRemoteUser();
 		LOG.info("user: " + username);
-		UserSetting setting = userService.getUserSetting(username);
-		net.wyun.qys.model.User u = userService.loadUser(username);
+		//UserSetting setting = userService.getUserSetting(username);
+		//net.wyun.qys.model.User u = userService.loadUser(username);
 
 		try {
 
@@ -120,78 +120,23 @@ public class Controller {
 			LOG.error(e);
 		}
 
+		/*
 		if (setting != null) {
 			LOG.info("user setting: " + setting.getUsername());
 		}
 		if (u != null) {
 			LOG.info("user avatar: " + u.getAvatar());
 		}
-
-		// try policySvc
-		LOG.info("save policy");
-		NationalPolicy policy = new NationalPolicy();
-		policy.setName("test db saving秦皇岛");
-		policy.setNum("2016-national policy");
-		policy.setCreator(username);
-		policy.setDepartment("information");
-		policy.setSource(NPSourceType.发改委);
-		policy.setType(NPolicyType.保险);
-		policy.setCreateDate(new Date());
-		policy.setE_uuid("e_uuid");
-		policy.setT_uuid("t_uuid");
-		//this.policySvc.save(policy);
-
-		// LOG.info("search test begins: ");
-		// searchTest();
-		// LOG.info("search test ends. ");
-
-		// this.jcrSearch();
+		*/
 
 		return index.ok();
 	}
 
-	private void saveStandard() {
-		Standard s = new Standard();
-		s.setName("国家标准2016");
-		s.setCreateDate(new Date());
-		s.setNum("001-2960-2016");
-		s.setType(StandardType.专用车);
-		s.setUuid("4eb65550-a36a-11e6-80f5-76304dec7eb7");
 
-		StanJcrFile jFile = new StanJcrFile();
-		jFile.setFileName("testfile.txt");
-		jFile.setUploadDate(new Date());
-		jFile.setUrl("temp/url");
-		jFile.setUuid("4eb65550-a36a-11e6-0000-76304dec7eb7");
-
-		s.addStanJcrFile(jFile);
-
-		StanTag sTag1 = new StanTag();
-		sTag1.setTag("first tag: car market 上海");
-		s.addStanTag(sTag1);
-
-		StanTag sTag = new StanTag();
-		sTag.setTag("second tag: car market 北京");
-		s.addStanTag(sTag);
-
-		standardSvc.save(s);
-	}
-
-	private void searchTest() {
-		Collection<SearchResult> connectorResults = null;
-		try {
-
-			QysFileSearchServiceConnector fssc = new QysFileSearchServiceConnector(
-					QysFileSearchServiceConnector.initFileSearchProp());
-			fssc.setSearchSubDir("standard");
-			connectorResults = fssc.searchQys("秦皇岛", "standard");
-
-		} catch (Exception e) {
-			LOG.error(e.getMessage(), e);
-		}
-		// return connectorResults;
-	}
-
+	/**
+	 * This function is not working. leave it for future reference.
+	 */
+	@SuppressWarnings("unused")
 	private void jcrSearch() {
 		List<Node> ret = new ArrayList<Node>();
 
