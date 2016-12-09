@@ -4,7 +4,7 @@
 		    <p style="font-size:15px; margin:0; padding:0; text-align:center; color:#999999;">${stan.createDate}</p>
 		    </span><p style="font-size:15px; margin:0; padding:0; text-align:center; color:#999999;">&#20316;&#32773;: ${stan.creator}</p>
 		    <% files.each { file -> %>
-		    <div style="width:100%; margin-top:30px; border:1px solid #578DC9;" onclick="window.open('${file.publicUrl}')">
+		    <div style="width:100%; margin-top:30px; border:1px solid #578DC9;" >
 		         <p style="font-size:15px; margin:0; padding:0; color:#999999;height:200px;"></p>
 		         
 		         <div style="margin-top:-180px; padding-left:35%">
