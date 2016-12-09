@@ -3,12 +3,14 @@ package org.juzu.tutorial;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeSet;
 
 import javax.inject.Inject;
 
@@ -179,7 +181,14 @@ private static final Log LOG = ExoLogger.getExoLogger(LocalPolicyController.clas
 	  }
 	  LOG.info("total jcr records found: " + connectorResults.size());
 	  
-	  Set<LocalPolicy> finalSet = new HashSet<LocalPolicy>();
+	  //sorting by create_t
+	  final Comparator<LocalPolicy> REV_DATE_COMP = new Comparator<LocalPolicy>() {
+		    @Override
+		    public int compare(LocalPolicy d1, LocalPolicy d2) {
+		        return d2.getCreateDate().compareTo(d1.getCreateDate());
+		    }
+	  };   
+	  Set<LocalPolicy> finalSet = new TreeSet<LocalPolicy>(REV_DATE_COMP);
 	  for(SearchResult sr:connectorResults){
 		  String uuid = sr.getDetail();
 		  if(stanMap.containsKey(uuid)){
