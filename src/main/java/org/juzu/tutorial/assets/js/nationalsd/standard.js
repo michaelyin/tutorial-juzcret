@@ -334,9 +334,13 @@ var path;
 			var dept_value = json.resultList[i].dept;
 			var createDate_value = json.resultList[i].createDate;
 			var files_str = json.resultList[i].stanJcrFiles[0];
+			if(json.resultList[i].stanJcrFiles.length == 0){ files_str = "";}
 			//alert(files_str);
 			var file_str_arr = new Array();
-			file_str_arr = files_str.split("},"); //字符分割
+			if(files_str != ""){
+				file_str_arr = files_str.split("},"); //字符分割
+			}
+			
 			var file_value = "";
 			var uuid_value = "";
 			for (j=0;j<file_str_arr.length ;j++ )
