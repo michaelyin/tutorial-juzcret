@@ -102,7 +102,7 @@ public class NationalStandardController {
 		  }
 		  
 		  
-		  return content.with().set("stan", stan).set("files", files).ok();
+		  return content.with().set("stan", stan).set("files", files).ok().withCharset(Tools.UTF_8);
 	  }	  
 	  
 	  @Assets({"standard_uploadcss", "standarduploadjs"})

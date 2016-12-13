@@ -114,7 +114,7 @@ public class NationalPolicyController {
 		  }
 		  
 		  
-		  return content.with().set("stan", stan).set("files", files).ok();
+		  return content.with().set("stan", stan).set("files", files).ok().withCharset(Tools.UTF_8);
 	  }	  
 	  /**
 	   * with out user input, search_text is empty string, search_type is null
