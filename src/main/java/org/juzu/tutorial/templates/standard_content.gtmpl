@@ -1,5 +1,5 @@
 <% if (stan!=null) { %>
-		    <h3 style="color:#999999; text-align:center;">${stan.name}</h3>
+		    <h3 style="color:#999999; text-align:center;">&#26631;&#20934;&#21517;&#23383;: ${stan.getName()}</h3>
 		    </span> <p style="font-size:15px; margin:0; padding:0; text-align:center; color:#999999;">&#26631;&#20934;&#21495;: ${stan.num}</p>
 		    <p style="font-size:15px; margin:0; padding:0; text-align:center; color:#999999;">${stan.createDate}</p>
 		    </span><p style="font-size:15px; margin:0; padding:0; text-align:center; color:#999999;">&#20316;&#32773;: ${stan.creator}</p>
